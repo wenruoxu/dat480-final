@@ -1,0 +1,10 @@
+set_property SRC_FILE_INFO {cfile:/home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_ulp_ucs_0/ulp_ulp_ucs_0.xdc rfile:../../../prj.gen/my_rm/bd/ulp/ip/ulp_ulp_ucs_0/ulp_ulp_ucs_0.xdc id:1 order:LATE scoped_inst:inst} [current_design]
+current_instance inst
+set_property src_info {type:SCOPED_XDC file:1 line:48 export:INPUT save:INPUT read:READ} [current_design]
+set_max_delay -datapath_only -from [get_cells {gapping_demand/gpio_gapping_demand/*/gpio_core_1/Dual.gpio_Data_Out_reg[*]}] -to [get_cells {aclk_kernel_*_hierarchy/clock_throttling_aclk_kernel*/*/Rate_int_reg[*]}] [get_property PERIOD [get_clocks -of_objects [get_ports aclk_ctrl]]]
+set_property src_info {type:SCOPED_XDC file:1 line:52 export:INPUT save:INPUT read:READ} [current_design]
+set_property DONT_TOUCH TRUE [get_cells aclk_kernel_*_hierarchy/fanout_aresetn_kernel_*/fanout_aresetn_kernel_*/*/q_i_reg[0]]
+set_property src_info {type:SCOPED_XDC file:1 line:53 export:INPUT save:INPUT read:READ} [current_design]
+set_property DONT_TOUCH TRUE [get_cells fanout_aresetn_ctrl/fanout_aresetn_ctrl*/*/q_i_reg[0]]
+set_property src_info {type:SCOPED_XDC file:1 line:54 export:INPUT save:INPUT read:READ} [current_design]
+set_property DONT_TOUCH TRUE [get_cells fanout_aresetn_pcie/fanout_aresetn_pcie*/*/q_i_reg[0]]

@@ -1,0 +1,28 @@
+---
+MainSourceFile:  /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls/.autopilot/db/krnl_proj_split.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '217:37'
+    FilePath:        /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '217:56'
+    FilePath:        /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '217:74'
+    FilePath:        /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '219:35'
+    FilePath:        /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '219:53'
+    FilePath:        /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '219:70'
+    FilePath:        /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp
+...

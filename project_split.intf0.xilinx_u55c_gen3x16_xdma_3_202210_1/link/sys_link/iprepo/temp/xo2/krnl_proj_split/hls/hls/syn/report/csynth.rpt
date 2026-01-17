@@ -1,0 +1,237 @@
+
+
+================================================================
+== Synthesis Summary Report of 'krnl_proj_split'
+================================================================
++ General Information: 
+    * Date:           Sat Jan 17 14:13:18 2026
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        krnl_proj_split
+    * Solution:       hls (Vitis Kernel Flow Target)
+    * Product family: virtexuplusHBM
+    * Target device:  xcu55c-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----+------------+-------------+-----+
+    |                        Modules                        |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |          |    |            |             |     |
+    |                        & Loops                        |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   | DSP|     FF     |     LUT     | URAM|
+    +-------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----+------------+-------------+-----+
+    |+ krnl_proj_split*                                     |  Timing|  -0.67|        -|          -|         -|        -|     -|  dataflow|  138 (3%)|   -|  6951 (~0%)|   43478 (3%)|    -|
+    | + input_split                                         |       -|   0.11|        -|          -|         -|        -|     -|        no|         -|   -|   877 (~0%)|   2812 (~0%)|    -|
+    |  o VITIS_LOOP_36_1                                    |       -|   2.43|        -|          -|        70|        -|     -|        no|         -|   -|           -|            -|    -|
+    |   + input_split_Pipeline_VITIS_LOOP_39_2              |       -|   0.11|       66|    219.978|         -|       66|     -|        no|         -|   -|   148 (~0%)|   2668 (~0%)|    -|
+    |    o VITIS_LOOP_39_2                                  |       -|   2.43|       64|    213.312|         2|        1|    64|       yes|         -|   -|           -|            -|    -|
+    | + Block_entry211_proc                                 |       -|   1.21|        0|      0.000|         -|        0|     -|        no|         -|   -|   130 (~0%)|     29 (~0%)|    -|
+    | + matcher_engine_1720_16_s                            |       -|   0.03|        -|          -|         -|        -|     -|        no|  21 (~0%)|   -|   409 (~0%)|   22586 (1%)|    -|
+    |  + matcher_engine_1720_16_Pipeline_init_state         |       -|   0.10|     1722|  5.739e+03|         -|     1722|     -|        no|         -|   -|    13 (~0%)|     63 (~0%)|    -|
+    |   o init_state                                        |       -|   2.43|     1720|  5.733e+03|         1|        1|  1720|       yes|         -|   -|           -|            -|    -|
+    |  + matcher_engine_1720_16_Pipeline_reset_state        |       -|   0.10|     1722|  5.739e+03|         -|     1722|     -|        no|         -|   -|    13 (~0%)|     63 (~0%)|    -|
+    |   o reset_state                                       |       -|   2.43|     1720|  5.733e+03|         1|        1|  1720|       yes|         -|   -|           -|            -|    -|
+    |  o VITIS_LOOP_80_1                                    |       -|   2.43|        -|          -|      3446|        -|     -|        no|         -|   -|           -|            -|    -|
+    |   + matcher_engine_1720_16_Pipeline_pattern_loop      |       -|   0.03|     3444|  1.148e+04|         -|     3444|     -|        no|  19 (~0%)|   -|   118 (~0%)|   22295 (1%)|    -|
+    |    o pattern_loop                                     |      II|   2.43|     3442|  1.147e+04|         5|        2|  1720|       yes|         -|   -|           -|            -|    -|
+    | + matcher_engine_957_214_s                            |  Timing|  -0.00|        -|          -|         -|        -|     -|        no|  117 (2%)|   -|  1054 (~0%)|   3965 (~0%)|    -|
+    |  + matcher_engine_957_214_Pipeline_init_state         |       -|   0.12|      959|  3.196e+03|         -|      959|     -|        no|         -|   -|    12 (~0%)|     61 (~0%)|    -|
+    |   o init_state                                        |       -|   2.43|      957|  3.190e+03|         1|        1|   957|       yes|         -|   -|           -|            -|    -|
+    |  + matcher_engine_957_214_Pipeline_reset_state        |       -|   0.12|      959|  3.196e+03|         -|      959|     -|        no|         -|   -|    12 (~0%)|     61 (~0%)|    -|
+    |   o reset_state                                       |       -|   2.43|      957|  3.190e+03|         1|        1|   957|       yes|         -|   -|           -|            -|    -|
+    |  o VITIS_LOOP_80_1                                    |       -|   2.43|        -|          -|    213413|        -|     -|        no|         -|   -|           -|            -|    -|
+    |   o pattern_loop                                      |       -|   2.43|   213411|  7.113e+05|       223|        -|   957|        no|         -|   -|           -|            -|    -|
+    |    + matcher_engine_957_214_Pipeline_match_mask_loop  |  Timing|  -0.00|      217|    723.261|         -|      217|     -|        no|  100 (2%)|   -|   247 (~0%)|   1481 (~0%)|    -|
+    |     o match_mask_loop                                 |       -|   2.43|      215|    716.595|         3|        1|   214|       yes|         -|   -|           -|            -|    -|
+    | + merge_matches                                       |  Timing|  -0.67|        -|          -|         -|        -|     -|        no|         -|   -|  3708 (~0%)|   13200 (1%)|    -|
+    |  + merge_matches_Pipeline_VITIS_LOOP_146_1            |  Timing|  -0.67|        -|          -|         -|        -|     -|        no|         -|   -|  3092 (~0%)|  12975 (~0%)|    -|
+    |   o VITIS_LOOP_146_1                                  |      II|   2.43|        -|          -|         5|        2|     -|       yes|         -|   -|           -|            -|    -|
+    +-------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----+------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+--------------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| Interface     | Register           | Offset | Width | Access | Description                      | Bit Fields                                                                         |
++---------------+--------------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| s_axi_control | CTRL               | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER               | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                                           |
+| s_axi_control | IP_IER             | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                      |
+| s_axi_control | IP_ISR             | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                      |
+| s_axi_control | processed_bytes_1  | 0x10   | 32    | R      | Data signal of processed_bytes   |                                                                                    |
+| s_axi_control | processed_bytes_2  | 0x14   | 32    | R      | Data signal of processed_bytes   |                                                                                    |
+| s_axi_control | processed_cycles_1 | 0x28   | 32    | R      | Data signal of processed_cycles  |                                                                                    |
+| s_axi_control | processed_cycles_2 | 0x2c   | 32    | R      | Data signal of processed_cycles  |                                                                                    |
++---------------+--------------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+
+* AXIS
++---------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface     | Direction | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++---------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| input_stream  | in        | both          | 512   | 16    | 1   | 64    | 1     | 1      | 64    | 1     | 1      |
+| output_stream | out       | both          | 512   | 16    | 1   | 64    | 1     | 1      | 64    | 1     | 1      |
++---------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------------+-----------+-----------------------------------------------------------+
+| Argument         | Direction | Datatype                                                  |
++------------------+-----------+-----------------------------------------------------------+
+| input_stream     | in        | stream<hls::axis<ap_uint<512>, 1, 1, 16, '8', false>, 0>& |
+| output_stream    | out       | stream<hls::axis<ap_uint<512>, 1, 1, 16, '8', false>, 0>& |
+| processed_bytes  | out       | ap_uint<64>&                                              |
+| processed_cycles | out       | ap_uint<64>&                                              |
++------------------+-----------+-----------------------------------------------------------+
+
+* SW-to-HW Mapping
++------------------+---------------+-----------+----------------------------------------------+
+| Argument         | HW Interface  | HW Type   | HW Info                                      |
++------------------+---------------+-----------+----------------------------------------------+
+| input_stream     | input_stream  | interface |                                              |
+| output_stream    | output_stream | interface |                                              |
+| processed_bytes  | s_axi_control | register  | name=processed_bytes_1 offset=0x10 range=32  |
+| processed_bytes  | s_axi_control | register  | name=processed_bytes_2 offset=0x14 range=32  |
+| processed_cycles | s_axi_control | register  | name=processed_cycles_1 offset=0x28 range=32 |
+| processed_cycles | s_axi_control | register  | name=processed_cycles_2 offset=0x2c range=32 |
++------------------+---------------+-----------+----------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                                | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++-----------------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + krnl_proj_split                                   | 0   |        |             |     |        |         |
+|  + input_split                                      | 0   |        |             |     |        |         |
+|   + input_split_Pipeline_VITIS_LOOP_39_2            | 0   |        |             |     |        |         |
+|     add_ln39_fu_152_p2                              |     |        | add_ln39    | add | fabric | 0       |
+|     add_ln47_fu_207_p2                              |     |        | add_ln47    | add | fabric | 0       |
+|  + matcher_engine_1720_16_s                         | 0   |        |             |     |        |         |
+|   + matcher_engine_1720_16_Pipeline_init_state      | 0   |        |             |     |        |         |
+|     add_ln75_fu_68_p2                               |     |        | add_ln75    | add | fabric | 0       |
+|   + matcher_engine_1720_16_Pipeline_pattern_loop    | 0   |        |             |     |        |         |
+|     add_ln104_fu_2988_p2                            |     |        | add_ln104   | add | fabric | 0       |
+|     add_ln124_fu_15761_p2                           |     |        | add_ln124   | add | fabric | 0       |
+|   + matcher_engine_1720_16_Pipeline_reset_state     | 0   |        |             |     |        |         |
+|     add_ln89_fu_68_p2                               |     |        | add_ln89    | add | fabric | 0       |
+|  + matcher_engine_957_214_s                         | 0   |        |             |     |        |         |
+|    add_ln64_fu_199366_p2                            |     |        | add_ln64    | add | fabric | 0       |
+|    add_ln104_fu_199378_p2                           |     |        | add_ln104   | add | fabric | 0       |
+|    add_ln124_fu_199395_p2                           |     |        | add_ln124   | add | fabric | 0       |
+|   + matcher_engine_957_214_Pipeline_init_state      | 0   |        |             |     |        |         |
+|     add_ln75_fu_68_p2                               |     |        | add_ln75    | add | fabric | 0       |
+|   + matcher_engine_957_214_Pipeline_reset_state     | 0   |        |             |     |        |         |
+|     add_ln89_fu_68_p2                               |     |        | add_ln89    | add | fabric | 0       |
+|   + matcher_engine_957_214_Pipeline_match_mask_loop | 0   |        |             |     |        |         |
+|     add_ln112_fu_2663_p2                            |     |        | add_ln112   | add | fabric | 0       |
+|     add_ln114_fu_2673_p2                            |     |        | add_ln114   | add | fabric | 0       |
+|  + merge_matches                                    | 0   |        |             |     |        |         |
+|   + merge_matches_Pipeline_VITIS_LOOP_146_1         | 0   |        |             |     |        |         |
+|     out_count_7_fu_512_p2                           |     |        | out_count_7 | add | fabric | 0       |
+|     out_count_8_fu_615_p2                           |     |        | out_count_8 | add | fabric | 0       |
++-----------------------------------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-----------------------------------------------------+--------------+------------+------+------+--------+------------------------------+--------+---------+------------------+
+| Name                                                | Usage        | Type       | BRAM | URAM | Pragma | Variable                     | Impl   | Latency | Bitwidth, Depth, |
+|                                                     |              |            |      |      |        |                              |        |         | Banks            |
++-----------------------------------------------------+--------------+------------+------+------+--------+------------------------------+--------+---------+------------------+
+| + krnl_proj_split                                   |              |            | 138  | 0    |        |                              |        |         |                  |
+|   control_s_axi_U                                   | interface    | s_axilite  |      |      |        |                              |        |         |                  |
+|   short_bytes_U                                     | fifo channel | stream     |      |      |        | short_bytes                  | srl    | 0       | 9, 64, 1         |
+|   long_bytes_U                                      | fifo channel | stream     |      |      |        | long_bytes                   | srl    | 0       | 9, 64, 1         |
+|   dest_channel_U                                    | fifo channel | task level |      |      |        | dest_channel                 | srl    | 0       | 16, 3, 1         |
+|   bytes_channel_U                                   | fifo channel | task level |      |      |        | bytes_channel                | srl    | 0       | 64, 2, 1         |
+|   short_matches_U                                   | fifo channel | stream     |      |      |        | short_matches                | memory | 0       | 33, 64, 1        |
+|   long_matches_U                                    | fifo channel | stream     |      |      |        | long_matches                 | memory | 0       | 33, 64, 1        |
+|  + matcher_engine_1720_16_s                         |              |            | 21   | 0    |        |                              |        |         |                  |
+|    state_1_U                                        | ram_1p       |            | 2    |      | pragma | state_1                      | bram   | 1       | 15, 1720, 1      |
+|   + matcher_engine_1720_16_Pipeline_pattern_loop    |              |            | 19   | 0    |        |                              |        |         |                  |
+|     pattern_len_SHORT_U                             | rom_1p       |            | 1    |      |        | pattern_len_SHORT            | auto   | 1       | 5, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_0_U                   | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_0  | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_1_U                   | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_1  | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_2_U                   | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_2  | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_3_U                   | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_3  | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_4_U                   | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_4  | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_5_U                   | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_5  | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_6_U                   | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_6  | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_7_U                   | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_7  | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_8_U                   | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_8  | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_9_U                   | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_9  | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_10_U                  | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_10 | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_11_U                  | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_11 | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_12_U                  | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_12 | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_13_U                  | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_13 | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_14_U                  | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_14 | auto   | 1       | 8, 1720, 1       |
+|     p_ZL19pattern_bytes_SHORT_15_U                  | rom_1p       |            | 1    |      |        | p_ZL19pattern_bytes_SHORT_15 | auto   | 1       | 8, 1720, 1       |
+|     pattern_id_SHORT_U                              | rom_1p       |            | 2    |      |        | pattern_id_SHORT             | auto   | 1       | 12, 1720, 1      |
+|  + matcher_engine_957_214_s                         |              |            | 117  | 0    |        |                              |        |         |                  |
+|    state_U                                          | ram_1p       |            | 15   |      | pragma | state                        | bram   | 1       | 213, 957, 1      |
+|    pattern_len_LONG_U                               | rom_1p       |            | 1    |      |        | pattern_len_LONG             | auto   | 1       | 8, 957, 1        |
+|    pattern_id_LONG_U                                | rom_1p       |            | 1    |      |        | pattern_id_LONG              | auto   | 1       | 12, 957, 1       |
+|   + matcher_engine_957_214_Pipeline_match_mask_loop |              |            | 100  | 0    |        |                              |        |         |                  |
+|     pattern_bytes_LONG_U                            | rom_1p       |            | 100  |      |        | pattern_bytes_LONG           | auto   | 1       | 8, 204798, 1     |
++-----------------------------------------------------+--------------+------------+------+------+--------+------------------------------+--------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------------------------+-------------------------------------------------------+
+| Type            | Options                                            | Location                                              |
++-----------------+----------------------------------------------------+-------------------------------------------------------+
+| inline          |                                                    | ../../src/krnl_proj_split.cpp:20 in write_output_word |
+| inline          | off                                                | ../../src/krnl_proj_split.cpp:34 in input_split       |
+| pipeline        | II = 1                                             | ../../src/krnl_proj_split.cpp:40 in input_split       |
+| inline          | off                                                | ../../src/krnl_proj_split.cpp:67 in matcher_engine    |
+| bind_storage    | variable = state type = ram_1p impl = bram         | ../../src/krnl_proj_split.cpp:69 in matcher_engine    |
+| array_partition | variable = dec complete                            | ../../src/krnl_proj_split.cpp:72 in matcher_engine    |
+| pipeline        | II = 1                                             | ../../src/krnl_proj_split.cpp:76 in matcher_engine    |
+| pipeline        | II = 1                                             | ../../src/krnl_proj_split.cpp:90 in matcher_engine    |
+| unroll          |                                                    | ../../src/krnl_proj_split.cpp:98 in matcher_engine    |
+| inline          | off                                                | ../../src/krnl_proj_split.cpp:138 in merge_matches    |
+| interface       | axis port = input_stream                           | ../../src/krnl_proj_split.cpp:196 in krnl_proj_split  |
+| interface       | axis port = output_stream                          | ../../src/krnl_proj_split.cpp:197 in krnl_proj_split  |
+| interface       | s_axilite port = processed_bytes bundle = control  | ../../src/krnl_proj_split.cpp:198 in krnl_proj_split  |
+| interface       | s_axilite port = processed_cycles bundle = control | ../../src/krnl_proj_split.cpp:199 in krnl_proj_split  |
+| interface       | s_axilite port = return bundle = control           | ../../src/krnl_proj_split.cpp:200 in krnl_proj_split  |
+| dataflow        |                                                    | ../../src/krnl_proj_split.cpp:201 in krnl_proj_split  |
+| stream          | variable = short_bytes depth = 64                  | ../../src/krnl_proj_split.cpp:207 in krnl_proj_split  |
+| stream          | variable = long_bytes depth = 64                   | ../../src/krnl_proj_split.cpp:208 in krnl_proj_split  |
+| stream          | variable = short_matches depth = 64                | ../../src/krnl_proj_split.cpp:209 in krnl_proj_split  |
+| stream          | variable = long_matches depth = 64                 | ../../src/krnl_proj_split.cpp:210 in krnl_proj_split  |
++-----------------+----------------------------------------------------+-------------------------------------------------------+
+
+

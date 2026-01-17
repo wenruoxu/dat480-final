@@ -1,0 +1,202 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_proj_split'
+================================================================
+* Date:           Sat Jan 17 14:13:18 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        krnl_proj_split
+* Solution:       hls (Vitis Kernel Flow Target)
+* Product family: virtexuplusHBM
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  3.100 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+--------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                           |                          |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |          Instance         |          Module          |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +---------------------------+--------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |input_split_U0             |input_split               |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |Block_entry211_proc_U0     |Block_entry211_proc       |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+        |matcher_engine_1720_16_U0  |matcher_engine_1720_16_s  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |matcher_engine_957_214_U0  |matcher_engine_957_214_s  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |merge_matches_U0           |merge_matches             |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +---------------------------+--------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       18|    -|
+|FIFO                 |        0|     -|      592|      554|    -|
+|Instance             |      138|     -|     6354|    42888|    0|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       18|    -|
+|Register             |        -|     -|        5|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |      138|     0|     6951|    43478|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |       10|     0|       ~0|       10|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        3|     0|       ~0|        3|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+--------------------------+---------+----+------+-------+-----+
+    |          Instance         |          Module          | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +---------------------------+--------------------------+---------+----+------+-------+-----+
+    |Block_entry211_proc_U0     |Block_entry211_proc       |        0|   0|   130|     29|    0|
+    |control_s_axi_U            |control_s_axi             |        0|   0|   176|    296|    0|
+    |input_split_U0             |input_split               |        0|   0|   877|   2812|    0|
+    |matcher_engine_1720_16_U0  |matcher_engine_1720_16_s  |       21|   0|   409|  22586|    0|
+    |matcher_engine_957_214_U0  |matcher_engine_957_214_s  |      117|   0|  1054|   3965|    0|
+    |merge_matches_U0           |merge_matches             |        0|   0|  3708|  13200|    0|
+    +---------------------------+--------------------------+---------+----+------+-------+-----+
+    |Total                      |                          |      138|   0|  6354|  42888|    0|
+    +---------------------------+--------------------------+---------+----+------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-----------------+---------+-----+----+-----+------+-----+---------+
+    |       Name      | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +-----------------+---------+-----+----+-----+------+-----+---------+
+    |bytes_channel_U  |        0|  133|   0|    -|     2|   64|      128|
+    |dest_channel_U   |        0|    5|   0|    -|     3|   16|       48|
+    |long_bytes_U     |        0|    9|   0|    -|    64|    9|      576|
+    |long_matches_U   |        0|  218|   0|    -|    64|   33|     2112|
+    |short_bytes_U    |        0|    9|   0|    -|    64|    9|      576|
+    |short_matches_U  |        0|  218|   0|    -|    64|   33|     2112|
+    +-----------------+---------+-----+----+-----+------+-----+---------+
+    |Total            |        0|  592|   0|    0|   261|  164|     5552|
+    +-----------------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |            Variable Name            | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |ap_channel_done_bytes_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_dest_channel         |       and|   0|  0|   2|           1|           1|
+    |ap_idle                              |       and|   0|  0|   2|           1|           1|
+    |ap_sync_continue                     |       and|   0|  0|   2|           1|           1|
+    |ap_sync_done                         |       and|   0|  0|   2|           1|           1|
+    |input_split_U0_ap_continue           |       and|   0|  0|   2|           1|           1|
+    |input_split_U0_start_full_n          |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_bytes_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_dest_channel   |        or|   0|  0|   2|           1|           1|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                |          |   0|  0|  18|           9|           9|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |                   Name                  | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_bytes_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_dest_channel   |   9|          2|    1|          2|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |Total                                    |  18|          4|    2|          4|
+    +-----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------+---+----+-----+-----------+
+    |                   Name                  | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------+---+----+-----+-----------+
+    |ap_rst_n_inv                             |  1|   0|    1|          0|
+    |ap_rst_reg_1                             |  1|   0|    1|          0|
+    |ap_rst_reg_2                             |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_bytes_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_dest_channel   |  1|   0|    1|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+    |Total                                    |  5|   0|    5|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+---------------+------------------------+--------------+
+|       RTL Ports       | Dir | Bits|    Protocol   |      Source Object     |    C Type    |
++-----------------------+-----+-----+---------------+------------------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|          s_axi|                 control|       pointer|
+|s_axi_control_AWREADY  |  out|    1|          s_axi|                 control|       pointer|
+|s_axi_control_AWADDR   |   in|    6|          s_axi|                 control|       pointer|
+|s_axi_control_WVALID   |   in|    1|          s_axi|                 control|       pointer|
+|s_axi_control_WREADY   |  out|    1|          s_axi|                 control|       pointer|
+|s_axi_control_WDATA    |   in|   32|          s_axi|                 control|       pointer|
+|s_axi_control_WSTRB    |   in|    4|          s_axi|                 control|       pointer|
+|s_axi_control_ARVALID  |   in|    1|          s_axi|                 control|       pointer|
+|s_axi_control_ARREADY  |  out|    1|          s_axi|                 control|       pointer|
+|s_axi_control_ARADDR   |   in|    6|          s_axi|                 control|       pointer|
+|s_axi_control_RVALID   |  out|    1|          s_axi|                 control|       pointer|
+|s_axi_control_RREADY   |   in|    1|          s_axi|                 control|       pointer|
+|s_axi_control_RDATA    |  out|   32|          s_axi|                 control|       pointer|
+|s_axi_control_RRESP    |  out|    2|          s_axi|                 control|       pointer|
+|s_axi_control_BVALID   |  out|    1|          s_axi|                 control|       pointer|
+|s_axi_control_BREADY   |   in|    1|          s_axi|                 control|       pointer|
+|s_axi_control_BRESP    |  out|    2|          s_axi|                 control|       pointer|
+|ap_clk                 |   in|    1|  ap_ctrl_chain|         krnl_proj_split|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_chain|         krnl_proj_split|  return value|
+|interrupt              |  out|    1|  ap_ctrl_chain|         krnl_proj_split|  return value|
+|input_stream_TDATA     |   in|  512|           axis|   input_stream_V_data_V|       pointer|
+|input_stream_TKEEP     |   in|   64|           axis|   input_stream_V_keep_V|       pointer|
+|input_stream_TSTRB     |   in|   64|           axis|   input_stream_V_strb_V|       pointer|
+|input_stream_TUSER     |   in|    1|           axis|   input_stream_V_user_V|       pointer|
+|input_stream_TLAST     |   in|    1|           axis|   input_stream_V_last_V|       pointer|
+|input_stream_TID       |   in|    1|           axis|     input_stream_V_id_V|       pointer|
+|input_stream_TDEST     |   in|   16|           axis|   input_stream_V_dest_V|       pointer|
+|input_stream_TVALID    |   in|    1|           axis|   input_stream_V_dest_V|       pointer|
+|input_stream_TREADY    |  out|    1|           axis|   input_stream_V_dest_V|       pointer|
+|output_stream_TDATA    |  out|  512|           axis|  output_stream_V_data_V|       pointer|
+|output_stream_TKEEP    |  out|   64|           axis|  output_stream_V_keep_V|       pointer|
+|output_stream_TSTRB    |  out|   64|           axis|  output_stream_V_strb_V|       pointer|
+|output_stream_TUSER    |  out|    1|           axis|  output_stream_V_user_V|       pointer|
+|output_stream_TLAST    |  out|    1|           axis|  output_stream_V_last_V|       pointer|
+|output_stream_TID      |  out|    1|           axis|    output_stream_V_id_V|       pointer|
+|output_stream_TDEST    |  out|   16|           axis|  output_stream_V_dest_V|       pointer|
+|output_stream_TVALID   |  out|    1|           axis|  output_stream_V_dest_V|       pointer|
+|output_stream_TREADY   |   in|    1|           axis|  output_stream_V_dest_V|       pointer|
++-----------------------+-----+-----+---------------+------------------------+--------------+
+

@@ -1,0 +1,20 @@
+{
+    "kernelContainerValues": [
+        "networklayer:xo",
+        "cmac_0:xo",
+        "krnl_proj_split:xo"
+    ],
+    "compile": "false",
+    "debug": "false",
+    "exportScript": "false",
+    "gccHostCompile": "false",
+    "generateEstimateRpt": "false",
+    "keepSolution": "false",
+    "link": "false",
+    "logDir": "\/home\/m2_2\/shared\/dat480-final\/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1\/logs\/link",
+    "package": "false",
+    "reportDir": "\/home\/m2_2\/shared\/dat480-final\/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1\/reports\/link",
+    "saveTemps": "false",
+    "verbose": "false",
+    "vplNoIpCache": "false"
+}

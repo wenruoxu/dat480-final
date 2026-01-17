@@ -1,0 +1,374 @@
+<ENTRY>
+{
+ "thisFile": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/krnl_proj_split.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Jan 17 14:09:57 2026",
+ "timestampMillis": "1768676997109",
+ "buildStep": {
+  "cmdId": "bf30b6fe-da7b-4f60-9437-e14b905c4eb7",
+  "name": "v++",
+  "logFile": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/logs/krnl_proj_split.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/v++  --compile --mode hls --work_dir _x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split --config krnl_proj_split.cfg src/krnl_proj_split.cpp ",
+  "args": [
+   "--compile",
+   "--mode",
+   "hls",
+   "--work_dir",
+   "_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split",
+   "--config",
+   "krnl_proj_split.cfg",
+   "src/krnl_proj_split.cpp"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/krnl_proj_split.cfg",
+    "content": "freqhz=300000000\npart=xcu55c-fsvh2892-2L-e\n\n[hls]\nflow_target=vitis\npackage.output.format=xo\nsyn.top=krnl_proj_split\nsyn.file=src/krnl_proj_split.cpp\nsyn.file=src/krnl_proj_split.h\ntb.file=tb/tb_proj_split.cpp\ntb.cflags=-lm\ncosim.O=true\ncosim.trace_level=port\ncosim.wave_debug=false\n"
+   }
+  ],
+  "cwd": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jan 17 14:09:57 2026",
+ "timestampMillis": "1768676997109",
+ "status": {
+  "cmdId": "bf30b6fe-da7b-4f60-9437-e14b905c4eb7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Jan 17 14:09:58 2026",
+ "timestampMillis": "1768676998773",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "krnl_proj_split",
+     "file": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/krnl_proj_split.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp",
+     "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2023.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jan 17 14:09:58 2026",
+ "timestampMillis": "1768676998774",
+ "buildStep": {
+  "cmdId": "8e03b93f-b1c8-4a70-a51f-a056703683c5",
+  "name": "csynth_design",
+  "logFile": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls/hls.log",
+  "commandLine": "csynth_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jan 17 14:09:58 2026",
+ "timestampMillis": "1768676998774",
+ "status": {
+  "cmdId": "8e03b93f-b1c8-4a70-a51f-a056703683c5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:09:58 2026",
+ "timestampMillis": "1768676998774",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:09:58 2026",
+ "timestampMillis": "1768676998774",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:09:58 2026",
+ "timestampMillis": "1768676998774",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:13:18 2026",
+ "timestampMillis": "1768677198774",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:13:18 2026",
+ "timestampMillis": "1768677198774",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:13:18 2026",
+ "timestampMillis": "1768677198774",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jan 17 14:13:18 2026",
+ "timestampMillis": "1768677198774",
+ "status": {
+  "cmdId": "8e03b93f-b1c8-4a70-a51f-a056703683c5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jan 17 14:13:18 2026",
+ "timestampMillis": "1768677198777",
+ "buildStep": {
+  "cmdId": "ec607ab6-18d1-4dc7-ba48-9cd72f546d63",
+  "name": "export_design",
+  "logFile": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls/hls.log",
+  "commandLine": "export_design -flow none -format xo",
+  "args": [
+   "-flow",
+   "none",
+   "-format",
+   "xo"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jan 17 14:13:18 2026",
+ "timestampMillis": "1768677198777",
+ "status": {
+  "cmdId": "ec607ab6-18d1-4dc7-ba48-9cd72f546d63",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:13:18 2026",
+ "timestampMillis": "1768677198777",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:13:18 2026",
+ "timestampMillis": "1768677198778",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:13:18 2026",
+ "timestampMillis": "1768677198778",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:13:36 2026",
+ "timestampMillis": "1768677216455",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:13:36 2026",
+ "timestampMillis": "1768677216456",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:13:36 2026",
+ "timestampMillis": "1768677216456",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jan 17 14:13:36 2026",
+ "timestampMillis": "1768677216456",
+ "status": {
+  "cmdId": "ec607ab6-18d1-4dc7-ba48-9cd72f546d63",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jan 17 14:13:37 2026",
+ "timestampMillis": "1768677217023",
+ "status": {
+  "cmdId": "bf30b6fe-da7b-4f60-9437-e14b905c4eb7",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:13:37 2026",
+ "timestampMillis": "1768677217050",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/reports/v++_compile_krnl_proj_split_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan 17 14:13:37 2026",
+ "timestampMillis": "1768677217051",
+ "report": {
+  "path": "/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/_x.xilinx_u55c_gen3x16_xdma_3_202210_1/krnl_proj_split/krnl_proj_split/reports/.db/v++_compile_krnl_proj_split_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

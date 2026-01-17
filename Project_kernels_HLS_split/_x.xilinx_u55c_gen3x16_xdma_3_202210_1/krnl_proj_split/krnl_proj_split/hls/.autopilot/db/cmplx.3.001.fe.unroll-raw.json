@@ -1,0 +1,82 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1 4 2 3",
+    "file": "krnl_proj_split.cpp",
+    "fileloc": 192,
+    "instructions": 59,
+    "loads": {
+      "L": 3
+    },
+    "name": "krnl_proj_split",
+    "stores": {
+      "L": 5,
+      "T": 2
+    },
+    "total_instructions": 1570
+  },
+  "1": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "krnl_proj_split.cpp",
+    "fileloc": 29,
+    "instructions": 103,
+    "loads": {
+      "L": 5
+    },
+    "name": "input_split",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 103
+  },
+  "2": {
+    "basicblocks": 32,
+    "calls": "",
+    "file": "krnl_proj_split.cpp",
+    "fileloc": 62,
+    "instructions": 619,
+    "loads": {
+      "G": 4,
+      "L": 1
+    },
+    "name": "matcher_engine<957, 214>",
+    "stores": {
+      "G": 3,
+      "L": 257
+    },
+    "total_instructions": 619
+  },
+  "3": {
+    "basicblocks": 30,
+    "calls": "",
+    "file": "krnl_proj_split.cpp",
+    "fileloc": 134,
+    "instructions": 168,
+    "loads": {
+      "L": 3
+    },
+    "name": "merge_matches",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 168
+  },
+  "4": {
+    "basicblocks": 32,
+    "calls": "",
+    "file": "krnl_proj_split.cpp",
+    "fileloc": 62,
+    "instructions": 621,
+    "loads": {
+      "G": 4,
+      "L": 1
+    },
+    "name": "matcher_engine<1720, 16>",
+    "stores": {
+      "G": 3,
+      "L": 257
+    },
+    "total_instructions": 621
+  }
+}

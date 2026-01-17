@@ -1,0 +1,96 @@
+{
+    "schema_version": {
+        "major": "1",
+        "minor": "0",
+        "patch": "0"
+    },
+    "design_state": "Synthesized",
+    "user_budget": {
+        "actual_resources": {
+            "LUT": "38799",
+            "LUTAsMem": "4029",
+            "REG": "88965",
+            "BRAM": "110",
+            "URAM": "0",
+            "DSP": "0"
+        },
+        "supply_resources": {
+            "LUT": "1169252",
+            "LUTAsMem": "591590",
+            "REG": "2442783",
+            "BRAM": "1816",
+            "URAM": "960",
+            "DSP": "9020"
+        }
+    },
+    "kernels": [
+        {
+            "name": "cmac_0",
+            "compute_unit_count": "1",
+            "compute_units": [
+                {
+                    "cu_name": "cmac_0",
+                    "actual_resources": {
+                        "LUT": "10353",
+                        "LUTAsMem": "663",
+                        "REG": "32831",
+                        "BRAM": "17",
+                        "URAM": "0",
+                        "DSP": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "icmp_server",
+            "compute_unit_count": "1",
+            "compute_units": [
+                {
+                    "cu_name": "icmp_server",
+                    "actual_resources": {
+                        "LUT": "1145",
+                        "LUTAsMem": "0",
+                        "REG": "3590",
+                        "BRAM": "0",
+                        "URAM": "0",
+                        "DSP": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "krnl_proj_split",
+            "compute_unit_count": "1",
+            "compute_units": [
+                {
+                    "cu_name": "krnl_proj_split_0",
+                    "actual_resources": {
+                        "LUT": "5961",
+                        "LUTAsMem": "84",
+                        "REG": "6201",
+                        "BRAM": "73",
+                        "URAM": "0",
+                        "DSP": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "networklayer",
+            "compute_unit_count": "1",
+            "compute_units": [
+                {
+                    "cu_name": "networklayer_0",
+                    "actual_resources": {
+                        "LUT": "21340",
+                        "LUTAsMem": "3282",
+                        "REG": "46343",
+                        "BRAM": "20",
+                        "URAM": "0",
+                        "DSP": "0"
+                    }
+                }
+            ]
+        }
+    ]
+}

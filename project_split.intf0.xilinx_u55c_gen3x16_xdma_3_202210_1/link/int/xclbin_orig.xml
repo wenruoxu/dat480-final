@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="vnx_project_split_if0">
+  <platform vendor="xilinx" boardid="u55c" name="gen3x16_xdma_3" featureRomTime="0">
+    <version major="202210" minor="1"/>
+    <description/>
+    <board name="xilinx.com:au55c:1.0" vendor="xilinx.com" fpga="xcu55c-fsvh2892-2L-e">
+      <interfaces>
+        <interface id="int1" name="PCIe" type="gen3x16"/>
+      </interfaces>
+      <memories>
+        <memory name="mem0" type="hbm" size="16GB"/>
+      </memories>
+      <images>
+        <image name="au55c_image.png" type="HDPI"/>
+        <image name="" type="MDPI"/>
+        <image name="" type="LDPI"/>
+      </images>
+      <id>
+        <vendor/>
+        <device/>
+        <subsystem/>
+      </id>
+    </board>
+    <build_flow/>
+    <host architecture="x86_64"/>
+    <device name="fpga0" fpgaDevice="virtexuplusHBM:xcu55c:fsvh2892:-2L:e" addrWidth="0">
+      <systemClocks>
+        <clock port="hbm_aclk" frequency="450.0MHz" name="hbm_aclk"/>
+      </systemClocks>
+      <core name="OCL_REGION_0" target="bitstream" type="clc_region" clockFreq="0MHz" numComputeUnits="60">
+        <kernelClocks>
+          <clock port="KERNEL_CLK" frequency="500.0MHz" name="ulp_ucs/aclk_kernel_01"/>
+          <clock port="DATA_CLK" frequency="300.0MHz" name="ulp_ucs/aclk_kernel_00"/>
+        </kernelClocks>
+        <kernel name="krnl_proj_split" language="c" vlnv="xilinx.com:hls:krnl_proj_split:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true" hwControlProtocol="ap_ctrl_chain" countedAutoRestart="0" deadlockDetection="local" mailbox="none" swReset="false">
+          <module name="krnl_proj_split">
+            <module name="input_split" instName="input_split_U0" type="DataflowHS">
+              <module name="input_split_Pipeline_VITIS_LOOP_39_2" instName="grp_input_split_Pipeline_VITIS_LOOP_39_2_fu_108" type="NonDataflowHS">
+                <rtlPort name="add_i_i5" object="add_i_i5" protocol="ap_none"/>
+                <rtlPort name="empty" object="empty" protocol="ap_none"/>
+                <rtlPort name="in_word_keep" object="in_word_keep" protocol="ap_none"/>
+                <rtlPort name="in_word_data" object="in_word_data" protocol="ap_none"/>
+              </module>
+            </module>
+            <module name="Block_entry211_proc" instName="Block_entry211_proc_U0" type="DataflowHS">
+              <rtlPort name="p_read" object="p_read" protocol="ap_none"/>
+            </module>
+            <module name="matcher_engine_1720_16_s" instName="matcher_engine_1720_16_U0" type="DataflowHS">
+              <module name="matcher_engine_1720_16_Pipeline_init_state" instName="grp_matcher_engine_1720_16_Pipeline_init_state_fu_198754" type="NonDataflowHS">
+                <rtlPort name="state_1_d0" object="state_1" protocol="ap_memory"/>
+              </module>
+              <module name="matcher_engine_1720_16_Pipeline_pattern_loop" instName="grp_matcher_engine_1720_16_Pipeline_pattern_loop_fu_198760" type="NonDataflowHS">
+                <rtlPort name="dec" object="dec" protocol="ap_none"/>
+                <rtlPort name="dec_256" object="dec_256" protocol="ap_none"/>
+                <rtlPort name="dec_257" object="dec_257" protocol="ap_none"/>
+                <rtlPort name="dec_258" object="dec_258" protocol="ap_none"/>
+                <rtlPort name="dec_259" object="dec_259" protocol="ap_none"/>
+                <rtlPort name="dec_260" object="dec_260" protocol="ap_none"/>
+                <rtlPort name="dec_261" object="dec_261" protocol="ap_none"/>
+                <rtlPort name="dec_262" object="dec_262" protocol="ap_none"/>
+                <rtlPort name="dec_263" object="dec_263" protocol="ap_none"/>
+                <rtlPort name="dec_264" object="dec_264" protocol="ap_none"/>
+                <rtlPort name="dec_265" object="dec_265" protocol="ap_none"/>
+                <rtlPort name="dec_266" object="dec_266" protocol="ap_none"/>
+                <rtlPort name="dec_267" object="dec_267" protocol="ap_none"/>
+                <rtlPort name="dec_268" object="dec_268" protocol="ap_none"/>
+                <rtlPort name="dec_269" object="dec_269" protocol="ap_none"/>
+                <rtlPort name="dec_270" object="dec_270" protocol="ap_none"/>
+                <rtlPort name="dec_271" object="dec_271" protocol="ap_none"/>
+                <rtlPort name="dec_272" object="dec_272" protocol="ap_none"/>
+                <rtlPort name="dec_273" object="dec_273" protocol="ap_none"/>
+                <rtlPort name="dec_274" object="dec_274" protocol="ap_none"/>
+                <rtlPort name="dec_275" object="dec_275" protocol="ap_none"/>
+                <rtlPort name="dec_276" object="dec_276" protocol="ap_none"/>
+                <rtlPort name="dec_277" object="dec_277" protocol="ap_none"/>
+                <rtlPort name="dec_278" object="dec_278" protocol="ap_none"/>
+                <rtlPort name="dec_279" object="dec_279" protocol="ap_none"/>
+                <rtlPort name="dec_280" object="dec_280" protocol="ap_none"/>
+                <rtlPort name="dec_281" object="dec_281" protocol="ap_none"/>
+                <rtlPort name="dec_282" object="dec_282" protocol="ap_none"/>
+                <rtlPort name="dec_283" object="dec_283" protocol="ap_none"/>
+                <rtlPort name="dec_284" object="dec_284" protocol="ap_none"/>
+                <rtlPort name="dec_285" object="dec_285" protocol="ap_none"/>
+                <rtlPort name="dec_286" object="dec_286" protocol="ap_none"/>
+                <rtlPort name="dec_287" object="dec_287" protocol="ap_none"/>
+                <rtlPort name="dec_288" object="dec_288" protocol="ap_none"/>
+                <rtlPort name="dec_289" object="dec_289" protocol="ap_none"/>
+                <rtlPort name="dec_290" object="dec_290" protocol="ap_none"/>
+                <rtlPort name="dec_291" object="dec_291" protocol="ap_none"/>
+                <rtlPort name="dec_292" object="dec_292" protocol="ap_none"/>
+                <rtlPort name="dec_293" object="dec_293" protocol="ap_none"/>
+                <rtlPort name="dec_294" object="dec_294" protocol="ap_none"/>
+                <rtlPort name="dec_295" object="dec_295" protocol="ap_none"/>
+                <rtlPort name="dec_296" object="dec_296" protocol="ap_none"/>
+                <rtlPort name="dec_297" object="dec_297" protocol="ap_none"/>
+                <rtlPort name="dec_298" object="dec_298" protocol="ap_none"/>
+                <rtlPort name="dec_299" object="dec_299" protocol="ap_none"/>
+                <rtlPort name="dec_300" object="dec_300" protocol="ap_none"/>
+                <rtlPort name="dec_301" object="dec_301" protocol="ap_none"/>
+                <rtlPort name="dec_302" object="dec_302" protocol="ap_none"/>
+                <rtlPort name="dec_303" object="dec_303" protocol="ap_none"/>
+                <rtlPort name="dec_304" object="dec_304" protocol="ap_none"/>
+                <rtlPort name="dec_305" object="dec_305" protocol="ap_none"/>
+                <rtlPort name="dec_306" object="dec_306" protocol="ap_none"/>
+                <rtlPort name="dec_307" object="dec_307" protocol="ap_none"/>
+                <rtlPort name="dec_308" object="dec_308" protocol="ap_none"/>
+                <rtlPort name="dec_309" object="dec_309" protocol="ap_none"/>
+                <rtlPort name="dec_310" object="dec_310" protocol="ap_none"/>
+                <rtlPort name="dec_311" object="dec_311" protocol="ap_none"/>
+                <rtlPort name="dec_312" object="dec_312" protocol="ap_none"/>
+                <rtlPort name="dec_313" object="dec_313" protocol="ap_none"/>
+                <rtlPort name="dec_314" object="dec_314" protocol="ap_none"/>
+                <rtlPort name="dec_315" object="dec_315" protocol="ap_none"/>
+                <rtlPort name="dec_316" object="dec_316" protocol="ap_none"/>
+                <rtlPort name="dec_317" object="dec_317" protocol="ap_none"/>
+                <rtlPort name="dec_318" object="dec_318" protocol="ap_none"/>
+                <rtlPort name="dec_319" object="dec_319" protocol="ap_none"/>
+                <rtlPort name="dec_320" object="dec_320" protocol="ap_none"/>
+                <rtlPort name="dec_321" object="dec_321" protocol="ap_none"/>
+                <rtlPort name="dec_322" object="dec_322" protocol="ap_none"/>
+                <rtlPort name="dec_323" object="dec_323" protocol="ap_none"/>
+                <rtlPort name="dec_324" object="dec_324" protocol="ap_none"/>
+                <rtlPort name="dec_325" object="dec_325" protocol="ap_none"/>
+                <rtlPort name="dec_326" object="dec_326" protocol="ap_none"/>
+                <rtlPort name="dec_327" object="dec_327" protocol="ap_none"/>
+                <rtlPort name="dec_328" object="dec_328" protocol="ap_none"/>
+                <rtlPort name="dec_329" object="dec_329" protocol="ap_none"/>
+                <rtlPort name="dec_330" object="dec_330" protocol="ap_none"/>
+                <rtlPort name="dec_331" object="dec_331" protocol="ap_none"/>
+                <rtlPort name="dec_332" object="dec_332" protocol="ap_none"/>
+                <rtlPort name="dec_333" object="dec_333" protocol="ap_none"/>
+                <rtlPort name="dec_334" object="dec_334" protocol="ap_none"/>
+                <rtlPort name="dec_335" object="dec_335" protocol="ap_none"/>
+                <rtlPort name="dec_336" object="dec_336" protocol="ap_none"/>
+                <rtlPort name="dec_337" object="dec_337" protocol="ap_none"/>
+                <rtlPort name="dec_338" object="dec_338" protocol="ap_none"/>
+                <rtlPort name="dec_339" object="dec_339" protocol="ap_none"/>
+                <rtlPort name="dec_340" object="dec_340" protocol="ap_none"/>
+                <rtlPort name="dec_341" object="dec_341" protocol="ap_none"/>
+                <rtlPort name="dec_342" object="dec_342" protocol="ap_none"/>
+                <rtlPort name="dec_343" object="dec_343" protocol="ap_none"/>
+                <rtlPort name="dec_344" object="dec_344" protocol="ap_none"/>
+                <rtlPort name="dec_345" object="dec_345" protocol="ap_none"/>
+                <rtlPort name="dec_346" object="dec_346" protocol="ap_none"/>
+                <rtlPort name="dec_347" object="dec_347" protocol="ap_none"/>
+                <rtlPort name="dec_348" object="dec_348" protocol="ap_none"/>
+                <rtlPort name="dec_349" object="dec_349" protocol="ap_none"/>
+                <rtlPort name="dec_350" object="dec_350" protocol="ap_none"/>
+                <rtlPort name="dec_351" object="dec_351" protocol="ap_none"/>
+                <rtlPort name="dec_352" object="dec_352" protocol="ap_none"/>
+                <rtlPort name="dec_353" object="dec_353" protocol="ap_none"/>
+                <rtlPort name="dec_354" object="dec_354" protocol="ap_none"/>
+                <rtlPort name="dec_355" object="dec_355" protocol="ap_none"/>
+                <rtlPort name="dec_356" object="dec_356" protocol="ap_none"/>
+                <rtlPort name="dec_357" object="dec_357" protocol="ap_none"/>
+                <rtlPort name="dec_358" object="dec_358" protocol="ap_none"/>
+                <rtlPort name="dec_359" object="dec_359" protocol="ap_none"/>
+                <rtlPort name="dec_360" object="dec_360" protocol="ap_none"/>
+                <rtlPort name="dec_361" object="dec_361" protocol="ap_none"/>
+                <rtlPort name="dec_362" object="dec_362" protocol="ap_none"/>
+                <rtlPort name="dec_363" object="dec_363" protocol="ap_none"/>
+                <rtlPort name="dec_364" object="dec_364" protocol="ap_none"/>
+                <rtlPort name="dec_365" object="dec_365" protocol="ap_none"/>
+                <rtlPort name="dec_366" object="dec_366" protocol="ap_none"/>
+                <rtlPort name="dec_367" object="dec_367" protocol="ap_none"/>
+                <rtlPort name="dec_368" object="dec_368" protocol="ap_none"/>
+                <rtlPort name="dec_369" object="dec_369" protocol="ap_none"/>
+                <rtlPort name="dec_370" object="dec_370" protocol="ap_none"/>
+                <rtlPort name="dec_371" object="dec_371" protocol="ap_none"/>
+                <rtlPort name="dec_372" object="dec_372" protocol="ap_none"/>
+                <rtlPort name="dec_373" object="dec_373" protocol="ap_none"/>
+                <rtlPort name="dec_374" object="dec_374" protocol="ap_none"/>
+                <rtlPort name="dec_375" object="dec_375" protocol="ap_none"/>
+                <rtlPort name="dec_376" object="dec_376" protocol="ap_none"/>
+                <rtlPort name="dec_377" object="dec_377" protocol="ap_none"/>
+                <rtlPort name="dec_378" object="dec_378" protocol="ap_none"/>
+                <rtlPort name="dec_379" object="dec_379" protocol="ap_none"/>
+                <rtlPort name="dec_380" object="dec_380" protocol="ap_none"/>
+                <rtlPort name="dec_381" object="dec_381" protocol="ap_none"/>
+                <rtlPort name="dec_382" object="dec_382" protocol="ap_none"/>
+                <rtlPort name="dec_383" object="dec_383" protocol="ap_none"/>
+                <rtlPort name="dec_384" object="dec_384" protocol="ap_none"/>
+                <rtlPort name="dec_385" object="dec_385" protocol="ap_none"/>
+                <rtlPort name="dec_386" object="dec_386" protocol="ap_none"/>
+                <rtlPort name="dec_387" object="dec_387" protocol="ap_none"/>
+                <rtlPort name="dec_388" object="dec_388" protocol="ap_none"/>
+                <rtlPort name="dec_389" object="dec_389" protocol="ap_none"/>
+                <rtlPort name="dec_390" object="dec_390" protocol="ap_none"/>
+                <rtlPort name="dec_391" object="dec_391" protocol="ap_none"/>
+                <rtlPort name="dec_392" object="dec_392" protocol="ap_none"/>
+                <rtlPort name="dec_393" object="dec_393" protocol="ap_none"/>
+                <rtlPort name="dec_394" object="dec_394" protocol="ap_none"/>
+                <rtlPort name="dec_395" object="dec_395" protocol="ap_none"/>
+                <rtlPort name="dec_396" object="dec_396" protocol="ap_none"/>
+                <rtlPort name="dec_397" object="dec_397" protocol="ap_none"/>
+                <rtlPort name="dec_398" object="dec_398" protocol="ap_none"/>
+                <rtlPort name="dec_399" object="dec_399" protocol="ap_none"/>
+                <rtlPort name="dec_400" object="dec_400" protocol="ap_none"/>
+                <rtlPort name="dec_401" object="dec_401" protocol="ap_none"/>
+                <rtlPort name="dec_402" object="dec_402" protocol="ap_none"/>
+                <rtlPort name="dec_403" object="dec_403" protocol="ap_none"/>
+                <rtlPort name="dec_404" object="dec_404" protocol="ap_none"/>
+                <rtlPort name="dec_405" object="dec_405" protocol="ap_none"/>
+                <rtlPort name="dec_406" object="dec_406" protocol="ap_none"/>
+                <rtlPort name="dec_407" object="dec_407" protocol="ap_none"/>
+                <rtlPort name="dec_408" object="dec_408" protocol="ap_none"/>
+                <rtlPort name="dec_409" object="dec_409" protocol="ap_none"/>
+                <rtlPort name="dec_410" object="dec_410" protocol="ap_none"/>
+                <rtlPort name="dec_411" object="dec_411" protocol="ap_none"/>
+                <rtlPort name="dec_412" object="dec_412" protocol="ap_none"/>
+                <rtlPort name="dec_413" object="dec_413" protocol="ap_none"/>
+                <rtlPort name="dec_414" object="dec_414" protocol="ap_none"/>
+                <rtlPort name="dec_415" object="dec_415" protocol="ap_none"/>
+                <rtlPort name="dec_416" object="dec_416" protocol="ap_none"/>
+                <rtlPort name="dec_417" object="dec_417" protocol="ap_none"/>
+                <rtlPort name="dec_418" object="dec_418" protocol="ap_none"/>
+                <rtlPort name="dec_419" object="dec_419" protocol="ap_none"/>
+                <rtlPort name="dec_420" object="dec_420" protocol="ap_none"/>
+                <rtlPort name="dec_421" object="dec_421" protocol="ap_none"/>
+                <rtlPort name="dec_422" object="dec_422" protocol="ap_none"/>
+                <rtlPort name="dec_423" object="dec_423" protocol="ap_none"/>
+                <rtlPort name="dec_424" object="dec_424" protocol="ap_none"/>
+                <rtlPort name="dec_425" object="dec_425" protocol="ap_none"/>
+                <rtlPort name="dec_426" object="dec_426" protocol="ap_none"/>
+                <rtlPort name="dec_427" object="dec_427" protocol="ap_none"/>
+                <rtlPort name="dec_428" object="dec_428" protocol="ap_none"/>
+                <rtlPort name="dec_429" object="dec_429" protocol="ap_none"/>
+                <rtlPort name="dec_430" object="dec_430" protocol="ap_none"/>
+                <rtlPort name="dec_431" object="dec_431" protocol="ap_none"/>
+                <rtlPort name="dec_432" object="dec_432" protocol="ap_none"/>
+                <rtlPort name="dec_433" object="dec_433" protocol="ap_none"/>
+                <rtlPort name="dec_434" object="dec_434" protocol="ap_none"/>
+                <rtlPort name="dec_435" object="dec_435" protocol="ap_none"/>
+                <rtlPort name="dec_436" object="dec_436" protocol="ap_none"/>
+                <rtlPort name="dec_437" object="dec_437" protocol="ap_none"/>
+                <rtlPort name="dec_438" object="dec_438" protocol="ap_none"/>
+                <rtlPort name="dec_439" object="dec_439" protocol="ap_none"/>
+                <rtlPort name="dec_440" object="dec_440" protocol="ap_none"/>
+                <rtlPort name="dec_441" object="dec_441" protocol="ap_none"/>
+                <rtlPort name="dec_442" object="dec_442" protocol="ap_none"/>
+                <rtlPort name="dec_443" object="dec_443" protocol="ap_none"/>
+                <rtlPort name="dec_444" object="dec_444" protocol="ap_none"/>
+                <rtlPort name="dec_445" object="dec_445" protocol="ap_none"/>
+                <rtlPort name="dec_446" object="dec_446" protocol="ap_none"/>
+                <rtlPort name="dec_447" object="dec_447" protocol="ap_none"/>
+                <rtlPort name="dec_448" object="dec_448" protocol="ap_none"/>
+                <rtlPort name="dec_449" object="dec_449" protocol="ap_none"/>
+                <rtlPort name="dec_450" object="dec_450" protocol="ap_none"/>
+                <rtlPort name="dec_451" object="dec_451" protocol="ap_none"/>
+                <rtlPort name="dec_452" object="dec_452" protocol="ap_none"/>
+                <rtlPort name="dec_453" object="dec_453" protocol="ap_none"/>
+                <rtlPort name="dec_454" object="dec_454" protocol="ap_none"/>
+                <rtlPort name="dec_455" object="dec_455" protocol="ap_none"/>
+                <rtlPort name="dec_456" object="dec_456" protocol="ap_none"/>
+                <rtlPort name="dec_457" object="dec_457" protocol="ap_none"/>
+                <rtlPort name="dec_458" object="dec_458" protocol="ap_none"/>
+                <rtlPort name="dec_459" object="dec_459" protocol="ap_none"/>
+                <rtlPort name="dec_460" object="dec_460" protocol="ap_none"/>
+                <rtlPort name="dec_461" object="dec_461" protocol="ap_none"/>
+                <rtlPort name="dec_462" object="dec_462" protocol="ap_none"/>
+                <rtlPort name="dec_463" object="dec_463" protocol="ap_none"/>
+                <rtlPort name="dec_464" object="dec_464" protocol="ap_none"/>
+                <rtlPort name="dec_465" object="dec_465" protocol="ap_none"/>
+                <rtlPort name="dec_466" object="dec_466" protocol="ap_none"/>
+                <rtlPort name="dec_467" object="dec_467" protocol="ap_none"/>
+                <rtlPort name="dec_468" object="dec_468" protocol="ap_none"/>
+                <rtlPort name="dec_469" object="dec_469" protocol="ap_none"/>
+                <rtlPort name="dec_470" object="dec_470" protocol="ap_none"/>
+                <rtlPort name="dec_471" object="dec_471" protocol="ap_none"/>
+                <rtlPort name="dec_472" object="dec_472" protocol="ap_none"/>
+                <rtlPort name="dec_473" object="dec_473" protocol="ap_none"/>
+                <rtlPort name="dec_474" object="dec_474" protocol="ap_none"/>
+                <rtlPort name="dec_475" object="dec_475" protocol="ap_none"/>
+                <rtlPort name="dec_476" object="dec_476" protocol="ap_none"/>
+                <rtlPort name="dec_477" object="dec_477" protocol="ap_none"/>
+                <rtlPort name="dec_478" object="dec_478" protocol="ap_none"/>
+                <rtlPort name="dec_479" object="dec_479" protocol="ap_none"/>
+                <rtlPort name="dec_480" object="dec_480" protocol="ap_none"/>
+                <rtlPort name="dec_481" object="dec_481" protocol="ap_none"/>
+                <rtlPort name="dec_482" object="dec_482" protocol="ap_none"/>
+                <rtlPort name="dec_483" object="dec_483" protocol="ap_none"/>
+                <rtlPort name="dec_484" object="dec_484" protocol="ap_none"/>
+                <rtlPort name="dec_485" object="dec_485" protocol="ap_none"/>
+                <rtlPort name="dec_486" object="dec_486" protocol="ap_none"/>
+                <rtlPort name="dec_487" object="dec_487" protocol="ap_none"/>
+                <rtlPort name="dec_488" object="dec_488" protocol="ap_none"/>
+                <rtlPort name="dec_489" object="dec_489" protocol="ap_none"/>
+                <rtlPort name="dec_490" object="dec_490" protocol="ap_none"/>
+                <rtlPort name="dec_491" object="dec_491" protocol="ap_none"/>
+                <rtlPort name="dec_492" object="dec_492" protocol="ap_none"/>
+                <rtlPort name="dec_493" object="dec_493" protocol="ap_none"/>
+                <rtlPort name="dec_494" object="dec_494" protocol="ap_none"/>
+                <rtlPort name="dec_495" object="dec_495" protocol="ap_none"/>
+                <rtlPort name="dec_496" object="dec_496" protocol="ap_none"/>
+                <rtlPort name="dec_497" object="dec_497" protocol="ap_none"/>
+                <rtlPort name="dec_498" object="dec_498" protocol="ap_none"/>
+                <rtlPort name="dec_499" object="dec_499" protocol="ap_none"/>
+                <rtlPort name="dec_500" object="dec_500" protocol="ap_none"/>
+                <rtlPort name="dec_501" object="dec_501" protocol="ap_none"/>
+                <rtlPort name="dec_502" object="dec_502" protocol="ap_none"/>
+                <rtlPort name="dec_503" object="dec_503" protocol="ap_none"/>
+                <rtlPort name="dec_504" object="dec_504" protocol="ap_none"/>
+                <rtlPort name="dec_505" object="dec_505" protocol="ap_none"/>
+                <rtlPort name="dec_506" object="dec_506" protocol="ap_none"/>
+                <rtlPort name="dec_507" object="dec_507" protocol="ap_none"/>
+                <rtlPort name="dec_508" object="dec_508" protocol="ap_none"/>
+                <rtlPort name="dec_509" object="dec_509" protocol="ap_none"/>
+                <rtlPort name="dec_510" object="dec_510" protocol="ap_none"/>
+                <rtlPort name="state_1_d0" object="state_1" protocol="ap_memory"/>
+                <rtlPort name="state_1_q0" object="state_1" protocol="ap_memory"/>
+              </module>
+              <module name="matcher_engine_1720_16_Pipeline_reset_state" instName="grp_matcher_engine_1720_16_Pipeline_reset_state_fu_199316" type="NonDataflowHS">
+                <rtlPort name="state_1_d0" object="state_1" protocol="ap_memory"/>
+              </module>
+            </module>
+            <module name="matcher_engine_957_214_s" instName="matcher_engine_957_214_U0" type="DataflowHS">
+              <module name="matcher_engine_957_214_Pipeline_init_state" instName="grp_matcher_engine_957_214_Pipeline_init_state_fu_198820" type="NonDataflowHS">
+                <rtlPort name="state_d0" object="state" protocol="ap_memory"/>
+              </module>
+              <module name="matcher_engine_957_214_Pipeline_reset_state" instName="grp_matcher_engine_957_214_Pipeline_reset_state_fu_198826" type="NonDataflowHS">
+                <rtlPort name="state_d0" object="state" protocol="ap_memory"/>
+              </module>
+              <module name="matcher_engine_957_214_Pipeline_match_mask_loop" instName="grp_matcher_engine_957_214_Pipeline_match_mask_loop_fu_198832" type="NonDataflowHS">
+                <rtlPort name="phi_mul" object="phi_mul" protocol="ap_none"/>
+                <rtlPort name="len" object="len" protocol="ap_none"/>
+                <rtlPort name="dec" object="dec" protocol="ap_none"/>
+                <rtlPort name="dec_1" object="dec_1" protocol="ap_none"/>
+                <rtlPort name="dec_2" object="dec_2" protocol="ap_none"/>
+                <rtlPort name="dec_3" object="dec_3" protocol="ap_none"/>
+                <rtlPort name="dec_4" object="dec_4" protocol="ap_none"/>
+                <rtlPort name="dec_5" object="dec_5" protocol="ap_none"/>
+                <rtlPort name="dec_6" object="dec_6" protocol="ap_none"/>
+                <rtlPort name="dec_7" object="dec_7" protocol="ap_none"/>
+                <rtlPort name="dec_8" object="dec_8" protocol="ap_none"/>
+                <rtlPort name="dec_9" object="dec_9" protocol="ap_none"/>
+                <rtlPort name="dec_10" object="dec_10" protocol="ap_none"/>
+                <rtlPort name="dec_11" object="dec_11" protocol="ap_none"/>
+                <rtlPort name="dec_12" object="dec_12" protocol="ap_none"/>
+                <rtlPort name="dec_13" object="dec_13" protocol="ap_none"/>
+                <rtlPort name="dec_14" object="dec_14" protocol="ap_none"/>
+                <rtlPort name="dec_15" object="dec_15" protocol="ap_none"/>
+                <rtlPort name="dec_16" object="dec_16" protocol="ap_none"/>
+                <rtlPort name="dec_17" object="dec_17" protocol="ap_none"/>
+                <rtlPort name="dec_18" object="dec_18" protocol="ap_none"/>
+                <rtlPort name="dec_19" object="dec_19" protocol="ap_none"/>
+                <rtlPort name="dec_20" object="dec_20" protocol="ap_none"/>
+                <rtlPort name="dec_21" object="dec_21" protocol="ap_none"/>
+                <rtlPort name="dec_22" object="dec_22" protocol="ap_none"/>
+                <rtlPort name="dec_23" object="dec_23" protocol="ap_none"/>
+                <rtlPort name="dec_24" object="dec_24" protocol="ap_none"/>
+                <rtlPort name="dec_25" object="dec_25" protocol="ap_none"/>
+                <rtlPort name="dec_26" object="dec_26" protocol="ap_none"/>
+                <rtlPort name="dec_27" object="dec_27" protocol="ap_none"/>
+                <rtlPort name="dec_28" object="dec_28" protocol="ap_none"/>
+                <rtlPort name="dec_29" object="dec_29" protocol="ap_none"/>
+                <rtlPort name="dec_30" object="dec_30" protocol="ap_none"/>
+                <rtlPort name="dec_31" object="dec_31" protocol="ap_none"/>
+                <rtlPort name="dec_32" object="dec_32" protocol="ap_none"/>
+                <rtlPort name="dec_33" object="dec_33" protocol="ap_none"/>
+                <rtlPort name="dec_34" object="dec_34" protocol="ap_none"/>
+                <rtlPort name="dec_35" object="dec_35" protocol="ap_none"/>
+                <rtlPort name="dec_36" object="dec_36" protocol="ap_none"/>
+                <rtlPort name="dec_37" object="dec_37" protocol="ap_none"/>
+                <rtlPort name="dec_38" object="dec_38" protocol="ap_none"/>
+                <rtlPort name="dec_39" object="dec_39" protocol="ap_none"/>
+                <rtlPort name="dec_40" object="dec_40" protocol="ap_none"/>
+                <rtlPort name="dec_41" object="dec_41" protocol="ap_none"/>
+                <rtlPort name="dec_42" object="dec_42" protocol="ap_none"/>
+                <rtlPort name="dec_43" object="dec_43" protocol="ap_none"/>
+                <rtlPort name="dec_44" object="dec_44" protocol="ap_none"/>
+                <rtlPort name="dec_45" object="dec_45" protocol="ap_none"/>
+                <rtlPort name="dec_46" object="dec_46" protocol="ap_none"/>
+                <rtlPort name="dec_47" object="dec_47" protocol="ap_none"/>
+                <rtlPort name="dec_48" object="dec_48" protocol="ap_none"/>
+                <rtlPort name="dec_49" object="dec_49" protocol="ap_none"/>
+                <rtlPort name="dec_50" object="dec_50" protocol="ap_none"/>
+                <rtlPort name="dec_51" object="dec_51" protocol="ap_none"/>
+                <rtlPort name="dec_52" object="dec_52" protocol="ap_none"/>
+                <rtlPort name="dec_53" object="dec_53" protocol="ap_none"/>
+                <rtlPort name="dec_54" object="dec_54" protocol="ap_none"/>
+                <rtlPort name="dec_55" object="dec_55" protocol="ap_none"/>
+                <rtlPort name="dec_56" object="dec_56" protocol="ap_none"/>
+                <rtlPort name="dec_57" object="dec_57" protocol="ap_none"/>
+                <rtlPort name="dec_58" object="dec_58" protocol="ap_none"/>
+                <rtlPort name="dec_59" object="dec_59" protocol="ap_none"/>
+                <rtlPort name="dec_60" object="dec_60" protocol="ap_none"/>
+                <rtlPort name="dec_61" object="dec_61" protocol="ap_none"/>
+                <rtlPort name="dec_62" object="dec_62" protocol="ap_none"/>
+                <rtlPort name="dec_63" object="dec_63" protocol="ap_none"/>
+                <rtlPort name="dec_64" object="dec_64" protocol="ap_none"/>
+                <rtlPort name="dec_65" object="dec_65" protocol="ap_none"/>
+                <rtlPort name="dec_66" object="dec_66" protocol="ap_none"/>
+                <rtlPort name="dec_67" object="dec_67" protocol="ap_none"/>
+                <rtlPort name="dec_68" object="dec_68" protocol="ap_none"/>
+                <rtlPort name="dec_69" object="dec_69" protocol="ap_none"/>
+                <rtlPort name="dec_70" object="dec_70" protocol="ap_none"/>
+                <rtlPort name="dec_71" object="dec_71" protocol="ap_none"/>
+                <rtlPort name="dec_72" object="dec_72" protocol="ap_none"/>
+                <rtlPort name="dec_73" object="dec_73" protocol="ap_none"/>
+                <rtlPort name="dec_74" object="dec_74" protocol="ap_none"/>
+                <rtlPort name="dec_75" object="dec_75" protocol="ap_none"/>
+                <rtlPort name="dec_76" object="dec_76" protocol="ap_none"/>
+                <rtlPort name="dec_77" object="dec_77" protocol="ap_none"/>
+                <rtlPort name="dec_78" object="dec_78" protocol="ap_none"/>
+                <rtlPort name="dec_79" object="dec_79" protocol="ap_none"/>
+                <rtlPort name="dec_80" object="dec_80" protocol="ap_none"/>
+                <rtlPort name="dec_81" object="dec_81" protocol="ap_none"/>
+                <rtlPort name="dec_82" object="dec_82" protocol="ap_none"/>
+                <rtlPort name="dec_83" object="dec_83" protocol="ap_none"/>
+                <rtlPort name="dec_84" object="dec_84" protocol="ap_none"/>
+                <rtlPort name="dec_85" object="dec_85" protocol="ap_none"/>
+                <rtlPort name="dec_86" object="dec_86" protocol="ap_none"/>
+                <rtlPort name="dec_87" object="dec_87" protocol="ap_none"/>
+                <rtlPort name="dec_88" object="dec_88" protocol="ap_none"/>
+                <rtlPort name="dec_89" object="dec_89" protocol="ap_none"/>
+                <rtlPort name="dec_90" object="dec_90" protocol="ap_none"/>
+                <rtlPort name="dec_91" object="dec_91" protocol="ap_none"/>
+                <rtlPort name="dec_92" object="dec_92" protocol="ap_none"/>
+                <rtlPort name="dec_93" object="dec_93" protocol="ap_none"/>
+                <rtlPort name="dec_94" object="dec_94" protocol="ap_none"/>
+                <rtlPort name="dec_95" object="dec_95" protocol="ap_none"/>
+                <rtlPort name="dec_96" object="dec_96" protocol="ap_none"/>
+                <rtlPort name="dec_97" object="dec_97" protocol="ap_none"/>
+                <rtlPort name="dec_98" object="dec_98" protocol="ap_none"/>
+                <rtlPort name="dec_99" object="dec_99" protocol="ap_none"/>
+                <rtlPort name="dec_100" object="dec_100" protocol="ap_none"/>
+                <rtlPort name="dec_101" object="dec_101" protocol="ap_none"/>
+                <rtlPort name="dec_102" object="dec_102" protocol="ap_none"/>
+                <rtlPort name="dec_103" object="dec_103" protocol="ap_none"/>
+                <rtlPort name="dec_104" object="dec_104" protocol="ap_none"/>
+                <rtlPort name="dec_105" object="dec_105" protocol="ap_none"/>
+                <rtlPort name="dec_106" object="dec_106" protocol="ap_none"/>
+                <rtlPort name="dec_107" object="dec_107" protocol="ap_none"/>
+                <rtlPort name="dec_108" object="dec_108" protocol="ap_none"/>
+                <rtlPort name="dec_109" object="dec_109" protocol="ap_none"/>
+                <rtlPort name="dec_110" object="dec_110" protocol="ap_none"/>
+                <rtlPort name="dec_111" object="dec_111" protocol="ap_none"/>
+                <rtlPort name="dec_112" object="dec_112" protocol="ap_none"/>
+                <rtlPort name="dec_113" object="dec_113" protocol="ap_none"/>
+                <rtlPort name="dec_114" object="dec_114" protocol="ap_none"/>
+                <rtlPort name="dec_115" object="dec_115" protocol="ap_none"/>
+                <rtlPort name="dec_116" object="dec_116" protocol="ap_none"/>
+                <rtlPort name="dec_117" object="dec_117" protocol="ap_none"/>
+                <rtlPort name="dec_118" object="dec_118" protocol="ap_none"/>
+                <rtlPort name="dec_119" object="dec_119" protocol="ap_none"/>
+                <rtlPort name="dec_120" object="dec_120" protocol="ap_none"/>
+                <rtlPort name="dec_121" object="dec_121" protocol="ap_none"/>
+                <rtlPort name="dec_122" object="dec_122" protocol="ap_none"/>
+                <rtlPort name="dec_123" object="dec_123" protocol="ap_none"/>
+                <rtlPort name="dec_124" object="dec_124" protocol="ap_none"/>
+                <rtlPort name="dec_125" object="dec_125" protocol="ap_none"/>
+                <rtlPort name="dec_126" object="dec_126" protocol="ap_none"/>
+                <rtlPort name="dec_127" object="dec_127" protocol="ap_none"/>
+                <rtlPort name="dec_128" object="dec_128" protocol="ap_none"/>
+                <rtlPort name="dec_129" object="dec_129" protocol="ap_none"/>
+                <rtlPort name="dec_130" object="dec_130" protocol="ap_none"/>
+                <rtlPort name="dec_131" object="dec_131" protocol="ap_none"/>
+                <rtlPort name="dec_132" object="dec_132" protocol="ap_none"/>
+                <rtlPort name="dec_133" object="dec_133" protocol="ap_none"/>
+                <rtlPort name="dec_134" object="dec_134" protocol="ap_none"/>
+                <rtlPort name="dec_135" object="dec_135" protocol="ap_none"/>
+                <rtlPort name="dec_136" object="dec_136" protocol="ap_none"/>
+                <rtlPort name="dec_137" object="dec_137" protocol="ap_none"/>
+                <rtlPort name="dec_138" object="dec_138" protocol="ap_none"/>
+                <rtlPort name="dec_139" object="dec_139" protocol="ap_none"/>
+                <rtlPort name="dec_140" object="dec_140" protocol="ap_none"/>
+                <rtlPort name="dec_141" object="dec_141" protocol="ap_none"/>
+                <rtlPort name="dec_142" object="dec_142" protocol="ap_none"/>
+                <rtlPort name="dec_143" object="dec_143" protocol="ap_none"/>
+                <rtlPort name="dec_144" object="dec_144" protocol="ap_none"/>
+                <rtlPort name="dec_145" object="dec_145" protocol="ap_none"/>
+                <rtlPort name="dec_146" object="dec_146" protocol="ap_none"/>
+                <rtlPort name="dec_147" object="dec_147" protocol="ap_none"/>
+                <rtlPort name="dec_148" object="dec_148" protocol="ap_none"/>
+                <rtlPort name="dec_149" object="dec_149" protocol="ap_none"/>
+                <rtlPort name="dec_150" object="dec_150" protocol="ap_none"/>
+                <rtlPort name="dec_151" object="dec_151" protocol="ap_none"/>
+                <rtlPort name="dec_152" object="dec_152" protocol="ap_none"/>
+                <rtlPort name="dec_153" object="dec_153" protocol="ap_none"/>
+                <rtlPort name="dec_154" object="dec_154" protocol="ap_none"/>
+                <rtlPort name="dec_155" object="dec_155" protocol="ap_none"/>
+                <rtlPort name="dec_156" object="dec_156" protocol="ap_none"/>
+                <rtlPort name="dec_157" object="dec_157" protocol="ap_none"/>
+                <rtlPort name="dec_158" object="dec_158" protocol="ap_none"/>
+                <rtlPort name="dec_159" object="dec_159" protocol="ap_none"/>
+                <rtlPort name="dec_160" object="dec_160" protocol="ap_none"/>
+                <rtlPort name="dec_161" object="dec_161" protocol="ap_none"/>
+                <rtlPort name="dec_162" object="dec_162" protocol="ap_none"/>
+                <rtlPort name="dec_163" object="dec_163" protocol="ap_none"/>
+                <rtlPort name="dec_164" object="dec_164" protocol="ap_none"/>
+                <rtlPort name="dec_165" object="dec_165" protocol="ap_none"/>
+                <rtlPort name="dec_166" object="dec_166" protocol="ap_none"/>
+                <rtlPort name="dec_167" object="dec_167" protocol="ap_none"/>
+                <rtlPort name="dec_168" object="dec_168" protocol="ap_none"/>
+                <rtlPort name="dec_169" object="dec_169" protocol="ap_none"/>
+                <rtlPort name="dec_170" object="dec_170" protocol="ap_none"/>
+                <rtlPort name="dec_171" object="dec_171" protocol="ap_none"/>
+                <rtlPort name="dec_172" object="dec_172" protocol="ap_none"/>
+                <rtlPort name="dec_173" object="dec_173" protocol="ap_none"/>
+                <rtlPort name="dec_174" object="dec_174" protocol="ap_none"/>
+                <rtlPort name="dec_175" object="dec_175" protocol="ap_none"/>
+                <rtlPort name="dec_176" object="dec_176" protocol="ap_none"/>
+                <rtlPort name="dec_177" object="dec_177" protocol="ap_none"/>
+                <rtlPort name="dec_178" object="dec_178" protocol="ap_none"/>
+                <rtlPort name="dec_179" object="dec_179" protocol="ap_none"/>
+                <rtlPort name="dec_180" object="dec_180" protocol="ap_none"/>
+                <rtlPort name="dec_181" object="dec_181" protocol="ap_none"/>
+                <rtlPort name="dec_182" object="dec_182" protocol="ap_none"/>
+                <rtlPort name="dec_183" object="dec_183" protocol="ap_none"/>
+                <rtlPort name="dec_184" object="dec_184" protocol="ap_none"/>
+                <rtlPort name="dec_185" object="dec_185" protocol="ap_none"/>
+                <rtlPort name="dec_186" object="dec_186" protocol="ap_none"/>
+                <rtlPort name="dec_187" object="dec_187" protocol="ap_none"/>
+                <rtlPort name="dec_188" object="dec_188" protocol="ap_none"/>
+                <rtlPort name="dec_189" object="dec_189" protocol="ap_none"/>
+                <rtlPort name="dec_190" object="dec_190" protocol="ap_none"/>
+                <rtlPort name="dec_191" object="dec_191" protocol="ap_none"/>
+                <rtlPort name="dec_192" object="dec_192" protocol="ap_none"/>
+                <rtlPort name="dec_193" object="dec_193" protocol="ap_none"/>
+                <rtlPort name="dec_194" object="dec_194" protocol="ap_none"/>
+                <rtlPort name="dec_195" object="dec_195" protocol="ap_none"/>
+                <rtlPort name="dec_196" object="dec_196" protocol="ap_none"/>
+                <rtlPort name="dec_197" object="dec_197" protocol="ap_none"/>
+                <rtlPort name="dec_198" object="dec_198" protocol="ap_none"/>
+                <rtlPort name="dec_199" object="dec_199" protocol="ap_none"/>
+                <rtlPort name="dec_200" object="dec_200" protocol="ap_none"/>
+                <rtlPort name="dec_201" object="dec_201" protocol="ap_none"/>
+                <rtlPort name="dec_202" object="dec_202" protocol="ap_none"/>
+                <rtlPort name="dec_203" object="dec_203" protocol="ap_none"/>
+                <rtlPort name="dec_204" object="dec_204" protocol="ap_none"/>
+                <rtlPort name="dec_205" object="dec_205" protocol="ap_none"/>
+                <rtlPort name="dec_206" object="dec_206" protocol="ap_none"/>
+                <rtlPort name="dec_207" object="dec_207" protocol="ap_none"/>
+                <rtlPort name="dec_208" object="dec_208" protocol="ap_none"/>
+                <rtlPort name="dec_209" object="dec_209" protocol="ap_none"/>
+                <rtlPort name="dec_210" object="dec_210" protocol="ap_none"/>
+                <rtlPort name="dec_211" object="dec_211" protocol="ap_none"/>
+                <rtlPort name="dec_212" object="dec_212" protocol="ap_none"/>
+                <rtlPort name="dec_213" object="dec_213" protocol="ap_none"/>
+                <rtlPort name="dec_214" object="dec_214" protocol="ap_none"/>
+                <rtlPort name="dec_215" object="dec_215" protocol="ap_none"/>
+                <rtlPort name="dec_216" object="dec_216" protocol="ap_none"/>
+                <rtlPort name="dec_217" object="dec_217" protocol="ap_none"/>
+                <rtlPort name="dec_218" object="dec_218" protocol="ap_none"/>
+                <rtlPort name="dec_219" object="dec_219" protocol="ap_none"/>
+                <rtlPort name="dec_220" object="dec_220" protocol="ap_none"/>
+                <rtlPort name="dec_221" object="dec_221" protocol="ap_none"/>
+                <rtlPort name="dec_222" object="dec_222" protocol="ap_none"/>
+                <rtlPort name="dec_223" object="dec_223" protocol="ap_none"/>
+                <rtlPort name="dec_224" object="dec_224" protocol="ap_none"/>
+                <rtlPort name="dec_225" object="dec_225" protocol="ap_none"/>
+                <rtlPort name="dec_226" object="dec_226" protocol="ap_none"/>
+                <rtlPort name="dec_227" object="dec_227" protocol="ap_none"/>
+                <rtlPort name="dec_228" object="dec_228" protocol="ap_none"/>
+                <rtlPort name="dec_229" object="dec_229" protocol="ap_none"/>
+                <rtlPort name="dec_230" object="dec_230" protocol="ap_none"/>
+                <rtlPort name="dec_231" object="dec_231" protocol="ap_none"/>
+                <rtlPort name="dec_232" object="dec_232" protocol="ap_none"/>
+                <rtlPort name="dec_233" object="dec_233" protocol="ap_none"/>
+                <rtlPort name="dec_234" object="dec_234" protocol="ap_none"/>
+                <rtlPort name="dec_235" object="dec_235" protocol="ap_none"/>
+                <rtlPort name="dec_236" object="dec_236" protocol="ap_none"/>
+                <rtlPort name="dec_237" object="dec_237" protocol="ap_none"/>
+                <rtlPort name="dec_238" object="dec_238" protocol="ap_none"/>
+                <rtlPort name="dec_239" object="dec_239" protocol="ap_none"/>
+                <rtlPort name="dec_240" object="dec_240" protocol="ap_none"/>
+                <rtlPort name="dec_241" object="dec_241" protocol="ap_none"/>
+                <rtlPort name="dec_242" object="dec_242" protocol="ap_none"/>
+                <rtlPort name="dec_243" object="dec_243" protocol="ap_none"/>
+                <rtlPort name="dec_244" object="dec_244" protocol="ap_none"/>
+                <rtlPort name="dec_245" object="dec_245" protocol="ap_none"/>
+                <rtlPort name="dec_246" object="dec_246" protocol="ap_none"/>
+                <rtlPort name="dec_247" object="dec_247" protocol="ap_none"/>
+                <rtlPort name="dec_248" object="dec_248" protocol="ap_none"/>
+                <rtlPort name="dec_249" object="dec_249" protocol="ap_none"/>
+                <rtlPort name="dec_250" object="dec_250" protocol="ap_none"/>
+                <rtlPort name="dec_251" object="dec_251" protocol="ap_none"/>
+                <rtlPort name="dec_252" object="dec_252" protocol="ap_none"/>
+                <rtlPort name="dec_253" object="dec_253" protocol="ap_none"/>
+                <rtlPort name="dec_254" object="dec_254" protocol="ap_none"/>
+                <rtlPort name="dec_255" object="dec_255" protocol="ap_none"/>
+              </module>
+            </module>
+            <module name="merge_matches" instName="merge_matches_U0" type="DataflowHS">
+              <rtlPort name="p_read" object="p_read" protocol="ap_none"/>
+              <module name="merge_matches_Pipeline_VITIS_LOOP_146_1" instName="grp_merge_matches_Pipeline_VITIS_LOOP_146_1_fu_109" type="NonDataflowHS">
+                <rtlPort name="p_read" object="p_read" protocol="ap_none"/>
+              </module>
+            </module>
+          </module>
+          <port name="INPUT_STREAM" mode="read_only" range="" dataWidth="512" portType="stream" base=""/>
+          <port name="OUTPUT_STREAM" mode="write_only" range="" dataWidth="512" portType="stream" base=""/>
+          <port name="S_AXI_CONTROL" mode="slave" range="0x40" dataWidth="32" portType="addressable" base="0x0"/>
+          <arg name="input_stream" addressQualifier="4" id="0" port="INPUT_STREAM" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x8" type="stream&lt;hls::axis&lt;ap_uint&lt;512>, 1, 1, 16, &apos;8&apos;, false>, 0>&amp;" memSize="0x40" origName="input_stream" origUse="variable"/>
+          <arg name="output_stream" addressQualifier="4" id="1" port="OUTPUT_STREAM" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x8" type="stream&lt;hls::axis&lt;ap_uint&lt;512>, 1, 1, 16, &apos;8&apos;, false>, 0>&amp;" memSize="0x40" origName="output_stream" origUse="variable"/>
+          <arg name="processed_bytes" addressQualifier="0" id="2" port="S_AXI_CONTROL" size="0x8" offset="0x10" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <arg name="processed_cycles" addressQualifier="0" id="3" port="S_AXI_CONTROL" size="0x8" offset="0x28" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <compileWorkGroupSize x="1" y="1" z="1"/>
+          <maxWorkGroupSize x="1" y="1" z="1"/>
+          <string_table/>
+          <instance name="krnl_proj_split_0"/>
+          <FIFOInformation>
+            <FIFOInst>
+              <Name>short_bytes_U</Name>
+              <ParentInst/>
+              <StaticDepth>64</StaticDepth>
+              <RuntimeDepth>mOutPtr</RuntimeDepth>
+              <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+              </InterfaceList>
+            </FIFOInst>
+            <FIFOInst>
+              <Name>long_bytes_U</Name>
+              <ParentInst/>
+              <StaticDepth>64</StaticDepth>
+              <RuntimeDepth>mOutPtr</RuntimeDepth>
+              <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+              </InterfaceList>
+            </FIFOInst>
+            <FIFOInst>
+              <Name>short_matches_U</Name>
+              <ParentInst/>
+              <StaticDepth>64</StaticDepth>
+              <RuntimeDepth>mOutPtr</RuntimeDepth>
+              <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+              </InterfaceList>
+            </FIFOInst>
+            <FIFOInst>
+              <Name>long_matches_U</Name>
+              <ParentInst/>
+              <StaticDepth>64</StaticDepth>
+              <RuntimeDepth>mOutPtr</RuntimeDepth>
+              <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+              </InterfaceList>
+            </FIFOInst>
+          </FIFOInformation>
+        </kernel>
+        <kernel name="cmac_0" language="ip_c" vlnv="xilinx.com:kernel:cmac_0:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="false" hwControlProtocol="ap_ctrl_none">
+          <port name="S_AXILITE" mode="slave" range="0x2000" dataWidth="32" portType="addressable" base="0x0"/>
+          <port name="S_AXIS" mode="read_only" range="" dataWidth="512" portType="stream" base=""/>
+          <port name="M_AXIS" mode="write_only" range="" dataWidth="512" portType="stream" base=""/>
+          <arg name="gt_reset_reg" addressQualifier="0" id="0" port="S_AXILITE" size="0x4" offset="0x0000" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="reset_reg" addressQualifier="0" id="1" port="S_AXILITE" size="0x4" offset="0x0004" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="mode" addressQualifier="0" id="2" port="S_AXILITE" size="0x4" offset="0x0008" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="conf_tx" addressQualifier="0" id="3" port="S_AXILITE" size="0x4" offset="0x000C" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="conf_rx" addressQualifier="0" id="4" port="S_AXILITE" size="0x4" offset="0x0014" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="core_mode" addressQualifier="0" id="5" port="S_AXILITE" size="0x4" offset="0x0020" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="version" addressQualifier="0" id="6" port="S_AXILITE" size="0x4" offset="0x0024" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="gt_loopback" addressQualifier="0" id="7" port="S_AXILITE" size="0x4" offset="0x0090" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="user_reg0" addressQualifier="0" id="8" port="S_AXILITE" size="0x4" offset="0x00CC" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="stat_tx_status" addressQualifier="0" id="9" port="S_AXILITE" size="0x4" offset="0x0200" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="stat_rx_status" addressQualifier="0" id="10" port="S_AXILITE" size="0x4" offset="0x0204" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="stat_status" addressQualifier="0" id="11" port="S_AXILITE" size="0x4" offset="0x0208" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="stat_rx_block_lock" addressQualifier="0" id="12" port="S_AXILITE" size="0x4" offset="0x020C" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="stat_rx_lane_sync" addressQualifier="0" id="13" port="S_AXILITE" size="0x4" offset="0x0210" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="stat_rx_lane_sync_err" addressQualifier="0" id="14" port="S_AXILITE" size="0x4" offset="0x0214" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="stat_an_link_ctl" addressQualifier="0" id="15" port="S_AXILITE" size="0x4" offset="0x0260" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="stat_lt_status" addressQualifier="0" id="16" port="S_AXILITE" size="0x4" offset="0x0264" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="stat_pm_tick" addressQualifier="0" id="17" port="S_AXILITE" size="0x4" offset="0x02B0" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="stat_cycle_count" addressQualifier="0" id="18" port="S_AXILITE" size="0x8" offset="0x02B8" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets" addressQualifier="0" id="19" port="S_AXILITE" size="0x8" offset="0x0500" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_good_packets" addressQualifier="0" id="20" port="S_AXILITE" size="0x8" offset="0x0508" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_bytes" addressQualifier="0" id="21" port="S_AXILITE" size="0x8" offset="0x0510" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_good_bytes" addressQualifier="0" id="22" port="S_AXILITE" size="0x8" offset="0x0518" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_64B" addressQualifier="0" id="23" port="S_AXILITE" size="0x8" offset="0x0520" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_65_127B" addressQualifier="0" id="24" port="S_AXILITE" size="0x8" offset="0x0528" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_128_255B" addressQualifier="0" id="25" port="S_AXILITE" size="0x8" offset="0x0530" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_256_511B" addressQualifier="0" id="26" port="S_AXILITE" size="0x8" offset="0x0538" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_512_1023B" addressQualifier="0" id="27" port="S_AXILITE" size="0x8" offset="0x0540" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_1024_1518B" addressQualifier="0" id="28" port="S_AXILITE" size="0x8" offset="0x0548" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_1519_1522B" addressQualifier="0" id="29" port="S_AXILITE" size="0x8" offset="0x0550" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_1523_1548B" addressQualifier="0" id="30" port="S_AXILITE" size="0x8" offset="0x0558" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_1549_2047B" addressQualifier="0" id="31" port="S_AXILITE" size="0x8" offset="0x0560" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_2048_4095B" addressQualifier="0" id="32" port="S_AXILITE" size="0x8" offset="0x0568" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_4096_8191B" addressQualifier="0" id="33" port="S_AXILITE" size="0x8" offset="0x0570" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_8192_9215B" addressQualifier="0" id="34" port="S_AXILITE" size="0x8" offset="0x0578" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_large" addressQualifier="0" id="35" port="S_AXILITE" size="0x8" offset="0x0580" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_packets_small" addressQualifier="0" id="36" port="S_AXILITE" size="0x8" offset="0x0588" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_total_bad_fcs" addressQualifier="0" id="37" port="S_AXILITE" size="0x8" offset="0x05B8" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_pause" addressQualifier="0" id="38" port="S_AXILITE" size="0x8" offset="0x05F0" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_tx_user_pause" addressQualifier="0" id="39" port="S_AXILITE" size="0x8" offset="0x05F8" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets" addressQualifier="0" id="40" port="S_AXILITE" size="0x8" offset="0x0608" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_good_packets" addressQualifier="0" id="41" port="S_AXILITE" size="0x8" offset="0x0610" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_bytes" addressQualifier="0" id="42" port="S_AXILITE" size="0x8" offset="0x0618" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_good_bytes" addressQualifier="0" id="43" port="S_AXILITE" size="0x8" offset="0x0620" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_64B" addressQualifier="0" id="44" port="S_AXILITE" size="0x8" offset="0x0628" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_65_127B" addressQualifier="0" id="45" port="S_AXILITE" size="0x8" offset="0x0630" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_128_255B" addressQualifier="0" id="46" port="S_AXILITE" size="0x8" offset="0x0638" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_256_511B" addressQualifier="0" id="47" port="S_AXILITE" size="0x8" offset="0x0640" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_512_1023B" addressQualifier="0" id="48" port="S_AXILITE" size="0x8" offset="0x0648" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_1024_1518B" addressQualifier="0" id="49" port="S_AXILITE" size="0x8" offset="0x0650" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_1519_1522B" addressQualifier="0" id="50" port="S_AXILITE" size="0x8" offset="0x0658" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_1523_1548B" addressQualifier="0" id="51" port="S_AXILITE" size="0x8" offset="0x0660" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_1549_2047B" addressQualifier="0" id="52" port="S_AXILITE" size="0x8" offset="0x0668" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_2048_4095B" addressQualifier="0" id="53" port="S_AXILITE" size="0x8" offset="0x0670" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_4096_8191B" addressQualifier="0" id="54" port="S_AXILITE" size="0x8" offset="0x0678" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_8192_9215B" addressQualifier="0" id="55" port="S_AXILITE" size="0x8" offset="0x0680" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_large" addressQualifier="0" id="56" port="S_AXILITE" size="0x8" offset="0x0688" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_small" addressQualifier="0" id="57" port="S_AXILITE" size="0x8" offset="0x0690" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_undersize" addressQualifier="0" id="58" port="S_AXILITE" size="0x8" offset="0x0698" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_fragmented" addressQualifier="0" id="59" port="S_AXILITE" size="0x8" offset="0x06A0" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_oversize" addressQualifier="0" id="60" port="S_AXILITE" size="0x8" offset="0x06A8" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_toolong" addressQualifier="0" id="61" port="S_AXILITE" size="0x8" offset="0x06B0" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_packets_jabber" addressQualifier="0" id="62" port="S_AXILITE" size="0x8" offset="0x06B8" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_total_bad_fcs" addressQualifier="0" id="63" port="S_AXILITE" size="0x8" offset="0x06C0" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_packets_bad_fcs" addressQualifier="0" id="64" port="S_AXILITE" size="0x8" offset="0x06C8" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_stomped_fcs" addressQualifier="0" id="65" port="S_AXILITE" size="0x8" offset="0x06D0" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_pause" addressQualifier="0" id="66" port="S_AXILITE" size="0x8" offset="0x06F8" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="stat_rx_user_pause" addressQualifier="0" id="67" port="S_AXILITE" size="0x8" offset="0x0700" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="rsfec_config_ind_corr" addressQualifier="0" id="68" port="S_AXILITE" size="0x4" offset="0x1000" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="rsfec_config_enable" addressQualifier="0" id="69" port="S_AXILITE" size="0x4" offset="0x107C" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="S_AXIS" addressQualifier="4" id="70" port="S_AXIS" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x0" type="stream&lt;ap_axiu&lt;512,0,0,0>>&amp;" memSize="0"/>
+          <arg name="M_AXIS" addressQualifier="4" id="71" port="M_AXIS" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x0" type="stream&lt;ap_axiu&lt;512,0,0,0>>&amp;" memSize="0"/>
+          <maxWorkGroupSize x="0" y="0" z="0"/>
+          <string_table/>
+          <instance name="cmac_0"/>
+        </kernel>
+        <kernel name="networklayer" language="ip_c" vlnv="xilinx.com:kernel:networklayer:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="false" hwControlProtocol="ap_ctrl_none">
+          <port name="S_AXIL_nl" mode="slave" range="0x2000" dataWidth="32" portType="addressable" base="0x0"/>
+          <port name="S_AXIS_sk2nl" mode="read_only" range="" dataWidth="512" portType="stream" base=""/>
+          <port name="S_AXIS_eth2nl" mode="read_only" range="" dataWidth="512" portType="stream" base=""/>
+          <port name="M_AXIS_nl2sk" mode="write_only" range="" dataWidth="512" portType="stream" base=""/>
+          <port name="M_AXIS_nl2eth" mode="write_only" range="" dataWidth="512" portType="stream" base=""/>
+          <arg name="mac_address" addressQualifier="0" id="0" port="S_AXIL_nl" size="0x8" offset="0x0010" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="ip_address" addressQualifier="0" id="1" port="S_AXIL_nl" size="0x4" offset="0x0018" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="gateway" addressQualifier="0" id="2" port="S_AXIL_nl" size="0x4" offset="0x001C" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="ip_mask" addressQualifier="0" id="3" port="S_AXIL_nl" size="0x4" offset="0x0020" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="eth_in_cycles" addressQualifier="0" id="4" port="S_AXIL_nl" size="0x8" offset="0x0400" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="eth_in_bytes" addressQualifier="0" id="5" port="S_AXIL_nl" size="0x8" offset="0x0408" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="eth_in_packets" addressQualifier="0" id="6" port="S_AXIL_nl" size="0x8" offset="0x0410" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="pkth_in_cycles" addressQualifier="0" id="7" port="S_AXIL_nl" size="0x8" offset="0x0418" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="pkth_in_bytes" addressQualifier="0" id="8" port="S_AXIL_nl" size="0x8" offset="0x0420" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="pkth_in_packets" addressQualifier="0" id="9" port="S_AXIL_nl" size="0x8" offset="0x0428" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="arp_in_cycles" addressQualifier="0" id="10" port="S_AXIL_nl" size="0x8" offset="0x0430" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="arp_in_bytes" addressQualifier="0" id="11" port="S_AXIL_nl" size="0x8" offset="0x0438" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="arp_in_packets" addressQualifier="0" id="12" port="S_AXIL_nl" size="0x8" offset="0x0440" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="arp_out_cycles" addressQualifier="0" id="13" port="S_AXIL_nl" size="0x8" offset="0x0448" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="arp_out_bytes" addressQualifier="0" id="14" port="S_AXIL_nl" size="0x8" offset="0x0450" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="arp_out_packets" addressQualifier="0" id="15" port="S_AXIL_nl" size="0x8" offset="0x0458" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="icmp_in_cycles" addressQualifier="0" id="16" port="S_AXIL_nl" size="0x8" offset="0x0460" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="icmp_in_bytes" addressQualifier="0" id="17" port="S_AXIL_nl" size="0x8" offset="0x0468" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="icmp_in_packets" addressQualifier="0" id="18" port="S_AXIL_nl" size="0x8" offset="0x0470" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="icmp_out_cycles" addressQualifier="0" id="19" port="S_AXIL_nl" size="0x8" offset="0x0478" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="icmp_out_bytes" addressQualifier="0" id="20" port="S_AXIL_nl" size="0x8" offset="0x0480" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="icmp_out_packets" addressQualifier="0" id="21" port="S_AXIL_nl" size="0x8" offset="0x0488" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="ethhi_out_cycles" addressQualifier="0" id="22" port="S_AXIL_nl" size="0x8" offset="0x0490" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="ethhi_out_bytes" addressQualifier="0" id="23" port="S_AXIL_nl" size="0x8" offset="0x0498" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="ethhi_out_packets" addressQualifier="0" id="24" port="S_AXIL_nl" size="0x8" offset="0x04A0" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="eth_out_cycles" addressQualifier="0" id="25" port="S_AXIL_nl" size="0x8" offset="0x04A8" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="eth_out_bytes" addressQualifier="0" id="26" port="S_AXIL_nl" size="0x8" offset="0x04B0" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="eth_out_packets" addressQualifier="0" id="27" port="S_AXIL_nl" size="0x8" offset="0x04B8" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="udp_in_cycles" addressQualifier="0" id="28" port="S_AXIL_nl" size="0x8" offset="0x04C0" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="udp_in_bytes" addressQualifier="0" id="29" port="S_AXIL_nl" size="0x8" offset="0x04C8" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="udp_in_packets" addressQualifier="0" id="30" port="S_AXIL_nl" size="0x8" offset="0x04D0" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="app_out_cycles" addressQualifier="0" id="31" port="S_AXIL_nl" size="0x8" offset="0x04D8" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="app_out_bytes" addressQualifier="0" id="32" port="S_AXIL_nl" size="0x8" offset="0x04E0" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="app_out_packets" addressQualifier="0" id="33" port="S_AXIL_nl" size="0x8" offset="0x04E8" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="udp_out_cycles" addressQualifier="0" id="34" port="S_AXIL_nl" size="0x8" offset="0x04F0" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="udp_out_bytes" addressQualifier="0" id="35" port="S_AXIL_nl" size="0x8" offset="0x04F8" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="udp_out_packets" addressQualifier="0" id="36" port="S_AXIL_nl" size="0x8" offset="0x0500" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="app_in_cycles" addressQualifier="0" id="37" port="S_AXIL_nl" size="0x8" offset="0x0508" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="app_in_bytes" addressQualifier="0" id="38" port="S_AXIL_nl" size="0x8" offset="0x0510" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="app_in_packets" addressQualifier="0" id="39" port="S_AXIL_nl" size="0x8" offset="0x0518" hostOffset="0x00" hostSize="0x8" type="uint"/>
+          <arg name="debug_reset_counters" addressQualifier="0" id="40" port="S_AXIL_nl" size="0x4" offset="0x05F0" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="udp_number_sockets" addressQualifier="0" id="41" port="S_AXIL_nl" size="0x4" offset="0x0810" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="udp_theirIP_offset" addressQualifier="0" id="42" port="S_AXIL_nl" size="0x4" offset="0x0820" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="udp_theirPort_offset" addressQualifier="0" id="43" port="S_AXIL_nl" size="0x4" offset="0x08A0" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="udp_myPort_offset" addressQualifier="0" id="44" port="S_AXIL_nl" size="0x4" offset="0x0920" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="udp_valid_offset" addressQualifier="0" id="45" port="S_AXIL_nl" size="0x4" offset="0x09A0" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="arp_discovery" addressQualifier="0" id="46" port="S_AXIL_nl" size="0x4" offset="0x1010" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="arp_valid_offset" addressQualifier="0" id="47" port="S_AXIL_nl" size="0x4" offset="0x1100" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="arp_ip_addr_offset" addressQualifier="0" id="48" port="S_AXIL_nl" size="0x4" offset="0x1400" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="arp_mac_addr_offset" addressQualifier="0" id="49" port="S_AXIL_nl" size="0x4" offset="0x1800" hostOffset="0x00" hostSize="0x4" type="uint"/>
+          <arg name="S_AXIS_sk2nl" addressQualifier="4" id="50" port="S_AXIS_sk2nl" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x0" type="stream&lt;ap_axiu&lt;512,0,0,16>>&amp;" memSize="0"/>
+          <arg name="M_AXIS_nl2sk" addressQualifier="4" id="51" port="M_AXIS_nl2sk" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x0" type="stream&lt;ap_axiu&lt;512,96,0,16>>&amp;" memSize="0"/>
+          <arg name="S_AXIS_eth2nl" addressQualifier="4" id="52" port="S_AXIS_eth2nl" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x0" type="stream&lt;ap_axiu&lt;512,0,0,0>>&amp;" memSize="0"/>
+          <arg name="M_AXIS_nl2eth" addressQualifier="4" id="53" port="M_AXIS_nl2eth" size="0x0" offset="0x0" hostOffset="0x0" hostSize="0x0" type="stream&lt;ap_axiu&lt;512,0,0,0>>&amp;" memSize="0"/>
+          <maxWorkGroupSize x="0" y="0" z="0"/>
+          <string_table/>
+          <instance name="networklayer_0"/>
+        </kernel>
+      </core>
+    </device>
+  </platform>
+</project>

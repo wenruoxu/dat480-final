@@ -1,0 +1,1691 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "network_layer_bd_udp_0",
+    "cell_name": "udp",
+    "component_reference": "xilinx.com:hls:udp:1.0",
+    "ip_revision": "2114440076",
+    "gen_directory": ".",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "network_layer_bd_udp_0", "resolve_type": "user", "usage": "all" } ],
+        "clk_period": [ { "value": "2.8", "enabled": false, "usage": "all" } ],
+        "machine": [ { "value": "64", "enabled": false, "usage": "all" } ],
+        "combinational": [ { "value": "0", "enabled": false, "usage": "all" } ],
+        "latency": [ { "value": "6", "enabled": false, "usage": "all" } ],
+        "II": [ { "value": "x", "enabled": false, "usage": "all" } ]
+      },
+      "model_parameters": {
+        "C_S_AXI_S_AXILITE_ADDR_WIDTH": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_S_AXI_S_AXILITE_DATA_WIDTH": [ { "value": "32", "format": "long", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "virtexuplusHBM" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xcu55c" } ],
+        "PACKAGE": [ { "value": "fsvh2892" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2L" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "E" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "2114440076" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "." } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "." } ],
+        "SWVERSION": [ { "value": "2023.2" } ],
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "s_axi_s_axilite_AWADDR": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "s_axi_s_axilite_AWVALID": [ { "direction": "in" } ],
+        "s_axi_s_axilite_AWREADY": [ { "direction": "out" } ],
+        "s_axi_s_axilite_WDATA": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "s_axi_s_axilite_WSTRB": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
+        "s_axi_s_axilite_WVALID": [ { "direction": "in" } ],
+        "s_axi_s_axilite_WREADY": [ { "direction": "out" } ],
+        "s_axi_s_axilite_BRESP": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "s_axi_s_axilite_BVALID": [ { "direction": "out" } ],
+        "s_axi_s_axilite_BREADY": [ { "direction": "in" } ],
+        "s_axi_s_axilite_ARADDR": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "s_axi_s_axilite_ARVALID": [ { "direction": "in" } ],
+        "s_axi_s_axilite_ARREADY": [ { "direction": "out" } ],
+        "s_axi_s_axilite_RDATA": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "s_axi_s_axilite_RRESP": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "s_axi_s_axilite_RVALID": [ { "direction": "out" } ],
+        "s_axi_s_axilite_RREADY": [ { "direction": "in" } ],
+        "ap_clk": [ { "direction": "in" } ],
+        "ap_rst_n": [ { "direction": "in" } ],
+        "rxUdpDataIn_TVALID": [ { "direction": "in" } ],
+        "rxUdpDataIn_TREADY": [ { "direction": "out" } ],
+        "rxUdpDataIn_TDATA": [ { "direction": "in", "size_left": "511", "size_right": "0" } ],
+        "rxUdpDataIn_TKEEP": [ { "direction": "in", "size_left": "63", "size_right": "0", "driver_value": "18446744073709551615" } ],
+        "rxUdpDataIn_TSTRB": [ { "direction": "in", "size_left": "63", "size_right": "0", "driver_value": "18446744073709551615" } ],
+        "rxUdpDataIn_TLAST": [ { "direction": "in", "size_left": "0", "size_right": "0", "driver_value": "0" } ],
+        "txUdpDataOut_TVALID": [ { "direction": "out" } ],
+        "txUdpDataOut_TREADY": [ { "direction": "in" } ],
+        "txUdpDataOut_TDATA": [ { "direction": "out", "size_left": "511", "size_right": "0" } ],
+        "txUdpDataOut_TKEEP": [ { "direction": "out", "size_left": "63", "size_right": "0" } ],
+        "txUdpDataOut_TSTRB": [ { "direction": "out", "size_left": "63", "size_right": "0" } ],
+        "txUdpDataOut_TLAST": [ { "direction": "out", "size_left": "0", "size_right": "0" } ],
+        "DataOutApp_TVALID": [ { "direction": "out" } ],
+        "DataOutApp_TREADY": [ { "direction": "in" } ],
+        "DataOutApp_TDATA": [ { "direction": "out", "size_left": "511", "size_right": "0" } ],
+        "DataOutApp_TKEEP": [ { "direction": "out", "size_left": "63", "size_right": "0" } ],
+        "DataOutApp_TSTRB": [ { "direction": "out", "size_left": "63", "size_right": "0" } ],
+        "DataOutApp_TUSER": [ { "direction": "out", "size_left": "95", "size_right": "0" } ],
+        "DataOutApp_TLAST": [ { "direction": "out", "size_left": "0", "size_right": "0" } ],
+        "DataOutApp_TDEST": [ { "direction": "out", "size_left": "15", "size_right": "0" } ],
+        "DataInApp_TVALID": [ { "direction": "in" } ],
+        "DataInApp_TREADY": [ { "direction": "out" } ],
+        "DataInApp_TDATA": [ { "direction": "in", "size_left": "511", "size_right": "0" } ],
+        "DataInApp_TKEEP": [ { "direction": "in", "size_left": "63", "size_right": "0", "driver_value": "18446744073709551615" } ],
+        "DataInApp_TSTRB": [ { "direction": "in", "size_left": "63", "size_right": "0", "driver_value": "18446744073709551615" } ],
+        "DataInApp_TUSER": [ { "direction": "in", "size_left": "95", "size_right": "0", "driver_value": "0" } ],
+        "DataInApp_TLAST": [ { "direction": "in", "size_left": "0", "size_right": "0", "driver_value": "0" } ],
+        "DataInApp_TDEST": [ { "direction": "in", "size_left": "15", "size_right": "0", "driver_value": "0" } ],
+        "myIpAddress": [ { "direction": "in", "size_left": "31", "size_right": "0" } ]
+      },
+      "interfaces": {
+        "s_axi_s_axilite": {
+          "vlnv": "xilinx.com:interface:aximm:1.0",
+          "abstraction_type": "xilinx.com:interface:aximm_rtl:1.0",
+          "mode": "slave",
+          "memory_map_ref": "s_axi_s_axilite",
+          "parameters": {
+            "ADDR_WIDTH": [ { "value": "10", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "DATA_WIDTH": [ { "value": "32", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "PROTOCOL": [ { "value": "AXI4LITE", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "300000000", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ID_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "AWUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ARUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "BUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BURST": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_LOCK": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_PROT": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_CACHE": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_QOS": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_REGION": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_WSTRB": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_RRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "SUPPORTS_NARROW_BURST": [ { "value": "0", "value_src": "auto", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_OUTSTANDING": [ { "value": "1", "value_src": "auto", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_OUTSTANDING": [ { "value": "1", "value_src": "auto", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "MAX_BURST_LENGTH": [ { "value": "1", "value_src": "auto", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "network_layer_bd_ap_clk", "value_src": "default_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_THREADS": [ { "value": "1", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_THREADS": [ { "value": "1", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_BITS_PER_BYTE": [ { "value": "0", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_BITS_PER_BYTE": [ { "value": "0", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "SLR_ASSIGNMENT": [ { "value": "", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "AWADDR": [ { "physical_name": "s_axi_s_axilite_AWADDR" } ],
+            "AWVALID": [ { "physical_name": "s_axi_s_axilite_AWVALID" } ],
+            "AWREADY": [ { "physical_name": "s_axi_s_axilite_AWREADY" } ],
+            "WDATA": [ { "physical_name": "s_axi_s_axilite_WDATA" } ],
+            "WSTRB": [ { "physical_name": "s_axi_s_axilite_WSTRB" } ],
+            "WVALID": [ { "physical_name": "s_axi_s_axilite_WVALID" } ],
+            "WREADY": [ { "physical_name": "s_axi_s_axilite_WREADY" } ],
+            "BRESP": [ { "physical_name": "s_axi_s_axilite_BRESP" } ],
+            "BVALID": [ { "physical_name": "s_axi_s_axilite_BVALID" } ],
+            "BREADY": [ { "physical_name": "s_axi_s_axilite_BREADY" } ],
+            "ARADDR": [ { "physical_name": "s_axi_s_axilite_ARADDR" } ],
+            "ARVALID": [ { "physical_name": "s_axi_s_axilite_ARVALID" } ],
+            "ARREADY": [ { "physical_name": "s_axi_s_axilite_ARREADY" } ],
+            "RDATA": [ { "physical_name": "s_axi_s_axilite_RDATA" } ],
+            "RRESP": [ { "physical_name": "s_axi_s_axilite_RRESP" } ],
+            "RVALID": [ { "physical_name": "s_axi_s_axilite_RVALID" } ],
+            "RREADY": [ { "physical_name": "s_axi_s_axilite_RREADY" } ]
+          }
+        },
+        "ap_clk": {
+          "vlnv": "xilinx.com:signal:clock:1.0",
+          "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "ASSOCIATED_BUSIF": [ { "value": "s_axi_s_axilite:rxUdpDataIn:txUdpDataOut:DataOutApp:DataInApp", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "ASSOCIATED_RESET": [ { "value": "ap_rst_n", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "300000000", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "network_layer_bd_ap_clk", "value_src": "default_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "CLK": [ { "physical_name": "ap_clk" } ]
+          }
+        },
+        "ap_rst_n": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_LOW", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "ap_rst_n" } ]
+          }
+        },
+        "rxUdpDataIn": {
+          "vlnv": "xilinx.com:interface:axis:1.0",
+          "abstraction_type": "xilinx.com:interface:axis_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "TDATA_NUM_BYTES": [ { "value": "64", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "TUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "LAYERED_METADATA": [ { "value": "", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "usage": "all" } ],
+            "TDEST_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "TID_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TREADY": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TSTRB": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TKEEP": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TLAST": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_HZ": [ { "value": "300000000", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "network_layer_bd_ap_clk", "value_src": "default_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "TVALID": [ { "physical_name": "rxUdpDataIn_TVALID" } ],
+            "TREADY": [ { "physical_name": "rxUdpDataIn_TREADY" } ],
+            "TDATA": [ { "physical_name": "rxUdpDataIn_TDATA" } ],
+            "TKEEP": [ { "physical_name": "rxUdpDataIn_TKEEP" } ],
+            "TSTRB": [ { "physical_name": "rxUdpDataIn_TSTRB" } ],
+            "TLAST": [ { "physical_name": "rxUdpDataIn_TLAST" } ]
+          }
+        },
+        "txUdpDataOut": {
+          "vlnv": "xilinx.com:interface:axis:1.0",
+          "abstraction_type": "xilinx.com:interface:axis_rtl:1.0",
+          "mode": "master",
+          "parameters": {
+            "TDATA_NUM_BYTES": [ { "value": "64", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "TUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "LAYERED_METADATA": [ { "value": "", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "usage": "all" } ],
+            "TDEST_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "TID_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TREADY": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TSTRB": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TKEEP": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TLAST": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_HZ": [ { "value": "300000000", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "network_layer_bd_ap_clk", "value_src": "default_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "TVALID": [ { "physical_name": "txUdpDataOut_TVALID" } ],
+            "TREADY": [ { "physical_name": "txUdpDataOut_TREADY" } ],
+            "TDATA": [ { "physical_name": "txUdpDataOut_TDATA" } ],
+            "TKEEP": [ { "physical_name": "txUdpDataOut_TKEEP" } ],
+            "TSTRB": [ { "physical_name": "txUdpDataOut_TSTRB" } ],
+            "TLAST": [ { "physical_name": "txUdpDataOut_TLAST" } ]
+          }
+        },
+        "DataOutApp": {
+          "vlnv": "xilinx.com:interface:axis:1.0",
+          "abstraction_type": "xilinx.com:interface:axis_rtl:1.0",
+          "mode": "master",
+          "parameters": {
+            "TDATA_NUM_BYTES": [ { "value": "64", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "TDEST_WIDTH": [ { "value": "16", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "TUSER_WIDTH": [ { "value": "96", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "LAYERED_METADATA": [ { "value": "", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "usage": "all" } ],
+            "TID_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TREADY": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TSTRB": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TKEEP": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TLAST": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_HZ": [ { "value": "300000000", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "network_layer_bd_ap_clk", "value_src": "default_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "TVALID": [ { "physical_name": "DataOutApp_TVALID" } ],
+            "TREADY": [ { "physical_name": "DataOutApp_TREADY" } ],
+            "TDATA": [ { "physical_name": "DataOutApp_TDATA" } ],
+            "TKEEP": [ { "physical_name": "DataOutApp_TKEEP" } ],
+            "TSTRB": [ { "physical_name": "DataOutApp_TSTRB" } ],
+            "TUSER": [ { "physical_name": "DataOutApp_TUSER" } ],
+            "TLAST": [ { "physical_name": "DataOutApp_TLAST" } ],
+            "TDEST": [ { "physical_name": "DataOutApp_TDEST" } ]
+          }
+        },
+        "DataInApp": {
+          "vlnv": "xilinx.com:interface:axis:1.0",
+          "abstraction_type": "xilinx.com:interface:axis_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "TDATA_NUM_BYTES": [ { "value": "64", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "TDEST_WIDTH": [ { "value": "16", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "TUSER_WIDTH": [ { "value": "96", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "LAYERED_METADATA": [ { "value": "", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "usage": "all" } ],
+            "TID_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TREADY": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TSTRB": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TKEEP": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TLAST": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_HZ": [ { "value": "300000000", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "network_layer_bd_ap_clk", "value_src": "default_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "TVALID": [ { "physical_name": "DataInApp_TVALID" } ],
+            "TREADY": [ { "physical_name": "DataInApp_TREADY" } ],
+            "TDATA": [ { "physical_name": "DataInApp_TDATA" } ],
+            "TKEEP": [ { "physical_name": "DataInApp_TKEEP" } ],
+            "TSTRB": [ { "physical_name": "DataInApp_TSTRB" } ],
+            "TUSER": [ { "physical_name": "DataInApp_TUSER" } ],
+            "TLAST": [ { "physical_name": "DataInApp_TLAST" } ],
+            "TDEST": [ { "physical_name": "DataInApp_TDEST" } ]
+          }
+        },
+        "myIpAddress": {
+          "vlnv": "xilinx.com:signal:data:1.0",
+          "abstraction_type": "xilinx.com:signal:data_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "LAYERED_METADATA": [ { "value": "undef", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "DATA": [ { "physical_name": "myIpAddress" } ]
+          }
+        }
+      },
+      "memory_maps": {
+        "s_axi_s_axilite": {
+          "address_blocks": {
+            "Reg": {
+              "base_address": "0",
+              "range": "65536",
+              "usage": "register",
+              "access": "read-write",
+              "parameters": {
+                "OFFSET_BASE_PARAM": [ { "value": "C_S_AXI_S_AXILITE_BASEADDR" } ],
+                "OFFSET_HIGH_PARAM": [ { "value": "C_S_AXI_S_AXILITE_HIGHADDR" } ]
+              },
+              "registers": {
+                "numberSockets": {
+                  "address_offset": "16",
+                  "size": 32,
+                  "display_name": "numberSockets",
+                  "description": "Data signal of numberSockets",
+                  "access": "read-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "numberSockets": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of numberSockets",
+                      "access": "read-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "numberSockets_ctrl": {
+                  "address_offset": "20",
+                  "size": 32,
+                  "display_name": "numberSockets_ctrl",
+                  "description": "Control signal of numberSockets",
+                  "access": "read-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "numberSockets_ap_vld": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Control signal numberSockets_ap_vld",
+                      "access": "read-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_0": {
+                  "address_offset": "32",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_0",
+                  "description": "Data signal of SocketTable_theirIP_0",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_0": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_0",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_1": {
+                  "address_offset": "40",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_1",
+                  "description": "Data signal of SocketTable_theirIP_1",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_1": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_1",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_2": {
+                  "address_offset": "48",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_2",
+                  "description": "Data signal of SocketTable_theirIP_2",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_2": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_2",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_3": {
+                  "address_offset": "56",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_3",
+                  "description": "Data signal of SocketTable_theirIP_3",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_3": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_3",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_4": {
+                  "address_offset": "64",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_4",
+                  "description": "Data signal of SocketTable_theirIP_4",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_4": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_4",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_5": {
+                  "address_offset": "72",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_5",
+                  "description": "Data signal of SocketTable_theirIP_5",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_5": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_5",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_6": {
+                  "address_offset": "80",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_6",
+                  "description": "Data signal of SocketTable_theirIP_6",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_6": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_6",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_7": {
+                  "address_offset": "88",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_7",
+                  "description": "Data signal of SocketTable_theirIP_7",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_7": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_7",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_8": {
+                  "address_offset": "96",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_8",
+                  "description": "Data signal of SocketTable_theirIP_8",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_8": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_8",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_9": {
+                  "address_offset": "104",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_9",
+                  "description": "Data signal of SocketTable_theirIP_9",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_9": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_9",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_10": {
+                  "address_offset": "112",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_10",
+                  "description": "Data signal of SocketTable_theirIP_10",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_10": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_10",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_11": {
+                  "address_offset": "120",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_11",
+                  "description": "Data signal of SocketTable_theirIP_11",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_11": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_11",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_12": {
+                  "address_offset": "128",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_12",
+                  "description": "Data signal of SocketTable_theirIP_12",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_12": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_12",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_13": {
+                  "address_offset": "136",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_13",
+                  "description": "Data signal of SocketTable_theirIP_13",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_13": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_13",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_14": {
+                  "address_offset": "144",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_14",
+                  "description": "Data signal of SocketTable_theirIP_14",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_14": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_14",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirIP_15": {
+                  "address_offset": "152",
+                  "size": 32,
+                  "display_name": "SocketTable_theirIP_15",
+                  "description": "Data signal of SocketTable_theirIP_15",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirIP_15": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of SocketTable_theirIP_15",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_0": {
+                  "address_offset": "160",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_0",
+                  "description": "Data signal of SocketTable_theirPort_0",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_0": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_0",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_1": {
+                  "address_offset": "168",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_1",
+                  "description": "Data signal of SocketTable_theirPort_1",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_1": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_1",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_2": {
+                  "address_offset": "176",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_2",
+                  "description": "Data signal of SocketTable_theirPort_2",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_2": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_2",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_3": {
+                  "address_offset": "184",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_3",
+                  "description": "Data signal of SocketTable_theirPort_3",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_3": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_3",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_4": {
+                  "address_offset": "192",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_4",
+                  "description": "Data signal of SocketTable_theirPort_4",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_4": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_4",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_5": {
+                  "address_offset": "200",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_5",
+                  "description": "Data signal of SocketTable_theirPort_5",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_5": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_5",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_6": {
+                  "address_offset": "208",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_6",
+                  "description": "Data signal of SocketTable_theirPort_6",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_6": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_6",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_7": {
+                  "address_offset": "216",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_7",
+                  "description": "Data signal of SocketTable_theirPort_7",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_7": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_7",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_8": {
+                  "address_offset": "224",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_8",
+                  "description": "Data signal of SocketTable_theirPort_8",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_8": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_8",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_9": {
+                  "address_offset": "232",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_9",
+                  "description": "Data signal of SocketTable_theirPort_9",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_9": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_9",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_10": {
+                  "address_offset": "240",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_10",
+                  "description": "Data signal of SocketTable_theirPort_10",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_10": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_10",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_11": {
+                  "address_offset": "248",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_11",
+                  "description": "Data signal of SocketTable_theirPort_11",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_11": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_11",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_12": {
+                  "address_offset": "256",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_12",
+                  "description": "Data signal of SocketTable_theirPort_12",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_12": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_12",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_13": {
+                  "address_offset": "264",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_13",
+                  "description": "Data signal of SocketTable_theirPort_13",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_13": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_13",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_14": {
+                  "address_offset": "272",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_14",
+                  "description": "Data signal of SocketTable_theirPort_14",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_14": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_14",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_theirPort_15": {
+                  "address_offset": "280",
+                  "size": 32,
+                  "display_name": "SocketTable_theirPort_15",
+                  "description": "Data signal of SocketTable_theirPort_15",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_theirPort_15": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_theirPort_15",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_0": {
+                  "address_offset": "288",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_0",
+                  "description": "Data signal of SocketTable_myPort_0",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_0": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_0",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_1": {
+                  "address_offset": "296",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_1",
+                  "description": "Data signal of SocketTable_myPort_1",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_1": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_1",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_2": {
+                  "address_offset": "304",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_2",
+                  "description": "Data signal of SocketTable_myPort_2",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_2": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_2",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_3": {
+                  "address_offset": "312",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_3",
+                  "description": "Data signal of SocketTable_myPort_3",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_3": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_3",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_4": {
+                  "address_offset": "320",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_4",
+                  "description": "Data signal of SocketTable_myPort_4",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_4": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_4",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_5": {
+                  "address_offset": "328",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_5",
+                  "description": "Data signal of SocketTable_myPort_5",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_5": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_5",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_6": {
+                  "address_offset": "336",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_6",
+                  "description": "Data signal of SocketTable_myPort_6",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_6": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_6",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_7": {
+                  "address_offset": "344",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_7",
+                  "description": "Data signal of SocketTable_myPort_7",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_7": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_7",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_8": {
+                  "address_offset": "352",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_8",
+                  "description": "Data signal of SocketTable_myPort_8",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_8": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_8",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_9": {
+                  "address_offset": "360",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_9",
+                  "description": "Data signal of SocketTable_myPort_9",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_9": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_9",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_10": {
+                  "address_offset": "368",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_10",
+                  "description": "Data signal of SocketTable_myPort_10",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_10": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_10",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_11": {
+                  "address_offset": "376",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_11",
+                  "description": "Data signal of SocketTable_myPort_11",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_11": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_11",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_12": {
+                  "address_offset": "384",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_12",
+                  "description": "Data signal of SocketTable_myPort_12",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_12": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_12",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_13": {
+                  "address_offset": "392",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_13",
+                  "description": "Data signal of SocketTable_myPort_13",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_13": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_13",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_14": {
+                  "address_offset": "400",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_14",
+                  "description": "Data signal of SocketTable_myPort_14",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_14": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_14",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_myPort_15": {
+                  "address_offset": "408",
+                  "size": 32,
+                  "display_name": "SocketTable_myPort_15",
+                  "description": "Data signal of SocketTable_myPort_15",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_myPort_15": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "description": "Bit 15 to 0 of SocketTable_myPort_15",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_0": {
+                  "address_offset": "416",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_0",
+                  "description": "Data signal of SocketTable_valid_0",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_0": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_0",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_1": {
+                  "address_offset": "424",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_1",
+                  "description": "Data signal of SocketTable_valid_1",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_1": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_1",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_2": {
+                  "address_offset": "432",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_2",
+                  "description": "Data signal of SocketTable_valid_2",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_2": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_2",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_3": {
+                  "address_offset": "440",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_3",
+                  "description": "Data signal of SocketTable_valid_3",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_3": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_3",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_4": {
+                  "address_offset": "448",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_4",
+                  "description": "Data signal of SocketTable_valid_4",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_4": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_4",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_5": {
+                  "address_offset": "456",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_5",
+                  "description": "Data signal of SocketTable_valid_5",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_5": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_5",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_6": {
+                  "address_offset": "464",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_6",
+                  "description": "Data signal of SocketTable_valid_6",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_6": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_6",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_7": {
+                  "address_offset": "472",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_7",
+                  "description": "Data signal of SocketTable_valid_7",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_7": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_7",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_8": {
+                  "address_offset": "480",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_8",
+                  "description": "Data signal of SocketTable_valid_8",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_8": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_8",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_9": {
+                  "address_offset": "488",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_9",
+                  "description": "Data signal of SocketTable_valid_9",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_9": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_9",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_10": {
+                  "address_offset": "496",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_10",
+                  "description": "Data signal of SocketTable_valid_10",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_10": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_10",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_11": {
+                  "address_offset": "504",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_11",
+                  "description": "Data signal of SocketTable_valid_11",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_11": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_11",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_12": {
+                  "address_offset": "512",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_12",
+                  "description": "Data signal of SocketTable_valid_12",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_12": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_12",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_13": {
+                  "address_offset": "520",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_13",
+                  "description": "Data signal of SocketTable_valid_13",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_13": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_13",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_14": {
+                  "address_offset": "528",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_14",
+                  "description": "Data signal of SocketTable_valid_14",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_14": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_14",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "SocketTable_valid_15": {
+                  "address_offset": "536",
+                  "size": 32,
+                  "display_name": "SocketTable_valid_15",
+                  "description": "Data signal of SocketTable_valid_15",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "SocketTable_valid_15": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "description": "Bit 0 to 0 of SocketTable_valid_15",
+                      "access": "write-only"
+                    },
+                    "RESERVED": {
+                      "bit_offset": 1,
+                      "bit_width": 31,
+                      "description": "Reserved.  0s on read.",
+                      "access": "read-only"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

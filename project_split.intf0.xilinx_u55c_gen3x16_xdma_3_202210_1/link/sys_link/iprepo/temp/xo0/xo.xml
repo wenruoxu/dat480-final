@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root VersionMajor="7" VersionMinor="3" SoftwareVersionMajor="2023" SoftwareVersionMinor="2" IpCache="no">
+  <IpCaches/>
+  <Kernels>
+    <Kernel Name="networklayer" Dir="networklayer" IP="ip_repo/xilinx_com_kernel_networklayer_1_0" TopIpDir="" ProjectID="c0a56bb15a9a465fbfa211831ad0aba1" Debug="no" Hls="no" Pdi="no" ShimSoln="no" SwEmu="no" Domain="" Deadlock="no" KernelJson="no">
+      <SupportedFlows>
+        <SupportedFlow>HW_EMU</SupportedFlow>
+        <SupportedFlow>SYSTEM</SupportedFlow>
+      </SupportedFlows>
+    </Kernel>
+  </Kernels>
+</Root>

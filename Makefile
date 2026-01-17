@@ -39,6 +39,7 @@ CMACDIR     = Ethernet/
 BASICDIR    = Basic_kernels/
 BENCHMARDIR = Benchmark_kernel/
 PROJDIR_HLS = Project_kernels_HLS/
+PROJDIR_HLS_SPLIT = Project_kernels_HLS_split/
 PROJDIR_RTL = Project_kernels_RTL/
 
 NETLAYERHLS = 100G-fpga-network-stack-core
@@ -76,6 +77,8 @@ else ifeq (project,$(DESIGN))
 #	LIST_XO += $(PROJDIR_RTL)$(TEMP_DIR)/example.xo # Example of including an RTL kernel, uncomment if needed
 # If you need more kernels, just add them here
 # Either more of your own, or from the basic/benchmark folders
+else ifeq (project_split,$(DESIGN))
+	LIST_XO += $(PROJDIR_HLS_SPLIT)$(TEMP_DIR)/krnl_proj_split.xo
 else ifeq (benchmark_project,$(DESIGN))
 	LIST_XO := $(BASICDIR)$(TEMP_DIR)/krnl_mm2s.xo # Remove previous entries 
 	LIST_XO += $(BASICDIR)$(TEMP_DIR)/krnl_s2mm.xo
@@ -83,7 +86,7 @@ else ifeq (benchmark_project,$(DESIGN))
 	LIST_XO += Stream_throughput_kernel/build/stream_throughput.xo
 
 else
-	$(error DESIGN=$(DESIGN) is not supported! Supported designs are: benchmark, basic, project)
+	$(error DESIGN=$(DESIGN) is not supported! Supported designs are: benchmark, basic, project, project_split)
 endif
 
 # Linker parameters
@@ -100,6 +103,9 @@ LIST_REPOS += --user_ip_repo_paths $(HLS_IP_FOLDER)
 
 .PHONY: all clean distclean distcleanall
 all: check-devices check-vitis check-xrt check-design check-interface create-conf-file $(BINARY_CONTAINERS)
+
+csim_project_split: check-vitis
+	make -C $(PROJDIR_HLS_SPLIT) csim
 
 # Cleaning stuff
 clean:
@@ -139,6 +145,9 @@ $(PROJDIR_RTL)$(TEMP_DIR)/%.xo: $(PROJDIR_RTL)src/*
 $(PROJDIR_HLS)$(TEMP_DIR)/%.xo: $(PROJDIR_HLS)src/*
 	make -C $(PROJDIR_HLS) all DEVICE=$(DEVICE) -j3
 
+$(PROJDIR_HLS_SPLIT)$(TEMP_DIR)/%.xo: $(PROJDIR_HLS_SPLIT)src/*
+	make -C $(PROJDIR_HLS_SPLIT) all DEVICE=$(DEVICE) -j3
+
 Stream_throughput_kernel/build/stream_throughput.xo: Stream_throughput_kernel/rtl/* Stream_throughput_kernel/frontend.*
 	make -C Stream_throughput_kernel package-rtl DEVICE=$(DEVICE)
 
@@ -161,7 +170,7 @@ endif
 
 #Check if the design name is supported
 check-design:
-	@if [[ ($(DESIGN) != "benchmark") && ($(DESIGN) != "basic") && ($(DESIGN) != "project") && ($(DESIGN) != "benchmark_project")]]; then\
+	@if [[ ($(DESIGN) != "benchmark") && ($(DESIGN) != "basic") && ($(DESIGN) != "project") && ($(DESIGN) != "benchmark_project") && ($(DESIGN) != "project_split")]]; then\
 		echo "DESIGN=$(DESIGN) is not supported!";\
 		exit 1;\
 	fi

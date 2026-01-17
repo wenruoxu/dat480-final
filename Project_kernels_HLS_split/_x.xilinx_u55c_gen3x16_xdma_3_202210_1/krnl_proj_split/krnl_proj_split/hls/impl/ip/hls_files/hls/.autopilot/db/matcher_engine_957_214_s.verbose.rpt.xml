@@ -1,0 +1,429 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'matcher_engine_957_214_s'" level="0">
+<item name = "Date">Sat Jan 17 14:13:16 2026
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">krnl_proj_split</item>
+<item name = "Solution">hls (Vitis Kernel Flow Target)</item>
+<item name = "Product family">virtexuplusHBM</item>
+<item name = "Target device">xcu55c-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.432 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_matcher_engine_957_214_Pipeline_init_state_fu_198820">matcher_engine_957_214_Pipeline_init_state, 959, 959, 3.196 us, 3.196 us, 959, 959, no</column>
+<column name="grp_matcher_engine_957_214_Pipeline_reset_state_fu_198826">matcher_engine_957_214_Pipeline_reset_state, 959, 959, 3.196 us, 3.196 us, 959, 959, no</column>
+<column name="grp_matcher_engine_957_214_Pipeline_match_mask_loop_fu_198832">matcher_engine_957_214_Pipeline_match_mask_loop, 217, 217, 0.723 us, 0.723 us, 217, 217, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_80_1">?, ?, 2873 ~ 213413, -, -, ?, no</column>
+<column name=" + pattern_loop">2871, 213411, 3 ~ 223, -, -, 957, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2158, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">100, -, 271, 1603, -</column>
+<column name="Memory">17, -, 0, 0, -</column>
+<column name="Multiplexer">-, -, -, 204, -</column>
+<column name="Register">-, -, 783, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">8, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">2, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_matcher_engine_957_214_Pipeline_init_state_fu_198820">matcher_engine_957_214_Pipeline_init_state, 0, 0, 12, 61, 0</column>
+<column name="grp_matcher_engine_957_214_Pipeline_match_mask_loop_fu_198832">matcher_engine_957_214_Pipeline_match_mask_loop, 100, 0, 247, 1481, 0</column>
+<column name="grp_matcher_engine_957_214_Pipeline_reset_state_fu_198826">matcher_engine_957_214_Pipeline_reset_state, 0, 0, 12, 61, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="pattern_id_LONG_U">matcher_engine_957_214_s_pattern_id_LONG_ROM_AUTO_1R, 1, 0, 0, 0, 957, 12, 1, 11484</column>
+<column name="pattern_len_LONG_U">matcher_engine_957_214_s_pattern_len_LONG_ROM_AUTO_1R, 1, 0, 0, 0, 957, 8, 1, 7656</column>
+<column name="state_U">matcher_engine_957_214_s_state_RAM_1P_BRAM_1R1W, 15, 0, 0, 0, 957, 213, 1, 203841</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln104_fu_199378_p2">+, 0, 0, 17, 10, 1</column>
+<column name="add_ln124_fu_199395_p2">+, 0, 0, 15, 8, 2</column>
+<column name="add_ln64_fu_199366_p2">+, 0, 0, 25, 18, 8</column>
+<column name="and_ln121_fu_199441_p2">and, 0, 0, 212, 213, 213</column>
+<column name="and_ln124_1_fu_199448_p2">and, 0, 0, 213, 214, 214</column>
+<column name="and_ln124_fu_199453_p2">and, 0, 0, 213, 214, 214</column>
+<column name="ap_block_state9">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op579_write_state9">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln104_fu_199372_p2">icmp, 0, 0, 17, 10, 8</column>
+<column name="icmp_ln107_fu_199389_p2">icmp, 0, 0, 15, 8, 1</column>
+<column name="icmp_ln124_fu_199459_p2">icmp, 0, 0, 221, 214, 1</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln121_1_fu_199435_p2">or, 0, 0, 212, 213, 1</column>
+<column name="or_ln121_fu_199425_p2">or, 0, 0, 213, 214, 1</column>
+<column name="shl_ln124_fu_199404_p2">shl, 0, 0, 777, 1, 214</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">59, 11, 1, 11</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="long_bytes_blk_n">9, 2, 1, 2</column>
+<column name="long_matches_blk_n">9, 2, 1, 2</column>
+<column name="long_matches_din">14, 3, 33, 99</column>
+<column name="p_2_reg_198797">9, 2, 10, 20</column>
+<column name="phi_mul_reg_198808">9, 2, 18, 36</column>
+<column name="state_address0">26, 5, 10, 50</column>
+<column name="state_ce0">20, 4, 1, 4</column>
+<column name="state_d0">20, 4, 213, 852</column>
+<column name="state_we0">20, 4, 1, 4</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln104_reg_199502">10, 0, 10, 0</column>
+<column name="add_ln64_reg_199494">18, 0, 18, 0</column>
+<column name="ap_CS_fsm">10, 0, 10, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="dec_100_reg_120623">1, 0, 1, 0</column>
+<column name="dec_101_reg_119849">1, 0, 1, 0</column>
+<column name="dec_102_reg_119075">1, 0, 1, 0</column>
+<column name="dec_103_reg_118301">1, 0, 1, 0</column>
+<column name="dec_104_reg_117527">1, 0, 1, 0</column>
+<column name="dec_105_reg_116753">1, 0, 1, 0</column>
+<column name="dec_106_reg_115979">1, 0, 1, 0</column>
+<column name="dec_107_reg_115205">1, 0, 1, 0</column>
+<column name="dec_108_reg_114431">1, 0, 1, 0</column>
+<column name="dec_109_reg_113657">1, 0, 1, 0</column>
+<column name="dec_10_reg_190283">1, 0, 1, 0</column>
+<column name="dec_110_reg_112883">1, 0, 1, 0</column>
+<column name="dec_111_reg_112109">1, 0, 1, 0</column>
+<column name="dec_112_reg_111335">1, 0, 1, 0</column>
+<column name="dec_113_reg_110561">1, 0, 1, 0</column>
+<column name="dec_114_reg_109787">1, 0, 1, 0</column>
+<column name="dec_115_reg_109013">1, 0, 1, 0</column>
+<column name="dec_116_reg_108239">1, 0, 1, 0</column>
+<column name="dec_117_reg_107465">1, 0, 1, 0</column>
+<column name="dec_118_reg_106691">1, 0, 1, 0</column>
+<column name="dec_119_reg_105917">1, 0, 1, 0</column>
+<column name="dec_11_reg_189509">1, 0, 1, 0</column>
+<column name="dec_120_reg_105143">1, 0, 1, 0</column>
+<column name="dec_121_reg_104369">1, 0, 1, 0</column>
+<column name="dec_122_reg_103595">1, 0, 1, 0</column>
+<column name="dec_123_reg_102821">1, 0, 1, 0</column>
+<column name="dec_124_reg_102047">1, 0, 1, 0</column>
+<column name="dec_125_reg_101273">1, 0, 1, 0</column>
+<column name="dec_126_reg_100499">1, 0, 1, 0</column>
+<column name="dec_127_reg_99725">1, 0, 1, 0</column>
+<column name="dec_128_reg_98951">1, 0, 1, 0</column>
+<column name="dec_129_reg_98177">1, 0, 1, 0</column>
+<column name="dec_12_reg_188735">1, 0, 1, 0</column>
+<column name="dec_130_reg_97403">1, 0, 1, 0</column>
+<column name="dec_131_reg_96629">1, 0, 1, 0</column>
+<column name="dec_132_reg_95855">1, 0, 1, 0</column>
+<column name="dec_133_reg_95081">1, 0, 1, 0</column>
+<column name="dec_134_reg_94307">1, 0, 1, 0</column>
+<column name="dec_135_reg_93533">1, 0, 1, 0</column>
+<column name="dec_136_reg_92759">1, 0, 1, 0</column>
+<column name="dec_137_reg_91985">1, 0, 1, 0</column>
+<column name="dec_138_reg_91211">1, 0, 1, 0</column>
+<column name="dec_139_reg_90437">1, 0, 1, 0</column>
+<column name="dec_13_reg_187961">1, 0, 1, 0</column>
+<column name="dec_140_reg_89663">1, 0, 1, 0</column>
+<column name="dec_141_reg_88889">1, 0, 1, 0</column>
+<column name="dec_142_reg_88115">1, 0, 1, 0</column>
+<column name="dec_143_reg_87341">1, 0, 1, 0</column>
+<column name="dec_144_reg_86567">1, 0, 1, 0</column>
+<column name="dec_145_reg_85793">1, 0, 1, 0</column>
+<column name="dec_146_reg_85019">1, 0, 1, 0</column>
+<column name="dec_147_reg_84245">1, 0, 1, 0</column>
+<column name="dec_148_reg_83471">1, 0, 1, 0</column>
+<column name="dec_149_reg_82697">1, 0, 1, 0</column>
+<column name="dec_14_reg_187187">1, 0, 1, 0</column>
+<column name="dec_150_reg_81923">1, 0, 1, 0</column>
+<column name="dec_151_reg_81149">1, 0, 1, 0</column>
+<column name="dec_152_reg_80375">1, 0, 1, 0</column>
+<column name="dec_153_reg_79601">1, 0, 1, 0</column>
+<column name="dec_154_reg_78827">1, 0, 1, 0</column>
+<column name="dec_155_reg_78053">1, 0, 1, 0</column>
+<column name="dec_156_reg_77279">1, 0, 1, 0</column>
+<column name="dec_157_reg_76505">1, 0, 1, 0</column>
+<column name="dec_158_reg_75731">1, 0, 1, 0</column>
+<column name="dec_159_reg_74957">1, 0, 1, 0</column>
+<column name="dec_15_reg_186413">1, 0, 1, 0</column>
+<column name="dec_160_reg_74183">1, 0, 1, 0</column>
+<column name="dec_161_reg_73409">1, 0, 1, 0</column>
+<column name="dec_162_reg_72635">1, 0, 1, 0</column>
+<column name="dec_163_reg_71861">1, 0, 1, 0</column>
+<column name="dec_164_reg_71087">1, 0, 1, 0</column>
+<column name="dec_165_reg_70313">1, 0, 1, 0</column>
+<column name="dec_166_reg_69539">1, 0, 1, 0</column>
+<column name="dec_167_reg_68765">1, 0, 1, 0</column>
+<column name="dec_168_reg_67991">1, 0, 1, 0</column>
+<column name="dec_169_reg_67217">1, 0, 1, 0</column>
+<column name="dec_16_reg_185639">1, 0, 1, 0</column>
+<column name="dec_170_reg_66443">1, 0, 1, 0</column>
+<column name="dec_171_reg_65669">1, 0, 1, 0</column>
+<column name="dec_172_reg_64895">1, 0, 1, 0</column>
+<column name="dec_173_reg_64121">1, 0, 1, 0</column>
+<column name="dec_174_reg_63347">1, 0, 1, 0</column>
+<column name="dec_175_reg_62573">1, 0, 1, 0</column>
+<column name="dec_176_reg_61799">1, 0, 1, 0</column>
+<column name="dec_177_reg_61025">1, 0, 1, 0</column>
+<column name="dec_178_reg_60251">1, 0, 1, 0</column>
+<column name="dec_179_reg_59477">1, 0, 1, 0</column>
+<column name="dec_17_reg_184865">1, 0, 1, 0</column>
+<column name="dec_180_reg_58703">1, 0, 1, 0</column>
+<column name="dec_181_reg_57929">1, 0, 1, 0</column>
+<column name="dec_182_reg_57155">1, 0, 1, 0</column>
+<column name="dec_183_reg_56381">1, 0, 1, 0</column>
+<column name="dec_184_reg_55607">1, 0, 1, 0</column>
+<column name="dec_185_reg_54833">1, 0, 1, 0</column>
+<column name="dec_186_reg_54059">1, 0, 1, 0</column>
+<column name="dec_187_reg_53285">1, 0, 1, 0</column>
+<column name="dec_188_reg_52511">1, 0, 1, 0</column>
+<column name="dec_189_reg_51737">1, 0, 1, 0</column>
+<column name="dec_18_reg_184091">1, 0, 1, 0</column>
+<column name="dec_190_reg_50963">1, 0, 1, 0</column>
+<column name="dec_191_reg_50189">1, 0, 1, 0</column>
+<column name="dec_192_reg_49415">1, 0, 1, 0</column>
+<column name="dec_193_reg_48641">1, 0, 1, 0</column>
+<column name="dec_194_reg_47867">1, 0, 1, 0</column>
+<column name="dec_195_reg_47093">1, 0, 1, 0</column>
+<column name="dec_196_reg_46319">1, 0, 1, 0</column>
+<column name="dec_197_reg_45545">1, 0, 1, 0</column>
+<column name="dec_198_reg_44771">1, 0, 1, 0</column>
+<column name="dec_199_reg_43997">1, 0, 1, 0</column>
+<column name="dec_19_reg_183317">1, 0, 1, 0</column>
+<column name="dec_1_reg_197249">1, 0, 1, 0</column>
+<column name="dec_200_reg_43223">1, 0, 1, 0</column>
+<column name="dec_201_reg_42449">1, 0, 1, 0</column>
+<column name="dec_202_reg_41675">1, 0, 1, 0</column>
+<column name="dec_203_reg_40901">1, 0, 1, 0</column>
+<column name="dec_204_reg_40127">1, 0, 1, 0</column>
+<column name="dec_205_reg_39353">1, 0, 1, 0</column>
+<column name="dec_206_reg_38579">1, 0, 1, 0</column>
+<column name="dec_207_reg_37805">1, 0, 1, 0</column>
+<column name="dec_208_reg_37031">1, 0, 1, 0</column>
+<column name="dec_209_reg_36257">1, 0, 1, 0</column>
+<column name="dec_20_reg_182543">1, 0, 1, 0</column>
+<column name="dec_210_reg_35483">1, 0, 1, 0</column>
+<column name="dec_211_reg_34709">1, 0, 1, 0</column>
+<column name="dec_212_reg_33935">1, 0, 1, 0</column>
+<column name="dec_213_reg_33161">1, 0, 1, 0</column>
+<column name="dec_214_reg_32387">1, 0, 1, 0</column>
+<column name="dec_215_reg_31613">1, 0, 1, 0</column>
+<column name="dec_216_reg_30839">1, 0, 1, 0</column>
+<column name="dec_217_reg_30065">1, 0, 1, 0</column>
+<column name="dec_218_reg_29291">1, 0, 1, 0</column>
+<column name="dec_219_reg_28517">1, 0, 1, 0</column>
+<column name="dec_21_reg_181769">1, 0, 1, 0</column>
+<column name="dec_220_reg_27743">1, 0, 1, 0</column>
+<column name="dec_221_reg_26969">1, 0, 1, 0</column>
+<column name="dec_222_reg_26195">1, 0, 1, 0</column>
+<column name="dec_223_reg_25421">1, 0, 1, 0</column>
+<column name="dec_224_reg_24647">1, 0, 1, 0</column>
+<column name="dec_225_reg_23873">1, 0, 1, 0</column>
+<column name="dec_226_reg_23099">1, 0, 1, 0</column>
+<column name="dec_227_reg_22325">1, 0, 1, 0</column>
+<column name="dec_228_reg_21551">1, 0, 1, 0</column>
+<column name="dec_229_reg_20777">1, 0, 1, 0</column>
+<column name="dec_22_reg_180995">1, 0, 1, 0</column>
+<column name="dec_230_reg_20003">1, 0, 1, 0</column>
+<column name="dec_231_reg_19229">1, 0, 1, 0</column>
+<column name="dec_232_reg_18455">1, 0, 1, 0</column>
+<column name="dec_233_reg_17681">1, 0, 1, 0</column>
+<column name="dec_234_reg_16907">1, 0, 1, 0</column>
+<column name="dec_235_reg_16133">1, 0, 1, 0</column>
+<column name="dec_236_reg_15359">1, 0, 1, 0</column>
+<column name="dec_237_reg_14585">1, 0, 1, 0</column>
+<column name="dec_238_reg_13811">1, 0, 1, 0</column>
+<column name="dec_239_reg_13037">1, 0, 1, 0</column>
+<column name="dec_23_reg_180221">1, 0, 1, 0</column>
+<column name="dec_240_reg_12263">1, 0, 1, 0</column>
+<column name="dec_241_reg_11489">1, 0, 1, 0</column>
+<column name="dec_242_reg_10715">1, 0, 1, 0</column>
+<column name="dec_243_reg_9941">1, 0, 1, 0</column>
+<column name="dec_244_reg_9167">1, 0, 1, 0</column>
+<column name="dec_245_reg_8393">1, 0, 1, 0</column>
+<column name="dec_246_reg_7619">1, 0, 1, 0</column>
+<column name="dec_247_reg_6845">1, 0, 1, 0</column>
+<column name="dec_248_reg_6071">1, 0, 1, 0</column>
+<column name="dec_249_reg_5297">1, 0, 1, 0</column>
+<column name="dec_24_reg_179447">1, 0, 1, 0</column>
+<column name="dec_250_reg_4523">1, 0, 1, 0</column>
+<column name="dec_251_reg_3749">1, 0, 1, 0</column>
+<column name="dec_252_reg_2975">1, 0, 1, 0</column>
+<column name="dec_253_reg_2201">1, 0, 1, 0</column>
+<column name="dec_254_reg_1427">1, 0, 1, 0</column>
+<column name="dec_255_reg_653">1, 0, 1, 0</column>
+<column name="dec_25_reg_178673">1, 0, 1, 0</column>
+<column name="dec_26_reg_177899">1, 0, 1, 0</column>
+<column name="dec_27_reg_177125">1, 0, 1, 0</column>
+<column name="dec_28_reg_176351">1, 0, 1, 0</column>
+<column name="dec_29_reg_175577">1, 0, 1, 0</column>
+<column name="dec_2_reg_196475">1, 0, 1, 0</column>
+<column name="dec_30_reg_174803">1, 0, 1, 0</column>
+<column name="dec_31_reg_174029">1, 0, 1, 0</column>
+<column name="dec_32_reg_173255">1, 0, 1, 0</column>
+<column name="dec_33_reg_172481">1, 0, 1, 0</column>
+<column name="dec_34_reg_171707">1, 0, 1, 0</column>
+<column name="dec_35_reg_170933">1, 0, 1, 0</column>
+<column name="dec_36_reg_170159">1, 0, 1, 0</column>
+<column name="dec_37_reg_169385">1, 0, 1, 0</column>
+<column name="dec_38_reg_168611">1, 0, 1, 0</column>
+<column name="dec_39_reg_167837">1, 0, 1, 0</column>
+<column name="dec_3_reg_195701">1, 0, 1, 0</column>
+<column name="dec_40_reg_167063">1, 0, 1, 0</column>
+<column name="dec_41_reg_166289">1, 0, 1, 0</column>
+<column name="dec_42_reg_165515">1, 0, 1, 0</column>
+<column name="dec_43_reg_164741">1, 0, 1, 0</column>
+<column name="dec_44_reg_163967">1, 0, 1, 0</column>
+<column name="dec_45_reg_163193">1, 0, 1, 0</column>
+<column name="dec_46_reg_162419">1, 0, 1, 0</column>
+<column name="dec_47_reg_161645">1, 0, 1, 0</column>
+<column name="dec_48_reg_160871">1, 0, 1, 0</column>
+<column name="dec_49_reg_160097">1, 0, 1, 0</column>
+<column name="dec_4_reg_194927">1, 0, 1, 0</column>
+<column name="dec_50_reg_159323">1, 0, 1, 0</column>
+<column name="dec_51_reg_158549">1, 0, 1, 0</column>
+<column name="dec_52_reg_157775">1, 0, 1, 0</column>
+<column name="dec_53_reg_157001">1, 0, 1, 0</column>
+<column name="dec_54_reg_156227">1, 0, 1, 0</column>
+<column name="dec_55_reg_155453">1, 0, 1, 0</column>
+<column name="dec_56_reg_154679">1, 0, 1, 0</column>
+<column name="dec_57_reg_153905">1, 0, 1, 0</column>
+<column name="dec_58_reg_153131">1, 0, 1, 0</column>
+<column name="dec_59_reg_152357">1, 0, 1, 0</column>
+<column name="dec_5_reg_194153">1, 0, 1, 0</column>
+<column name="dec_60_reg_151583">1, 0, 1, 0</column>
+<column name="dec_61_reg_150809">1, 0, 1, 0</column>
+<column name="dec_62_reg_150035">1, 0, 1, 0</column>
+<column name="dec_63_reg_149261">1, 0, 1, 0</column>
+<column name="dec_64_reg_148487">1, 0, 1, 0</column>
+<column name="dec_65_reg_147713">1, 0, 1, 0</column>
+<column name="dec_66_reg_146939">1, 0, 1, 0</column>
+<column name="dec_67_reg_146165">1, 0, 1, 0</column>
+<column name="dec_68_reg_145391">1, 0, 1, 0</column>
+<column name="dec_69_reg_144617">1, 0, 1, 0</column>
+<column name="dec_6_reg_193379">1, 0, 1, 0</column>
+<column name="dec_70_reg_143843">1, 0, 1, 0</column>
+<column name="dec_71_reg_143069">1, 0, 1, 0</column>
+<column name="dec_72_reg_142295">1, 0, 1, 0</column>
+<column name="dec_73_reg_141521">1, 0, 1, 0</column>
+<column name="dec_74_reg_140747">1, 0, 1, 0</column>
+<column name="dec_75_reg_139973">1, 0, 1, 0</column>
+<column name="dec_76_reg_139199">1, 0, 1, 0</column>
+<column name="dec_77_reg_138425">1, 0, 1, 0</column>
+<column name="dec_78_reg_137651">1, 0, 1, 0</column>
+<column name="dec_79_reg_136877">1, 0, 1, 0</column>
+<column name="dec_7_reg_192605">1, 0, 1, 0</column>
+<column name="dec_80_reg_136103">1, 0, 1, 0</column>
+<column name="dec_81_reg_135329">1, 0, 1, 0</column>
+<column name="dec_82_reg_134555">1, 0, 1, 0</column>
+<column name="dec_83_reg_133781">1, 0, 1, 0</column>
+<column name="dec_84_reg_133007">1, 0, 1, 0</column>
+<column name="dec_85_reg_132233">1, 0, 1, 0</column>
+<column name="dec_86_reg_131459">1, 0, 1, 0</column>
+<column name="dec_87_reg_130685">1, 0, 1, 0</column>
+<column name="dec_88_reg_129911">1, 0, 1, 0</column>
+<column name="dec_89_reg_129137">1, 0, 1, 0</column>
+<column name="dec_8_reg_191831">1, 0, 1, 0</column>
+<column name="dec_90_reg_128363">1, 0, 1, 0</column>
+<column name="dec_91_reg_127589">1, 0, 1, 0</column>
+<column name="dec_92_reg_126815">1, 0, 1, 0</column>
+<column name="dec_93_reg_126041">1, 0, 1, 0</column>
+<column name="dec_94_reg_125267">1, 0, 1, 0</column>
+<column name="dec_95_reg_124493">1, 0, 1, 0</column>
+<column name="dec_96_reg_123719">1, 0, 1, 0</column>
+<column name="dec_97_reg_122945">1, 0, 1, 0</column>
+<column name="dec_98_reg_122171">1, 0, 1, 0</column>
+<column name="dec_99_reg_121397">1, 0, 1, 0</column>
+<column name="dec_9_reg_191057">1, 0, 1, 0</column>
+<column name="dec_reg_198023">1, 0, 1, 0</column>
+<column name="grp_matcher_engine_957_214_Pipeline_init_state_fu_198820_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_matcher_engine_957_214_Pipeline_match_mask_loop_fu_198832_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_matcher_engine_957_214_Pipeline_reset_state_fu_198826_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_ln107_reg_199524">1, 0, 1, 0</column>
+<column name="icmp_ln124_reg_199544">1, 0, 1, 0</column>
+<column name="len_reg_199518">8, 0, 8, 0</column>
+<column name="p_2_reg_198797">10, 0, 10, 0</column>
+<column name="phi_mul_reg_198808">18, 0, 18, 0</column>
+<column name="shl_ln124_reg_199539">214, 0, 214, 0</column>
+<column name="state_addr_reg_199528">10, 0, 10, 0</column>
+<column name="state_load_reg_199533">213, 0, 213, 0</column>
+<column name="zext_ln104_reg_199507">10, 0, 64, 54</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, matcher_engine&lt;957, 214&gt;, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, matcher_engine&lt;957, 214&gt;, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, matcher_engine&lt;957, 214&gt;, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, matcher_engine&lt;957, 214&gt;, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, matcher_engine&lt;957, 214&gt;, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, matcher_engine&lt;957, 214&gt;, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, matcher_engine&lt;957, 214&gt;, return value</column>
+<column name="long_bytes_dout">in, 9, ap_fifo, long_bytes, pointer</column>
+<column name="long_bytes_num_data_valid">in, 7, ap_fifo, long_bytes, pointer</column>
+<column name="long_bytes_fifo_cap">in, 7, ap_fifo, long_bytes, pointer</column>
+<column name="long_bytes_empty_n">in, 1, ap_fifo, long_bytes, pointer</column>
+<column name="long_bytes_read">out, 1, ap_fifo, long_bytes, pointer</column>
+<column name="long_matches_din">out, 33, ap_fifo, long_matches, pointer</column>
+<column name="long_matches_num_data_valid">in, 7, ap_fifo, long_matches, pointer</column>
+<column name="long_matches_fifo_cap">in, 7, ap_fifo, long_matches, pointer</column>
+<column name="long_matches_full_n">in, 1, ap_fifo, long_matches, pointer</column>
+<column name="long_matches_write">out, 1, ap_fifo, long_matches, pointer</column>
+</table>
+</item>
+</section>
+</profile>

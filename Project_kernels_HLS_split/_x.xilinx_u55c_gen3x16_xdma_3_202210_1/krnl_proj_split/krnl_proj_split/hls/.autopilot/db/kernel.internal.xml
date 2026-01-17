@@ -1,0 +1,17 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel name="krnl_proj_split" language="c" vlnv="xilinx.com:hls:krnl_proj_split:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" compileOptions="" profileType="none" hwControlProtocol="ap_ctrl_chain">
+    <ports>
+      <port name="INPUT_STREAM" mode="read_only" dataWidth="512" portType="stream"/>
+      <port name="OUTPUT_STREAM" mode="write_only" dataWidth="512" portType="stream"/>
+      <port name="S_AXI_CONTROL" portType="addressable" mode="slave" base="0x0" range="0x40" dataWidth="32"/>
+    </ports>
+    <args>
+      <arg id="0" name="input_stream" addressQualifier="4" port="INPUT_STREAM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1, 1, 16, &apos;8&apos;, false&gt;, 0&gt;&amp;" memSize="0x40" origName="input_stream" origUse="variable"/>
+      <arg id="1" name="output_stream" addressQualifier="4" port="OUTPUT_STREAM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1, 1, 16, &apos;8&apos;, false&gt;, 0&gt;&amp;" memSize="0x40" origName="output_stream" origUse="variable"/>
+      <arg id="2" name="processed_bytes" addressQualifier="0" port="S_AXI_CONTROL" hostOffset="0x0" hostSize="0x8" offset="0x10" size="0x8" type="void*"/>
+      <arg id="3" name="processed_cycles" addressQualifier="0" port="S_AXI_CONTROL" hostOffset="0x0" hostSize="0x8" offset="0x28" size="0x8" type="void*"/>
+    </args>
+    <compileWorkGroupSize x="1" y="1" z="1"/>
+    <maxWorkGroupSize x="1" y="1" z="1"/>
+  </kernel>
+</root>

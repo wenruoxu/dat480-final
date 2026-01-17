@@ -1,0 +1,940 @@
+<?xml version="1.0"?>
+<cf:model cf:cpu="x86" cf:partition="0" cf:prefix="p_0_" cf:name="dr" xd:type="design" xmlns:xd="http://www.xilinx.com/xd" xmlns:cf="http://www.xilinx.com/connections">
+  <cf:block cf:name="hwblk_cmac_0">
+    <cf:port cf:name="S_AXILITE" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="gt_reset_reg" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="reset_reg" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="mode" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="conf_tx" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="conf_rx" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="core_mode" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="version" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="gt_loopback" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="user_reg0" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_status" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_status" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_status" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_block_lock" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_lane_sync" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_lane_sync_err" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_an_link_ctl" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_lt_status" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_pm_tick" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_cycle_count" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_good_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_good_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_64B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_65_127B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_128_255B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_256_511B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_512_1023B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_1024_1518B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_1519_1522B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_1523_1548B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_1549_2047B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_2048_4095B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_4096_8191B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_8192_9215B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_large" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_packets_small" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_total_bad_fcs" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_pause" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_tx_user_pause" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_good_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_good_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_64B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_65_127B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_128_255B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_256_511B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_512_1023B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_1024_1518B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_1519_1522B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_1523_1548B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_1549_2047B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_2048_4095B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_4096_8191B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_8192_9215B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_large" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_small" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_undersize" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_fragmented" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_oversize" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_toolong" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_packets_jabber" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_total_bad_fcs" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_packets_bad_fcs" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_stomped_fcs" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_pause" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stat_rx_user_pause" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="rsfec_config_ind_corr" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="rsfec_config_enable" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="S_AXIS" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="M_AXIS" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:block cf:name="swblk_cmac_0">
+    <cf:port cf:name="S_AXILITE" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="gt_reset_reg" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="reset_reg" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="mode" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="conf_tx" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="conf_rx" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="core_mode" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="version" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="gt_loopback" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="user_reg0" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_status" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_status" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_status" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_block_lock" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_lane_sync" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_lane_sync_err" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_an_link_ctl" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_lt_status" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_pm_tick" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_cycle_count" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_good_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_good_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_64B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_65_127B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_128_255B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_256_511B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_512_1023B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_1024_1518B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_1519_1522B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_1523_1548B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_1549_2047B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_2048_4095B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_4096_8191B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_8192_9215B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_large" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_packets_small" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_total_bad_fcs" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_pause" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_tx_user_pause" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_good_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_good_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_64B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_65_127B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_128_255B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_256_511B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_512_1023B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_1024_1518B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_1519_1522B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_1523_1548B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_1549_2047B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_2048_4095B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_4096_8191B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_8192_9215B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_large" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_small" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_undersize" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_fragmented" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_oversize" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_toolong" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_packets_jabber" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_total_bad_fcs" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_packets_bad_fcs" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_stomped_fcs" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_pause" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stat_rx_user_pause" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="rsfec_config_ind_corr" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="rsfec_config_enable" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="S_AXIS" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="M_AXIS" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:block cf:name="hwblk_networklayer">
+    <cf:port cf:name="S_AXIL_nl" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="mac_address" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="ip_address" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="gateway" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="ip_mask" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="eth_in_cycles" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="eth_in_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="eth_in_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="pkth_in_cycles" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="pkth_in_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="pkth_in_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arp_in_cycles" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arp_in_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arp_in_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arp_out_cycles" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arp_out_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arp_out_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="icmp_in_cycles" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="icmp_in_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="icmp_in_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="icmp_out_cycles" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="icmp_out_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="icmp_out_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="ethhi_out_cycles" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="ethhi_out_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="ethhi_out_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="eth_out_cycles" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="eth_out_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="eth_out_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="udp_in_cycles" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="udp_in_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="udp_in_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="app_out_cycles" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="app_out_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="app_out_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="udp_out_cycles" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="udp_out_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="udp_out_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="app_in_cycles" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="app_in_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="app_in_packets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="debug_reset_counters" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="udp_number_sockets" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="udp_theirIP_offset" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="udp_theirPort_offset" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="udp_myPort_offset" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="udp_valid_offset" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arp_discovery" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arp_valid_offset" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arp_ip_addr_offset" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arp_mac_addr_offset" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="S_AXIS_sk2nl" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="M_AXIS_nl2sk" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="S_AXIS_eth2nl" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="M_AXIS_nl2eth" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:block cf:name="swblk_networklayer">
+    <cf:port cf:name="S_AXIL_nl" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="mac_address" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="ip_address" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="gateway" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="ip_mask" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="eth_in_cycles" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="eth_in_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="eth_in_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="pkth_in_cycles" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="pkth_in_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="pkth_in_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arp_in_cycles" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arp_in_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arp_in_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arp_out_cycles" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arp_out_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arp_out_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="icmp_in_cycles" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="icmp_in_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="icmp_in_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="icmp_out_cycles" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="icmp_out_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="icmp_out_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="ethhi_out_cycles" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="ethhi_out_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="ethhi_out_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="eth_out_cycles" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="eth_out_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="eth_out_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="udp_in_cycles" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="udp_in_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="udp_in_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="app_out_cycles" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="app_out_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="app_out_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="udp_out_cycles" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="udp_out_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="udp_out_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="app_in_cycles" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="app_in_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="app_in_packets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="debug_reset_counters" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="udp_number_sockets" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="udp_theirIP_offset" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="udp_theirPort_offset" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="udp_myPort_offset" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="udp_valid_offset" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arp_discovery" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arp_valid_offset" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arp_ip_addr_offset" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arp_mac_addr_offset" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="S_AXIS_sk2nl" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="M_AXIS_nl2sk" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="S_AXIS_eth2nl" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="M_AXIS_nl2eth" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:block cf:name="hwblk_krnl_proj_split">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="input_stream" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="output_stream" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="processed_bytes" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="processed_cycles" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:block cf:name="swblk_krnl_proj_split">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="input_stream" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="output_stream" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="processed_bytes" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="processed_cycles" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:comp cf:name="xilinx_u55c_gen3x16_xdma_2_202110_1" xd:componentRef="xilinx_u55c_gen3x16_xdma_2_202110_1" xd:clockId="0"/>
+  <cf:comp cf:name="cmac_0" xd:componentRef="cmac_0" xd:clockId="0">
+    <cf:parameter cf:name="SLR_ASSIGNMENTS" cf:value="SLR1"/>
+  </cf:comp>
+  <cf:comp cf:name="networklayer_0" xd:componentRef="networklayer" xd:clockId="0">
+    <cf:parameter cf:name="SLR_ASSIGNMENTS" cf:value="SLR1"/>
+  </cf:comp>
+  <cf:comp cf:name="krnl_proj_split_0" xd:componentRef="krnl_proj_split" xd:clockId="0">
+    <cf:parameter cf:name="SLR_ASSIGNMENTS" cf:value="SLR1"/>
+  </cf:comp>
+  <cf:instance cf:name="hwinst_cmac_0" cf:blockName="hwblk_cmac_0" cf:compName="cmac_0">
+    <cf:portMap cf:blockPort="S_AXILITE" cf:compPort="S_AXILITE" xd:register="0x0"/>
+    <cf:portMap cf:blockPort="gt_reset_reg" cf:compPort="S_AXILITE" xd:register="0x0000"/>
+    <cf:portMap cf:blockPort="reset_reg" cf:compPort="S_AXILITE" xd:register="0x0004"/>
+    <cf:portMap cf:blockPort="mode" cf:compPort="S_AXILITE" xd:register="0x0008"/>
+    <cf:portMap cf:blockPort="conf_tx" cf:compPort="S_AXILITE" xd:register="0x000C"/>
+    <cf:portMap cf:blockPort="conf_rx" cf:compPort="S_AXILITE" xd:register="0x0014"/>
+    <cf:portMap cf:blockPort="core_mode" cf:compPort="S_AXILITE" xd:register="0x0020"/>
+    <cf:portMap cf:blockPort="version" cf:compPort="S_AXILITE" xd:register="0x0024"/>
+    <cf:portMap cf:blockPort="gt_loopback" cf:compPort="S_AXILITE" xd:register="0x0090"/>
+    <cf:portMap cf:blockPort="user_reg0" cf:compPort="S_AXILITE" xd:register="0x00CC"/>
+    <cf:portMap cf:blockPort="stat_tx_status" cf:compPort="S_AXILITE" xd:register="0x0200"/>
+    <cf:portMap cf:blockPort="stat_rx_status" cf:compPort="S_AXILITE" xd:register="0x0204"/>
+    <cf:portMap cf:blockPort="stat_status" cf:compPort="S_AXILITE" xd:register="0x0208"/>
+    <cf:portMap cf:blockPort="stat_rx_block_lock" cf:compPort="S_AXILITE" xd:register="0x020C"/>
+    <cf:portMap cf:blockPort="stat_rx_lane_sync" cf:compPort="S_AXILITE" xd:register="0x0210"/>
+    <cf:portMap cf:blockPort="stat_rx_lane_sync_err" cf:compPort="S_AXILITE" xd:register="0x0214"/>
+    <cf:portMap cf:blockPort="stat_an_link_ctl" cf:compPort="S_AXILITE" xd:register="0x0260"/>
+    <cf:portMap cf:blockPort="stat_lt_status" cf:compPort="S_AXILITE" xd:register="0x0264"/>
+    <cf:portMap cf:blockPort="stat_pm_tick" cf:compPort="S_AXILITE" xd:register="0x02B0"/>
+    <cf:portMap cf:blockPort="stat_cycle_count" cf:compPort="S_AXILITE" xd:register="0x02B8"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets" cf:compPort="S_AXILITE" xd:register="0x0500"/>
+    <cf:portMap cf:blockPort="stat_tx_total_good_packets" cf:compPort="S_AXILITE" xd:register="0x0508"/>
+    <cf:portMap cf:blockPort="stat_tx_total_bytes" cf:compPort="S_AXILITE" xd:register="0x0510"/>
+    <cf:portMap cf:blockPort="stat_tx_total_good_bytes" cf:compPort="S_AXILITE" xd:register="0x0518"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_64B" cf:compPort="S_AXILITE" xd:register="0x0520"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_65_127B" cf:compPort="S_AXILITE" xd:register="0x0528"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_128_255B" cf:compPort="S_AXILITE" xd:register="0x0530"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_256_511B" cf:compPort="S_AXILITE" xd:register="0x0538"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_512_1023B" cf:compPort="S_AXILITE" xd:register="0x0540"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_1024_1518B" cf:compPort="S_AXILITE" xd:register="0x0548"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_1519_1522B" cf:compPort="S_AXILITE" xd:register="0x0550"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_1523_1548B" cf:compPort="S_AXILITE" xd:register="0x0558"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_1549_2047B" cf:compPort="S_AXILITE" xd:register="0x0560"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_2048_4095B" cf:compPort="S_AXILITE" xd:register="0x0568"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_4096_8191B" cf:compPort="S_AXILITE" xd:register="0x0570"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_8192_9215B" cf:compPort="S_AXILITE" xd:register="0x0578"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_large" cf:compPort="S_AXILITE" xd:register="0x0580"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_small" cf:compPort="S_AXILITE" xd:register="0x0588"/>
+    <cf:portMap cf:blockPort="stat_tx_total_bad_fcs" cf:compPort="S_AXILITE" xd:register="0x05B8"/>
+    <cf:portMap cf:blockPort="stat_tx_pause" cf:compPort="S_AXILITE" xd:register="0x05F0"/>
+    <cf:portMap cf:blockPort="stat_tx_user_pause" cf:compPort="S_AXILITE" xd:register="0x05F8"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets" cf:compPort="S_AXILITE" xd:register="0x0608"/>
+    <cf:portMap cf:blockPort="stat_rx_total_good_packets" cf:compPort="S_AXILITE" xd:register="0x0610"/>
+    <cf:portMap cf:blockPort="stat_rx_total_bytes" cf:compPort="S_AXILITE" xd:register="0x0618"/>
+    <cf:portMap cf:blockPort="stat_rx_total_good_bytes" cf:compPort="S_AXILITE" xd:register="0x0620"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_64B" cf:compPort="S_AXILITE" xd:register="0x0628"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_65_127B" cf:compPort="S_AXILITE" xd:register="0x0630"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_128_255B" cf:compPort="S_AXILITE" xd:register="0x0638"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_256_511B" cf:compPort="S_AXILITE" xd:register="0x0640"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_512_1023B" cf:compPort="S_AXILITE" xd:register="0x0648"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_1024_1518B" cf:compPort="S_AXILITE" xd:register="0x0650"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_1519_1522B" cf:compPort="S_AXILITE" xd:register="0x0658"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_1523_1548B" cf:compPort="S_AXILITE" xd:register="0x0660"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_1549_2047B" cf:compPort="S_AXILITE" xd:register="0x0668"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_2048_4095B" cf:compPort="S_AXILITE" xd:register="0x0670"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_4096_8191B" cf:compPort="S_AXILITE" xd:register="0x0678"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_8192_9215B" cf:compPort="S_AXILITE" xd:register="0x0680"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_large" cf:compPort="S_AXILITE" xd:register="0x0688"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_small" cf:compPort="S_AXILITE" xd:register="0x0690"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_undersize" cf:compPort="S_AXILITE" xd:register="0x0698"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_fragmented" cf:compPort="S_AXILITE" xd:register="0x06A0"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_oversize" cf:compPort="S_AXILITE" xd:register="0x06A8"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_toolong" cf:compPort="S_AXILITE" xd:register="0x06B0"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_jabber" cf:compPort="S_AXILITE" xd:register="0x06B8"/>
+    <cf:portMap cf:blockPort="stat_rx_total_bad_fcs" cf:compPort="S_AXILITE" xd:register="0x06C0"/>
+    <cf:portMap cf:blockPort="stat_rx_packets_bad_fcs" cf:compPort="S_AXILITE" xd:register="0x06C8"/>
+    <cf:portMap cf:blockPort="stat_rx_stomped_fcs" cf:compPort="S_AXILITE" xd:register="0x06D0"/>
+    <cf:portMap cf:blockPort="stat_rx_pause" cf:compPort="S_AXILITE" xd:register="0x06F8"/>
+    <cf:portMap cf:blockPort="stat_rx_user_pause" cf:compPort="S_AXILITE" xd:register="0x0700"/>
+    <cf:portMap cf:blockPort="rsfec_config_ind_corr" cf:compPort="S_AXILITE" xd:register="0x1000"/>
+    <cf:portMap cf:blockPort="rsfec_config_enable" cf:compPort="S_AXILITE" xd:register="0x107C"/>
+    <cf:portMap cf:blockPort="S_AXIS" cf:compPort="S_AXIS"/>
+    <cf:portMap cf:blockPort="M_AXIS" cf:compPort="M_AXIS"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_cmac_0" cf:blockName="swblk_cmac_0" cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1">
+    <cf:portMap cf:blockPort="S_AXILITE" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="gt_reset_reg" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="reset_reg" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="mode" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="conf_tx" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="conf_rx" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="core_mode" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="version" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="gt_loopback" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="user_reg0" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_status" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_status" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_status" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_block_lock" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_lane_sync" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_lane_sync_err" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_an_link_ctl" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_lt_status" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_pm_tick" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_cycle_count" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_good_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_good_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_64B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_65_127B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_128_255B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_256_511B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_512_1023B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_1024_1518B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_1519_1522B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_1523_1548B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_1549_2047B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_2048_4095B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_4096_8191B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_8192_9215B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_large" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_packets_small" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_total_bad_fcs" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_pause" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_tx_user_pause" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_good_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_good_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_64B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_65_127B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_128_255B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_256_511B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_512_1023B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_1024_1518B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_1519_1522B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_1523_1548B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_1549_2047B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_2048_4095B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_4096_8191B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_8192_9215B" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_large" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_small" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_undersize" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_fragmented" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_oversize" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_toolong" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_packets_jabber" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_total_bad_fcs" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_packets_bad_fcs" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_stomped_fcs" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_pause" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stat_rx_user_pause" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="rsfec_config_ind_corr" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="rsfec_config_enable" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+  </cf:instance>
+  <cf:instance cf:name="hwinst_networklayer_0" cf:blockName="hwblk_networklayer" cf:compName="networklayer_0">
+    <cf:portMap cf:blockPort="S_AXIL_nl" cf:compPort="S_AXIL_nl" xd:register="0x0"/>
+    <cf:portMap cf:blockPort="mac_address" cf:compPort="S_AXIL_nl" xd:register="0x0010"/>
+    <cf:portMap cf:blockPort="ip_address" cf:compPort="S_AXIL_nl" xd:register="0x0018"/>
+    <cf:portMap cf:blockPort="gateway" cf:compPort="S_AXIL_nl" xd:register="0x001C"/>
+    <cf:portMap cf:blockPort="ip_mask" cf:compPort="S_AXIL_nl" xd:register="0x0020"/>
+    <cf:portMap cf:blockPort="eth_in_cycles" cf:compPort="S_AXIL_nl" xd:register="0x0400"/>
+    <cf:portMap cf:blockPort="eth_in_bytes" cf:compPort="S_AXIL_nl" xd:register="0x0408"/>
+    <cf:portMap cf:blockPort="eth_in_packets" cf:compPort="S_AXIL_nl" xd:register="0x0410"/>
+    <cf:portMap cf:blockPort="pkth_in_cycles" cf:compPort="S_AXIL_nl" xd:register="0x0418"/>
+    <cf:portMap cf:blockPort="pkth_in_bytes" cf:compPort="S_AXIL_nl" xd:register="0x0420"/>
+    <cf:portMap cf:blockPort="pkth_in_packets" cf:compPort="S_AXIL_nl" xd:register="0x0428"/>
+    <cf:portMap cf:blockPort="arp_in_cycles" cf:compPort="S_AXIL_nl" xd:register="0x0430"/>
+    <cf:portMap cf:blockPort="arp_in_bytes" cf:compPort="S_AXIL_nl" xd:register="0x0438"/>
+    <cf:portMap cf:blockPort="arp_in_packets" cf:compPort="S_AXIL_nl" xd:register="0x0440"/>
+    <cf:portMap cf:blockPort="arp_out_cycles" cf:compPort="S_AXIL_nl" xd:register="0x0448"/>
+    <cf:portMap cf:blockPort="arp_out_bytes" cf:compPort="S_AXIL_nl" xd:register="0x0450"/>
+    <cf:portMap cf:blockPort="arp_out_packets" cf:compPort="S_AXIL_nl" xd:register="0x0458"/>
+    <cf:portMap cf:blockPort="icmp_in_cycles" cf:compPort="S_AXIL_nl" xd:register="0x0460"/>
+    <cf:portMap cf:blockPort="icmp_in_bytes" cf:compPort="S_AXIL_nl" xd:register="0x0468"/>
+    <cf:portMap cf:blockPort="icmp_in_packets" cf:compPort="S_AXIL_nl" xd:register="0x0470"/>
+    <cf:portMap cf:blockPort="icmp_out_cycles" cf:compPort="S_AXIL_nl" xd:register="0x0478"/>
+    <cf:portMap cf:blockPort="icmp_out_bytes" cf:compPort="S_AXIL_nl" xd:register="0x0480"/>
+    <cf:portMap cf:blockPort="icmp_out_packets" cf:compPort="S_AXIL_nl" xd:register="0x0488"/>
+    <cf:portMap cf:blockPort="ethhi_out_cycles" cf:compPort="S_AXIL_nl" xd:register="0x0490"/>
+    <cf:portMap cf:blockPort="ethhi_out_bytes" cf:compPort="S_AXIL_nl" xd:register="0x0498"/>
+    <cf:portMap cf:blockPort="ethhi_out_packets" cf:compPort="S_AXIL_nl" xd:register="0x04A0"/>
+    <cf:portMap cf:blockPort="eth_out_cycles" cf:compPort="S_AXIL_nl" xd:register="0x04A8"/>
+    <cf:portMap cf:blockPort="eth_out_bytes" cf:compPort="S_AXIL_nl" xd:register="0x04B0"/>
+    <cf:portMap cf:blockPort="eth_out_packets" cf:compPort="S_AXIL_nl" xd:register="0x04B8"/>
+    <cf:portMap cf:blockPort="udp_in_cycles" cf:compPort="S_AXIL_nl" xd:register="0x04C0"/>
+    <cf:portMap cf:blockPort="udp_in_bytes" cf:compPort="S_AXIL_nl" xd:register="0x04C8"/>
+    <cf:portMap cf:blockPort="udp_in_packets" cf:compPort="S_AXIL_nl" xd:register="0x04D0"/>
+    <cf:portMap cf:blockPort="app_out_cycles" cf:compPort="S_AXIL_nl" xd:register="0x04D8"/>
+    <cf:portMap cf:blockPort="app_out_bytes" cf:compPort="S_AXIL_nl" xd:register="0x04E0"/>
+    <cf:portMap cf:blockPort="app_out_packets" cf:compPort="S_AXIL_nl" xd:register="0x04E8"/>
+    <cf:portMap cf:blockPort="udp_out_cycles" cf:compPort="S_AXIL_nl" xd:register="0x04F0"/>
+    <cf:portMap cf:blockPort="udp_out_bytes" cf:compPort="S_AXIL_nl" xd:register="0x04F8"/>
+    <cf:portMap cf:blockPort="udp_out_packets" cf:compPort="S_AXIL_nl" xd:register="0x0500"/>
+    <cf:portMap cf:blockPort="app_in_cycles" cf:compPort="S_AXIL_nl" xd:register="0x0508"/>
+    <cf:portMap cf:blockPort="app_in_bytes" cf:compPort="S_AXIL_nl" xd:register="0x0510"/>
+    <cf:portMap cf:blockPort="app_in_packets" cf:compPort="S_AXIL_nl" xd:register="0x0518"/>
+    <cf:portMap cf:blockPort="debug_reset_counters" cf:compPort="S_AXIL_nl" xd:register="0x05F0"/>
+    <cf:portMap cf:blockPort="udp_number_sockets" cf:compPort="S_AXIL_nl" xd:register="0x0810"/>
+    <cf:portMap cf:blockPort="udp_theirIP_offset" cf:compPort="S_AXIL_nl" xd:register="0x0820"/>
+    <cf:portMap cf:blockPort="udp_theirPort_offset" cf:compPort="S_AXIL_nl" xd:register="0x08A0"/>
+    <cf:portMap cf:blockPort="udp_myPort_offset" cf:compPort="S_AXIL_nl" xd:register="0x0920"/>
+    <cf:portMap cf:blockPort="udp_valid_offset" cf:compPort="S_AXIL_nl" xd:register="0x09A0"/>
+    <cf:portMap cf:blockPort="arp_discovery" cf:compPort="S_AXIL_nl" xd:register="0x1010"/>
+    <cf:portMap cf:blockPort="arp_valid_offset" cf:compPort="S_AXIL_nl" xd:register="0x1100"/>
+    <cf:portMap cf:blockPort="arp_ip_addr_offset" cf:compPort="S_AXIL_nl" xd:register="0x1400"/>
+    <cf:portMap cf:blockPort="arp_mac_addr_offset" cf:compPort="S_AXIL_nl" xd:register="0x1800"/>
+    <cf:portMap cf:blockPort="S_AXIS_sk2nl" cf:compPort="S_AXIS_sk2nl"/>
+    <cf:portMap cf:blockPort="M_AXIS_nl2sk" cf:compPort="M_AXIS_nl2sk"/>
+    <cf:portMap cf:blockPort="S_AXIS_eth2nl" cf:compPort="S_AXIS_eth2nl"/>
+    <cf:portMap cf:blockPort="M_AXIS_nl2eth" cf:compPort="M_AXIS_nl2eth"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_networklayer_0" cf:blockName="swblk_networklayer" cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1">
+    <cf:portMap cf:blockPort="S_AXIL_nl" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="mac_address" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="ip_address" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="gateway" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="ip_mask" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="eth_in_cycles" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="eth_in_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="eth_in_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="pkth_in_cycles" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="pkth_in_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="pkth_in_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="arp_in_cycles" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="arp_in_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="arp_in_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="arp_out_cycles" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="arp_out_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="arp_out_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="icmp_in_cycles" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="icmp_in_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="icmp_in_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="icmp_out_cycles" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="icmp_out_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="icmp_out_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="ethhi_out_cycles" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="ethhi_out_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="ethhi_out_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="eth_out_cycles" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="eth_out_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="eth_out_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="udp_in_cycles" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="udp_in_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="udp_in_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="app_out_cycles" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="app_out_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="app_out_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="udp_out_cycles" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="udp_out_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="udp_out_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="app_in_cycles" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="app_in_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="app_in_packets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="debug_reset_counters" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="udp_number_sockets" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="udp_theirIP_offset" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="udp_theirPort_offset" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="udp_myPort_offset" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="udp_valid_offset" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="arp_discovery" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="arp_valid_offset" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="arp_ip_addr_offset" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="arp_mac_addr_offset" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+  </cf:instance>
+  <cf:instance cf:name="hwinst_krnl_proj_split_0" cf:blockName="hwblk_krnl_proj_split" cf:compName="krnl_proj_split_0">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="s_axi_control" xd:register="0x0"/>
+    <cf:portMap cf:blockPort="input_stream" cf:compPort="input_stream"/>
+    <cf:portMap cf:blockPort="output_stream" cf:compPort="output_stream"/>
+    <cf:portMap cf:blockPort="processed_bytes" cf:compPort="s_axi_control" xd:register="0x10"/>
+    <cf:portMap cf:blockPort="processed_cycles" cf:compPort="s_axi_control" xd:register="0x28"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_krnl_proj_split_0" cf:blockName="swblk_krnl_proj_split" cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="processed_bytes" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="processed_cycles" cf:compPort="SLR1/interconnect_axilite_user_M01_AXI"/>
+  </cf:instance>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="S_AXILITE" cf:dstInst="hwinst_cmac_0" cf:dstPort="S_AXILITE">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="gt_reset_reg" cf:dstInst="hwinst_cmac_0" cf:dstPort="gt_reset_reg">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="reset_reg" cf:dstInst="hwinst_cmac_0" cf:dstPort="reset_reg">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="mode" cf:dstInst="hwinst_cmac_0" cf:dstPort="mode">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="conf_tx" cf:dstInst="hwinst_cmac_0" cf:dstPort="conf_tx">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="conf_rx" cf:dstInst="hwinst_cmac_0" cf:dstPort="conf_rx">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="core_mode" cf:dstInst="hwinst_cmac_0" cf:dstPort="core_mode">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="version" cf:dstInst="hwinst_cmac_0" cf:dstPort="version">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="gt_loopback" cf:dstInst="hwinst_cmac_0" cf:dstPort="gt_loopback">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="user_reg0" cf:dstInst="hwinst_cmac_0" cf:dstPort="user_reg0">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_status" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_status">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_status" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_status">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_status" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_status">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_block_lock" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_block_lock">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_lane_sync" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_lane_sync">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_lane_sync_err" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_lane_sync_err">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_an_link_ctl" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_an_link_ctl">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_lt_status" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_lt_status">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_pm_tick" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_pm_tick">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_cycle_count" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_cycle_count">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_good_packets" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_good_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_bytes" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_good_bytes" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_good_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_64B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_64B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_65_127B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_65_127B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_128_255B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_128_255B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_256_511B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_256_511B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_512_1023B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_512_1023B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_1024_1518B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_1024_1518B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_1519_1522B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_1519_1522B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_1523_1548B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_1523_1548B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_1549_2047B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_1549_2047B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_2048_4095B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_2048_4095B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_4096_8191B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_4096_8191B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_8192_9215B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_8192_9215B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_large" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_large">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_packets_small" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_packets_small">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_total_bad_fcs" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_total_bad_fcs">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_pause" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_pause">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_tx_user_pause" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_tx_user_pause">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_good_packets" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_good_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_bytes" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_good_bytes" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_good_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_64B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_64B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_65_127B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_65_127B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_128_255B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_128_255B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_256_511B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_256_511B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_512_1023B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_512_1023B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_1024_1518B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_1024_1518B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_1519_1522B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_1519_1522B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_1523_1548B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_1523_1548B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_1549_2047B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_1549_2047B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_2048_4095B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_2048_4095B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_4096_8191B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_4096_8191B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_8192_9215B" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_8192_9215B">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_large" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_large">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_small" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_small">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_undersize" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_undersize">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_fragmented" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_fragmented">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_oversize" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_oversize">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_toolong" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_toolong">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_packets_jabber" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_packets_jabber">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_total_bad_fcs" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_total_bad_fcs">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_packets_bad_fcs" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_packets_bad_fcs">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_stomped_fcs" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_stomped_fcs">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_pause" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_pause">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="stat_rx_user_pause" cf:dstInst="hwinst_cmac_0" cf:dstPort="stat_rx_user_pause">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="rsfec_config_ind_corr" cf:dstInst="hwinst_cmac_0" cf:dstPort="rsfec_config_ind_corr">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_cmac_0" cf:srcPort="rsfec_config_enable" cf:dstInst="hwinst_cmac_0" cf:dstPort="rsfec_config_enable">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="hwinst_cmac_0" cf:srcPort="M_AXIS" cf:dstInst="hwinst_networklayer_0" cf:dstPort="S_AXIS_eth2nl"/>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="S_AXIL_nl" cf:dstInst="hwinst_networklayer_0" cf:dstPort="S_AXIL_nl">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="mac_address" cf:dstInst="hwinst_networklayer_0" cf:dstPort="mac_address">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="ip_address" cf:dstInst="hwinst_networklayer_0" cf:dstPort="ip_address">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="gateway" cf:dstInst="hwinst_networklayer_0" cf:dstPort="gateway">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="ip_mask" cf:dstInst="hwinst_networklayer_0" cf:dstPort="ip_mask">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="eth_in_cycles" cf:dstInst="hwinst_networklayer_0" cf:dstPort="eth_in_cycles">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="eth_in_bytes" cf:dstInst="hwinst_networklayer_0" cf:dstPort="eth_in_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="eth_in_packets" cf:dstInst="hwinst_networklayer_0" cf:dstPort="eth_in_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="pkth_in_cycles" cf:dstInst="hwinst_networklayer_0" cf:dstPort="pkth_in_cycles">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="pkth_in_bytes" cf:dstInst="hwinst_networklayer_0" cf:dstPort="pkth_in_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="pkth_in_packets" cf:dstInst="hwinst_networklayer_0" cf:dstPort="pkth_in_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="arp_in_cycles" cf:dstInst="hwinst_networklayer_0" cf:dstPort="arp_in_cycles">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="arp_in_bytes" cf:dstInst="hwinst_networklayer_0" cf:dstPort="arp_in_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="arp_in_packets" cf:dstInst="hwinst_networklayer_0" cf:dstPort="arp_in_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="arp_out_cycles" cf:dstInst="hwinst_networklayer_0" cf:dstPort="arp_out_cycles">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="arp_out_bytes" cf:dstInst="hwinst_networklayer_0" cf:dstPort="arp_out_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="arp_out_packets" cf:dstInst="hwinst_networklayer_0" cf:dstPort="arp_out_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="icmp_in_cycles" cf:dstInst="hwinst_networklayer_0" cf:dstPort="icmp_in_cycles">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="icmp_in_bytes" cf:dstInst="hwinst_networklayer_0" cf:dstPort="icmp_in_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="icmp_in_packets" cf:dstInst="hwinst_networklayer_0" cf:dstPort="icmp_in_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="icmp_out_cycles" cf:dstInst="hwinst_networklayer_0" cf:dstPort="icmp_out_cycles">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="icmp_out_bytes" cf:dstInst="hwinst_networklayer_0" cf:dstPort="icmp_out_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="icmp_out_packets" cf:dstInst="hwinst_networklayer_0" cf:dstPort="icmp_out_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="ethhi_out_cycles" cf:dstInst="hwinst_networklayer_0" cf:dstPort="ethhi_out_cycles">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="ethhi_out_bytes" cf:dstInst="hwinst_networklayer_0" cf:dstPort="ethhi_out_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="ethhi_out_packets" cf:dstInst="hwinst_networklayer_0" cf:dstPort="ethhi_out_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="eth_out_cycles" cf:dstInst="hwinst_networklayer_0" cf:dstPort="eth_out_cycles">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="eth_out_bytes" cf:dstInst="hwinst_networklayer_0" cf:dstPort="eth_out_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="eth_out_packets" cf:dstInst="hwinst_networklayer_0" cf:dstPort="eth_out_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="udp_in_cycles" cf:dstInst="hwinst_networklayer_0" cf:dstPort="udp_in_cycles">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="udp_in_bytes" cf:dstInst="hwinst_networklayer_0" cf:dstPort="udp_in_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="udp_in_packets" cf:dstInst="hwinst_networklayer_0" cf:dstPort="udp_in_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="app_out_cycles" cf:dstInst="hwinst_networklayer_0" cf:dstPort="app_out_cycles">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="app_out_bytes" cf:dstInst="hwinst_networklayer_0" cf:dstPort="app_out_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="app_out_packets" cf:dstInst="hwinst_networklayer_0" cf:dstPort="app_out_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="udp_out_cycles" cf:dstInst="hwinst_networklayer_0" cf:dstPort="udp_out_cycles">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="udp_out_bytes" cf:dstInst="hwinst_networklayer_0" cf:dstPort="udp_out_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="udp_out_packets" cf:dstInst="hwinst_networklayer_0" cf:dstPort="udp_out_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="app_in_cycles" cf:dstInst="hwinst_networklayer_0" cf:dstPort="app_in_cycles">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="app_in_bytes" cf:dstInst="hwinst_networklayer_0" cf:dstPort="app_in_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="app_in_packets" cf:dstInst="hwinst_networklayer_0" cf:dstPort="app_in_packets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="debug_reset_counters" cf:dstInst="hwinst_networklayer_0" cf:dstPort="debug_reset_counters">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="udp_number_sockets" cf:dstInst="hwinst_networklayer_0" cf:dstPort="udp_number_sockets">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="udp_theirIP_offset" cf:dstInst="hwinst_networklayer_0" cf:dstPort="udp_theirIP_offset">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="udp_theirPort_offset" cf:dstInst="hwinst_networklayer_0" cf:dstPort="udp_theirPort_offset">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="udp_myPort_offset" cf:dstInst="hwinst_networklayer_0" cf:dstPort="udp_myPort_offset">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="udp_valid_offset" cf:dstInst="hwinst_networklayer_0" cf:dstPort="udp_valid_offset">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="arp_discovery" cf:dstInst="hwinst_networklayer_0" cf:dstPort="arp_discovery">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="arp_valid_offset" cf:dstInst="hwinst_networklayer_0" cf:dstPort="arp_valid_offset">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="arp_ip_addr_offset" cf:dstInst="hwinst_networklayer_0" cf:dstPort="arp_ip_addr_offset">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_networklayer_0" cf:srcPort="arp_mac_addr_offset" cf:dstInst="hwinst_networklayer_0" cf:dstPort="arp_mac_addr_offset">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="hwinst_networklayer_0" cf:srcPort="M_AXIS_nl2sk" cf:dstInst="hwinst_krnl_proj_split_0" cf:dstPort="input_stream"/>
+  <cf:connection cf:srcInst="hwinst_networklayer_0" cf:srcPort="M_AXIS_nl2eth" cf:dstInst="hwinst_cmac_0" cf:dstPort="S_AXIS"/>
+  <cf:connection cf:srcInst="swinst_krnl_proj_split_0" cf:srcPort="s_axi_control" cf:dstInst="hwinst_krnl_proj_split_0" cf:dstPort="s_axi_control">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="hwinst_krnl_proj_split_0" cf:srcPort="output_stream" cf:dstInst="hwinst_networklayer_0" cf:dstPort="S_AXIS_sk2nl"/>
+  <cf:connection cf:srcInst="swinst_krnl_proj_split_0" cf:srcPort="processed_bytes" cf:dstInst="hwinst_krnl_proj_split_0" cf:dstPort="processed_bytes">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_krnl_proj_split_0" cf:srcPort="processed_cycles" cf:dstInst="hwinst_krnl_proj_split_0" cf:dstPort="processed_cycles">
+    <cf:dataMover cf:compName="xilinx_u55c_gen3x16_xdma_2_202110_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+</cf:model>

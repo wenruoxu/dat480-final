@@ -1,0 +1,1912 @@
+<profile>
+    <ReportVersion>
+        <Version>2023.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplusHBM</ProductFamily>
+        <Part>xcu55c-fsvh2892-2L-e</Part>
+        <TopModelName>krnl_proj_split</TopModelName>
+        <TargetClockPeriod>3.33</TargetClockPeriod>
+        <ClockUncertainty>0.90</ClockUncertainty>
+        <FlowTarget>vitis</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>dataflow</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>3.100</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>undef</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>undef</Worst-caseLatency>
+            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+            <DataflowPipelineThroughput>undef</DataflowPipelineThroughput>
+            <Interval-min>undef</Interval-min>
+            <Interval-max>undef</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfViolations>
+            <IssueType>-</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:201</SourceLocation>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>138</BRAM_18K>
+            <FF>6951</FF>
+            <LUT>43478</LUT>
+            <URAM>0</URAM>
+            <DSP>0</DSP>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4032</BRAM_18K>
+            <DSP>9024</DSP>
+            <FF>2607360</FF>
+            <LUT>1303680</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>s_axi_control_AWVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWADDR</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>6</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WDATA</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WSTRB</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARADDR</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>6</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RDATA</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RRESP</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BRESP</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>krnl_proj_split</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_chain</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>krnl_proj_split</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_chain</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>interrupt</name>
+            <Object>krnl_proj_split</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_chain</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_stream_TDATA</name>
+            <Object>input_stream_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>512</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_stream_TKEEP</name>
+            <Object>input_stream_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_stream_TSTRB</name>
+            <Object>input_stream_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_stream_TUSER</name>
+            <Object>input_stream_V_user_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_stream_TLAST</name>
+            <Object>input_stream_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_stream_TID</name>
+            <Object>input_stream_V_id_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_stream_TDEST</name>
+            <Object>input_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_stream_TVALID</name>
+            <Object>input_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_stream_TREADY</name>
+            <Object>input_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_stream_TDATA</name>
+            <Object>output_stream_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>512</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_stream_TKEEP</name>
+            <Object>output_stream_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_stream_TSTRB</name>
+            <Object>output_stream_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_stream_TUSER</name>
+            <Object>output_stream_V_user_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_stream_TLAST</name>
+            <Object>output_stream_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_stream_TID</name>
+            <Object>output_stream_V_id_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_stream_TDEST</name>
+            <Object>output_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_stream_TVALID</name>
+            <Object>output_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_stream_TREADY</name>
+            <Object>output_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="4">
+            <ModuleName>krnl_proj_split</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>input_split_U0</InstName>
+                    <ModuleName>input_split</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>162</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_input_split_Pipeline_VITIS_LOOP_39_2_fu_108</InstName>
+                            <ModuleName>input_split_Pipeline_VITIS_LOOP_39_2</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>108</ID>
+                            <BindInstances>add_ln39_fu_152_p2 add_ln47_fu_207_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                </Instance>
+                <Instance>
+                    <InstName>Block_entry211_proc_U0</InstName>
+                    <ModuleName>Block_entry211_proc</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>182</ID>
+                </Instance>
+                <Instance>
+                    <InstName>matcher_engine_1720_16_U0</InstName>
+                    <ModuleName>matcher_engine_1720_16_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>191</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_matcher_engine_1720_16_Pipeline_init_state_fu_198754</InstName>
+                            <ModuleName>matcher_engine_1720_16_Pipeline_init_state</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>198754</ID>
+                            <BindInstances>add_ln75_fu_68_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_matcher_engine_1720_16_Pipeline_pattern_loop_fu_198760</InstName>
+                            <ModuleName>matcher_engine_1720_16_Pipeline_pattern_loop</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>198760</ID>
+                            <BindInstances>add_ln104_fu_2988_p2 add_ln124_fu_15761_p2 pattern_len_SHORT_U p_ZL19pattern_bytes_SHORT_0_U p_ZL19pattern_bytes_SHORT_1_U p_ZL19pattern_bytes_SHORT_2_U p_ZL19pattern_bytes_SHORT_3_U p_ZL19pattern_bytes_SHORT_4_U p_ZL19pattern_bytes_SHORT_5_U p_ZL19pattern_bytes_SHORT_6_U p_ZL19pattern_bytes_SHORT_7_U p_ZL19pattern_bytes_SHORT_8_U p_ZL19pattern_bytes_SHORT_9_U p_ZL19pattern_bytes_SHORT_10_U p_ZL19pattern_bytes_SHORT_11_U p_ZL19pattern_bytes_SHORT_12_U p_ZL19pattern_bytes_SHORT_13_U p_ZL19pattern_bytes_SHORT_14_U p_ZL19pattern_bytes_SHORT_15_U pattern_id_SHORT_U</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_matcher_engine_1720_16_Pipeline_reset_state_fu_199316</InstName>
+                            <ModuleName>matcher_engine_1720_16_Pipeline_reset_state</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>199316</ID>
+                            <BindInstances>add_ln89_fu_68_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>state_1_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>matcher_engine_957_214_U0</InstName>
+                    <ModuleName>matcher_engine_957_214_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>235</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_matcher_engine_957_214_Pipeline_init_state_fu_198820</InstName>
+                            <ModuleName>matcher_engine_957_214_Pipeline_init_state</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>198820</ID>
+                            <BindInstances>add_ln75_fu_68_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_matcher_engine_957_214_Pipeline_reset_state_fu_198826</InstName>
+                            <ModuleName>matcher_engine_957_214_Pipeline_reset_state</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>198826</ID>
+                            <BindInstances>add_ln89_fu_68_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_matcher_engine_957_214_Pipeline_match_mask_loop_fu_198832</InstName>
+                            <ModuleName>matcher_engine_957_214_Pipeline_match_mask_loop</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>198832</ID>
+                            <BindInstances>add_ln112_fu_2663_p2 add_ln114_fu_2673_p2 pattern_bytes_LONG_U</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>add_ln64_fu_199366_p2 add_ln104_fu_199378_p2 add_ln124_fu_199395_p2 state_U pattern_len_LONG_U pattern_id_LONG_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>merge_matches_U0</InstName>
+                    <ModuleName>merge_matches</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>249</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_merge_matches_Pipeline_VITIS_LOOP_146_1_fu_109</InstName>
+                            <ModuleName>merge_matches_Pipeline_VITIS_LOOP_146_1</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>109</ID>
+                            <BindInstances>out_count_7_fu_512_p2 out_count_8_fu_615_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                </Instance>
+            </InstancesList>
+            <BindInstances>short_bytes_U long_bytes_U dest_channel_U bytes_channel_U short_matches_U long_matches_U control_s_axi_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>input_split_Pipeline_VITIS_LOOP_39_2</Name>
+            <Loops>
+                <VITIS_LOOP_39_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.322</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>66</Best-caseLatency>
+                    <Average-caseLatency>66</Average-caseLatency>
+                    <Worst-caseLatency>66</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.220 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.220 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.220 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>66</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_39_2>
+                        <Name>VITIS_LOOP_39_2</Name>
+                        <Slack>2.43</Slack>
+                        <TripCount>64</TripCount>
+                        <Latency>64</Latency>
+                        <AbsoluteTimeLatency>0.213 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_39_2>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:39</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_39_2>
+                            <Name>VITIS_LOOP_39_2</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:43</SourceLocation>
+                        </VITIS_LOOP_39_2>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>148</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>2668</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_39_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_fu_152_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:39" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_39_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln47_fu_207_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:47" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln47"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>input_split</Name>
+            <Loops>
+                <VITIS_LOOP_36_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.322</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_36_1>
+                        <Name>VITIS_LOOP_36_1</Name>
+                        <Slack>2.43</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <IterationLatency>70</IterationLatency>
+                        <PipelineDepth>70</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_input_split_Pipeline_VITIS_LOOP_39_2_fu_108</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_36_1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:36</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_36_1>
+                            <Name>VITIS_LOOP_36_1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:36</SourceLocation>
+                        </VITIS_LOOP_36_1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>877</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>2812</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>matcher_engine_1720_16_Pipeline_init_state</Name>
+            <Loops>
+                <init_state/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.325</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1722</Best-caseLatency>
+                    <Average-caseLatency>1722</Average-caseLatency>
+                    <Worst-caseLatency>1722</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.739 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.739 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.739 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1722</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <init_state>
+                        <Name>init_state</Name>
+                        <Slack>2.43</Slack>
+                        <TripCount>1720</TripCount>
+                        <Latency>1720</Latency>
+                        <AbsoluteTimeLatency>5.733 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </init_state>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:75</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <init_state>
+                            <Name>init_state</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:75</SourceLocation>
+                        </init_state>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>13</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>63</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="init_state" OPTYPE="add" PRAGMA="" RTLNAME="add_ln75_fu_68_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:75" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln75"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>matcher_engine_1720_16_Pipeline_pattern_loop</Name>
+            <Loops>
+                <pattern_loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.399</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>3444</Best-caseLatency>
+                    <Average-caseLatency>3444</Average-caseLatency>
+                    <Worst-caseLatency>3444</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>11.479 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>11.479 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>11.479 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3444</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <pattern_loop>
+                        <Name>pattern_loop</Name>
+                        <Slack>2.43</Slack>
+                        <TripCount>1720</TripCount>
+                        <Latency>3442</Latency>
+                        <AbsoluteTimeLatency>11.472 us</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>5</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </pattern_loop>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:104</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <pattern_loop>
+                            <Name>pattern_loop</Name>
+                            <IssueType>II Violation</IssueType>
+                            <ViolationType>Resource Limitation</ViolationType>
+                            <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:104</SourceLocation>
+                        </pattern_loop>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>19</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <FF>118</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>22295</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="pattern_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln104_fu_2988_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:104" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln104"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="pattern_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln124_fu_15761_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:124" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln124"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="pattern_len_SHORT_U" SOURCE="" STORAGESIZE="5 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="pattern_len_SHORT"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_0_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_0"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_1_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_1"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_2_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_2"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_3_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_3"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_4_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_4"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_5_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_5"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_6_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_6"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_7_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_7"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_8_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_8"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_9_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_9"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_10_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_10"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_11_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_11"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_12_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_12"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_13_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_13"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_14_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_14"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="p_ZL19pattern_bytes_SHORT_15_U" SOURCE="" STORAGESIZE="8 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="p_ZL19pattern_bytes_SHORT_15"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="pattern_id_SHORT_U" SOURCE="" STORAGESIZE="12 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="pattern_id_SHORT"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>matcher_engine_1720_16_Pipeline_reset_state</Name>
+            <Loops>
+                <reset_state/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.325</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1722</Best-caseLatency>
+                    <Average-caseLatency>1722</Average-caseLatency>
+                    <Worst-caseLatency>1722</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.739 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.739 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.739 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1722</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <reset_state>
+                        <Name>reset_state</Name>
+                        <Slack>2.43</Slack>
+                        <TripCount>1720</TripCount>
+                        <Latency>1720</Latency>
+                        <AbsoluteTimeLatency>5.733 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </reset_state>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:89</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <reset_state>
+                            <Name>reset_state</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:89</SourceLocation>
+                        </reset_state>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>13</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>63</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="reset_state" OPTYPE="add" PRAGMA="" RTLNAME="add_ln89_fu_68_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:89" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln89"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>matcher_engine_1720_16_s</Name>
+            <Loops>
+                <VITIS_LOOP_80_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.399</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_80_1>
+                        <Name>VITIS_LOOP_80_1</Name>
+                        <Slack>2.43</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <IterationLatency>3446</IterationLatency>
+                        <PipelineDepth>3446</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_matcher_engine_1720_16_Pipeline_pattern_loop_fu_198760</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_80_1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:69</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_80_1>
+                            <Name>VITIS_LOOP_80_1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:81</SourceLocation>
+                        </VITIS_LOOP_80_1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>21</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <FF>409</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>22586</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="pragma" RTLNAME="state_1_U" SOURCE="" STORAGESIZE="15 1720 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p" URAM="0" VARIABLE="state_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>matcher_engine_957_214_Pipeline_init_state</Name>
+            <Loops>
+                <init_state/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.312</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>959</Best-caseLatency>
+                    <Average-caseLatency>959</Average-caseLatency>
+                    <Worst-caseLatency>959</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>3.196 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>3.196 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>3.196 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>959</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <init_state>
+                        <Name>init_state</Name>
+                        <Slack>2.43</Slack>
+                        <TripCount>957</TripCount>
+                        <Latency>957</Latency>
+                        <AbsoluteTimeLatency>3.190 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </init_state>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:75</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <init_state>
+                            <Name>init_state</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:75</SourceLocation>
+                        </init_state>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>12</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>61</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="init_state" OPTYPE="add" PRAGMA="" RTLNAME="add_ln75_fu_68_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:75" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln75"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>matcher_engine_957_214_Pipeline_match_mask_loop</Name>
+            <Loops>
+                <match_mask_loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.432</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>217</Best-caseLatency>
+                    <Average-caseLatency>217</Average-caseLatency>
+                    <Worst-caseLatency>217</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.723 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.723 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.723 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>217</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <match_mask_loop>
+                        <Name>match_mask_loop</Name>
+                        <Slack>2.43</Slack>
+                        <TripCount>214</TripCount>
+                        <Latency>215</Latency>
+                        <AbsoluteTimeLatency>0.717 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </match_mask_loop>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:105</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <match_mask_loop>
+                            <Name>match_mask_loop</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:112</SourceLocation>
+                        </match_mask_loop>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>100</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>2</UTIL_BRAM>
+                    <FF>247</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1481</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="match_mask_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln112_fu_2663_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:112" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln112"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="match_mask_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln114_fu_2673_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:114" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln114"/>
+                <BindNode BINDTYPE="storage" BRAM="100" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="pattern_bytes_LONG_U" SOURCE="" STORAGESIZE="8 204798 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="pattern_bytes_LONG"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>matcher_engine_957_214_Pipeline_reset_state</Name>
+            <Loops>
+                <reset_state/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.312</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>959</Best-caseLatency>
+                    <Average-caseLatency>959</Average-caseLatency>
+                    <Worst-caseLatency>959</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>3.196 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>3.196 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>3.196 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>959</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <reset_state>
+                        <Name>reset_state</Name>
+                        <Slack>2.43</Slack>
+                        <TripCount>957</TripCount>
+                        <Latency>957</Latency>
+                        <AbsoluteTimeLatency>3.190 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </reset_state>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:89</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <reset_state>
+                            <Name>reset_state</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:89</SourceLocation>
+                        </reset_state>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>12</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>61</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="reset_state" OPTYPE="add" PRAGMA="" RTLNAME="add_ln89_fu_68_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:89" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln89"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>matcher_engine_957_214_s</Name>
+            <Loops>
+                <VITIS_LOOP_80_1>
+                    <pattern_loop/>
+                </VITIS_LOOP_80_1>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.432</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_80_1>
+                        <Name>VITIS_LOOP_80_1</Name>
+                        <Slack>2.43</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>2873</min>
+                                <max>213413</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>2873 ~ 213413</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList/>
+                        <pattern_loop>
+                            <Name>pattern_loop</Name>
+                            <Slack>2.43</Slack>
+                            <TripCount>957</TripCount>
+                            <Latency>2871 ~ 213411</Latency>
+                            <AbsoluteTimeLatency>9.569 us ~ 0.711 ms</AbsoluteTimeLatency>
+                            <IterationLatency>
+                                <range>
+                                    <min>3</min>
+                                    <max>223</max>
+                                </range>
+                            </IterationLatency>
+                            <PipelineDepth>3 ~ 223</PipelineDepth>
+                            <PipelineType>no</PipelineType>
+                            <InstanceList>
+                                <Instance>grp_matcher_engine_957_214_Pipeline_match_mask_loop_fu_198832</Instance>
+                            </InstanceList>
+                        </pattern_loop>
+                    </VITIS_LOOP_80_1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:69</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_80_1>
+                            <Name>VITIS_LOOP_80_1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:81</SourceLocation>
+                            <pattern_loop>
+                                <Name>pattern_loop</Name>
+                                <IssueType>-</IssueType>
+                                <ViolationType>-</ViolationType>
+                                <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:104</SourceLocation>
+                            </pattern_loop>
+                        </VITIS_LOOP_80_1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>117</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>2</UTIL_BRAM>
+                    <FF>1054</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>3965</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="pattern_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln64_fu_199366_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:64" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln64"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="pattern_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln104_fu_199378_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:104" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln104"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="pattern_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln124_fu_199395_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:124" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln124"/>
+                <BindNode BINDTYPE="storage" BRAM="15" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="pragma" RTLNAME="state_U" SOURCE="" STORAGESIZE="213 957 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p" URAM="0" VARIABLE="state"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="pattern_len_LONG_U" SOURCE="" STORAGESIZE="8 957 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="pattern_len_LONG"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="pattern_id_LONG_U" SOURCE="" STORAGESIZE="12 957 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="pattern_id_LONG"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>merge_matches_Pipeline_VITIS_LOOP_146_1</Name>
+            <Loops>
+                <VITIS_LOOP_146_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>3.100</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_146_1>
+                        <Name>VITIS_LOOP_146_1</Name>
+                        <Slack>2.43</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>5</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_146_1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>Timing Violation</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:141~/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:220</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_146_1>
+                            <Name>VITIS_LOOP_146_1</Name>
+                            <IssueType>II Violation</IssueType>
+                            <ViolationType>Memory Dependency</ViolationType>
+                            <IterationDistance>1</IterationDistance>
+                            <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:154~/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:220</SourceLocation>
+                        </VITIS_LOOP_146_1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>3092</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>12975</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_146_1" OPTYPE="add" PRAGMA="" RTLNAME="out_count_7_fu_512_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="out_count_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_146_1" OPTYPE="add" PRAGMA="" RTLNAME="out_count_8_fu_615_p2" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:168" STORAGESUBTYPE="" URAM="0" VARIABLE="out_count_8"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>merge_matches</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>3.100</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:184~/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:220</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>3708</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>13200</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>Block_entry211_proc</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>1.217</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:222</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>130</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>29</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>krnl_proj_split</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>3.100</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <DataflowPipelineThroughput>undef</DataflowPipelineThroughput>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>dataflow</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:201</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>138</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>3</UTIL_BRAM>
+                    <FF>6951</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>43478</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>3</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="short_bytes_U" SOURCE=":0" STORAGESIZE="9 64 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="short_bytes"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="long_bytes_U" SOURCE=":0" STORAGESIZE="9 64 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="long_bytes"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="dest_channel_U" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:215" STORAGESIZE="16 3 1" STORAGESUBTYPE="task level" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="dest_channel"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="bytes_channel_U" SOURCE="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:215" STORAGESIZE="64 2 1" STORAGESUBTYPE="task level" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="bytes_channel"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="short_matches_U" SOURCE=":0" STORAGESIZE="33 64 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="short_matches"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="long_matches_U" SOURCE=":0" STORAGESIZE="33 64 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="long_matches"/>
+                <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation>
+        <FIFOInst>
+            <Name>short_bytes_U</Name>
+            <ParentInst/>
+            <StaticDepth>64</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>long_bytes_U</Name>
+            <ParentInst/>
+            <StaticDepth>64</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>short_matches_U</Name>
+            <ParentInst/>
+            <StaticDepth>64</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>long_matches_U</Name>
+            <ParentInst/>
+            <StaticDepth>64</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+    </FIFOInformation>
+    <UserConfigCommands>
+        <config_cosim O="1" trace_level="port" wave_debug="0"/>
+        <config_export format="xo"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="input_stream" index="0" direction="in" srcType="stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1, 1, 16, '8', false&gt;, 0&gt;&amp;" srcSize="1024">
+            <hwRefs>
+                <hwRef type="interface" interface="input_stream" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="output_stream" index="1" direction="out" srcType="stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1, 1, 16, '8', false&gt;, 0&gt;&amp;" srcSize="1024">
+            <hwRefs>
+                <hwRef type="interface" interface="output_stream" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="processed_bytes" index="2" direction="out" srcType="ap_uint&lt;64&gt;&amp;" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="processed_bytes_1" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control" name="processed_bytes_2" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="processed_cycles" index="3" direction="out" srcType="ap_uint&lt;64&gt;&amp;" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="processed_cycles_1" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control" name="processed_cycles_2" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="6" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_">
+            <ports>
+                <port>s_axi_control_ARADDR</port>
+                <port>s_axi_control_ARREADY</port>
+                <port>s_axi_control_ARVALID</port>
+                <port>s_axi_control_AWADDR</port>
+                <port>s_axi_control_AWREADY</port>
+                <port>s_axi_control_AWVALID</port>
+                <port>s_axi_control_BREADY</port>
+                <port>s_axi_control_BRESP</port>
+                <port>s_axi_control_BVALID</port>
+                <port>s_axi_control_RDATA</port>
+                <port>s_axi_control_RREADY</port>
+                <port>s_axi_control_RRESP</port>
+                <port>s_axi_control_RVALID</port>
+                <port>s_axi_control_WDATA</port>
+                <port>s_axi_control_WREADY</port>
+                <port>s_axi_control_WSTRB</port>
+                <port>s_axi_control_WVALID</port>
+            </ports>
+            <registers>
+                <register offset="0x00" name="CTRL" access="RW" description="Control signals" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="AP_START" access="RW" description="Control signal Register for 'ap_start'."/>
+                        <field offset="1" width="1" name="AP_DONE" access="R" description="Control signal Register for 'ap_done'."/>
+                        <field offset="2" width="1" name="AP_IDLE" access="R" description="Control signal Register for 'ap_idle'."/>
+                        <field offset="3" width="1" name="AP_READY" access="R" description="Control signal Register for 'ap_ready'."/>
+                        <field offset="4" width="1" name="AP_CONTINUE" access="R" description="Control signal Register for 'ap_continue'."/>
+                        <field offset="5" width="2" name="RESERVED_1" access="R" description="Reserved.  0s on read."/>
+                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" description="Control signal Register for 'auto_restart'."/>
+                        <field offset="8" width="1" name="RESERVED_2" access="R" description="Reserved.  0s on read."/>
+                        <field offset="9" width="1" name="INTERRUPT" access="R" description="Control signal Register for 'interrupt'."/>
+                        <field offset="10" width="22" name="RESERVED_3" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x04" name="GIER" access="RW" description="Global Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="Enable" access="RW" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x08" name="IP_IER" access="RW" description="IP Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x0c" name="IP_ISR" access="RW" description="IP Interrupt Status Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_ST" access="RTOW" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."/>
+                        <field offset="1" width="1" name="CHAN1_INT_ST" access="RTOW" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x10" name="processed_bytes_1" access="R" description="Data signal of processed_bytes" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="processed_bytes" access="R" description="Bit 31 to 0 of processed_bytes"/>
+                    </fields>
+                </register>
+                <register offset="0x14" name="processed_bytes_2" access="R" description="Data signal of processed_bytes" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="processed_bytes" access="R" description="Bit 63 to 32 of processed_bytes"/>
+                    </fields>
+                </register>
+                <register offset="0x28" name="processed_cycles_1" access="R" description="Data signal of processed_cycles" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="processed_cycles" access="R" description="Bit 31 to 0 of processed_cycles"/>
+                    </fields>
+                </register>
+                <register offset="0x2c" name="processed_cycles_2" access="R" description="Data signal of processed_cycles" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="processed_cycles" access="R" description="Bit 63 to 32 of processed_cycles"/>
+                    </fields>
+                </register>
+            </registers>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="processed_bytes"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="40" argName="processed_cycles"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control:input_stream:output_stream</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="interrupt" type="interrupt" busTypeName="interrupt" mode="master" dataWidth="1">
+            <busParams>
+                <busParam busParamName="SENSITIVITY">LEVEL_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="interrupt">INTERRUPT</portMap>
+            </portMaps>
+            <ports>
+                <port>interrupt</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="input_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="512" portPrefix="input_stream_">
+            <ports>
+                <port>input_stream_TDATA</port>
+                <port>input_stream_TDEST</port>
+                <port>input_stream_TID</port>
+                <port>input_stream_TKEEP</port>
+                <port>input_stream_TLAST</port>
+                <port>input_stream_TREADY</port>
+                <port>input_stream_TSTRB</port>
+                <port>input_stream_TUSER</port>
+                <port>input_stream_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="input_stream"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="output_stream" type="axi4stream" busTypeName="axis" mode="master" dataWidth="512" portPrefix="output_stream_">
+            <ports>
+                <port>output_stream_TDATA</port>
+                <port>output_stream_TDEST</port>
+                <port>output_stream_TID</port>
+                <port>output_stream_TKEEP</port>
+                <port>output_stream_TLAST</port>
+                <port>output_stream_TREADY</port>
+                <port>output_stream_TSTRB</port>
+                <port>output_stream_TUSER</port>
+                <port>output_stream_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="output_stream"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="S_AXILITE Interfaces">
+                <table>
+                    <keys size="5">Interface, Data Width, Address Width, Offset, Register</keys>
+                    <column name="s_axi_control">32, 6, 16, 0</column>
+                </table>
+            </item>
+            <item name="S_AXILITE Registers">
+                <table>
+                    <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
+                    <column name="s_axi_control">CTRL, 0x00, 32, RW, Control signals, 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT</column>
+                    <column name="s_axi_control">GIER, 0x04, 32, RW, Global Interrupt Enable Register, 0=Enable</column>
+                    <column name="s_axi_control">IP_IER, 0x08, 32, RW, IP Interrupt Enable Register, 0=CHAN0_INT_EN 1=CHAN1_INT_EN</column>
+                    <column name="s_axi_control">IP_ISR, 0x0c, 32, RW, IP Interrupt Status Register, 0=CHAN0_INT_ST 1=CHAN1_INT_ST</column>
+                    <column name="s_axi_control">processed_bytes_1, 0x10, 32, R, Data signal of processed_bytes, </column>
+                    <column name="s_axi_control">processed_bytes_2, 0x14, 32, R, Data signal of processed_bytes, </column>
+                    <column name="s_axi_control">processed_cycles_1, 0x28, 32, R, Data signal of processed_cycles, </column>
+                    <column name="s_axi_control">processed_cycles_2, 0x2c, 32, R, Data signal of processed_cycles, </column>
+                </table>
+            </item>
+            <item name="AXIS">
+                <table>
+                    <keys size="12">Interface, Direction, Register Mode, TDATA, TDEST, TID, TKEEP, TLAST, TREADY, TSTRB, TUSER, TVALID</keys>
+                    <column name="input_stream">in, both, 512, 16, 1, 64, 1, 1, 64, 1, 1</column>
+                    <column name="output_stream">out, both, 512, 16, 1, 64, 1, 1, 64, 1, 1</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="interrupt">interrupt, interrupt</column>
+                    <column name="ap_ctrl">ap_ctrl_chain, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="input_stream">in, stream&lt;hls::axis&lt;ap_uint&lt;512&gt; 1 1 16 '8' false&gt; 0&gt;&amp;</column>
+                    <column name="output_stream">out, stream&lt;hls::axis&lt;ap_uint&lt;512&gt; 1 1 16 '8' false&gt; 0&gt;&amp;</column>
+                    <column name="processed_bytes">out, ap_uint&lt;64&gt;&amp;</column>
+                    <column name="processed_cycles">out, ap_uint&lt;64&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="4">Argument, HW Interface, HW Type, HW Info</keys>
+                    <column name="input_stream">input_stream, interface, </column>
+                    <column name="output_stream">output_stream, interface, </column>
+                    <column name="processed_bytes">s_axi_control, register, name=processed_bytes_1 offset=0x10 range=32</column>
+                    <column name="processed_bytes">s_axi_control, register, name=processed_bytes_2 offset=0x14 range=32</column>
+                    <column name="processed_cycles">s_axi_control, register, name=processed_cycles_1 offset=0x28 range=32</column>
+                    <column name="processed_cycles">s_axi_control, register, name=processed_cycles_2 offset=0x2c range=32</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="inline" location="../../src/krnl_proj_split.cpp:20" status="valid" parentFunction="write_output_word" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../src/krnl_proj_split.cpp:34" status="valid" parentFunction="input_split" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="../../src/krnl_proj_split.cpp:40" status="valid" parentFunction="input_split" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="inline" location="../../src/krnl_proj_split.cpp:67" status="valid" parentFunction="matcher_engine" variable="" isDirective="0" options="off"/>
+        <Pragma type="bind_storage" location="../../src/krnl_proj_split.cpp:69" status="valid" parentFunction="matcher_engine" variable="" isDirective="0" options="variable = state type = ram_1p impl = bram"/>
+        <Pragma type="array_partition" location="../../src/krnl_proj_split.cpp:72" status="valid" parentFunction="matcher_engine" variable="" isDirective="0" options="variable = dec complete"/>
+        <Pragma type="pipeline" location="../../src/krnl_proj_split.cpp:76" status="valid" parentFunction="matcher_engine" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="pipeline" location="../../src/krnl_proj_split.cpp:90" status="valid" parentFunction="matcher_engine" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="unroll" location="../../src/krnl_proj_split.cpp:98" status="valid" parentFunction="matcher_engine" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../src/krnl_proj_split.cpp:138" status="valid" parentFunction="merge_matches" variable="" isDirective="0" options="off"/>
+        <Pragma type="interface" location="../../src/krnl_proj_split.cpp:196" status="valid" parentFunction="krnl_proj_split" variable="" isDirective="0" options="axis port = input_stream"/>
+        <Pragma type="interface" location="../../src/krnl_proj_split.cpp:197" status="valid" parentFunction="krnl_proj_split" variable="" isDirective="0" options="axis port = output_stream"/>
+        <Pragma type="interface" location="../../src/krnl_proj_split.cpp:198" status="valid" parentFunction="krnl_proj_split" variable="" isDirective="0" options="s_axilite port = processed_bytes bundle = control"/>
+        <Pragma type="interface" location="../../src/krnl_proj_split.cpp:199" status="valid" parentFunction="krnl_proj_split" variable="" isDirective="0" options="s_axilite port = processed_cycles bundle = control"/>
+        <Pragma type="interface" location="../../src/krnl_proj_split.cpp:200" status="valid" parentFunction="krnl_proj_split" variable="" isDirective="0" options="s_axilite port = return bundle = control"/>
+        <Pragma type="dataflow" location="../../src/krnl_proj_split.cpp:201" status="valid" parentFunction="krnl_proj_split" variable="" isDirective="0" options=""/>
+        <Pragma type="stream" location="../../src/krnl_proj_split.cpp:207" status="valid" parentFunction="krnl_proj_split" variable="" isDirective="0" options="variable = short_bytes depth = 64"/>
+        <Pragma type="stream" location="../../src/krnl_proj_split.cpp:208" status="valid" parentFunction="krnl_proj_split" variable="" isDirective="0" options="variable = long_bytes depth = 64"/>
+        <Pragma type="stream" location="../../src/krnl_proj_split.cpp:209" status="valid" parentFunction="krnl_proj_split" variable="" isDirective="0" options="variable = short_matches depth = 64"/>
+        <Pragma type="stream" location="../../src/krnl_proj_split.cpp:210" status="valid" parentFunction="krnl_proj_split" variable="" isDirective="0" options="variable = long_matches depth = 64"/>
+    </PragmaReport>
+    <AutoPragmaReport/>
+</profile>
+

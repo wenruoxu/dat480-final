@@ -1,0 +1,369 @@
+-------------------------------------
+| Tool Version : Vivado v.2023.2
+| Date         : Sat Jan 17 15:03:28 2026
+| Host         : cse-es62-02.cse.chalmers.se
+| Design       : design_1
+| Device       : xcu55c-fsvh2892-2L-E-
+-------------------------------------
+
+For more information on clockInfo.txt clock routing debug file see https://support.xilinx.com/s/article/000035660?language=en_US
+
+***********************
+Running Pre-CRP Checker
+***********************
+Number of global clocks: 40
+	Number of BUFGCE: 14
+	Number of BUFGCE_HDIO: 0
+	Number of BUFG_CTRL: 1
+	Number of BUFGCE_DIV: 1
+	Number of BUFG_GT: 24
+	Number of BUFG_PS: 0
+	Number of BUFG_FABRIC: 0
+	Running suboptimal placement checker for 6 clock (and their loads) with USER_CLOCK_ROOT...
+		No sub-optimality found
+	 Running runUCRCheckContainedRPBlock check... 
+	Running suboptimal placement checker for 24 BUFG_GT clocks (and their loads)...
+		No sub-optimality found
+	Running suboptimal placement checker for 2 clocks (and their loads) that have the CLOCK_LOW_FANOUT property...
+		No sub-optimality found
+	Running suboptimal placement checker for 29 clocks (and their loads) which do not have the CLOCK_LOW_FANOUT property but have a fanout less than 2000...
+		No sub-optimality found
+Pre-CRP Checker took 0.19 secs
+
+********************************
+Clock Net Route Info (CRP Input)
+********************************
+Clock 1: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_USERCLK
+	Clock source type: BUFG_GT fixed to track 20
+	Clock source region: X7Y3
+	Clock locked root: (7, 0)
+	Clock regions with locked loads: (4, 1) (6, 1) (6, 2) (6, 3) (6, 4) (6, 5) (6, 6) (6, 7) (7, 0) (7, 1) (7, 2) (7, 3) (7, 4) (7, 5) (7, 6) (7, 7) (7, 8) (7, 9) (7, 10) 
+	initial rect ((0, 0), (7, 11))
+
+Clock 2: level0_i/ulp/ulp_ucs/inst/aclk_kernel_00_hierarchy/clock_throttling_aclk_kernel_00/U0/Clk_Out
+	Clock source type: BUFGCE
+	Clock source region: X4Y3
+	initial rect ((0, 3), (6, 7))
+
+Clock 3: level0_i/blp/blp_i/ss_hif/inst/clkwiz_level0_periph/inst/clk_out2
+	Clock source type: BUFGCE fixed to track 0
+	Clock source region: X4Y1
+	Clock locked root: (3, 5)
+	Clock regions with locked loads: (2, 0) (4, 0) (4, 2) (4, 3) (5, 0) (6, 1) (6, 2) (6, 3) (6, 4) (6, 6) (6, 7) (7, 1) (7, 2) (7, 3) (7, 4) (7, 5) (7, 6) (7, 7) (7, 8) (7, 9) (7, 10) 
+	initial rect ((0, 0), (7, 11))
+
+Clock 4: level0_i/ulp/ulp_ucs/inst/aclk_hbm_hierarchy/clkwiz_hbm/inst/CLK_CORE_DRP_I/clk_inst/clk_out1
+	Clock source type: BUFGCE
+	Clock source region: X4Y0
+	Clock regions with locked loads: (0, 0) (1, 0) (2, 0) (3, 0) (4, 0) (5, 0) (6, 0) (7, 0) 
+	initial rect ((0, 0), (7, 8))
+
+Clock 5: level0_i/ulp/cmac_0/inst/cmac_bd_0_i/cmac_uplus_0/inst/cmac_gtwiz_userclk_rx_inst/gen_gtwiz_userclk_rx_main.bufg_gt_usrclk_inst_0
+	Clock source type: BUFG_GT
+	Clock source region: X0Y6
+	Clock regions with locked loads: (0, 4) (0, 6) 
+	initial rect ((0, 4), (1, 6))
+
+Clock 6: level0_i/ulp/cmac_0/inst/cmac_bd_0_i/cmac_uplus_0/inst/cmac_gtwiz_userclk_tx_inst/CLK
+	Clock source type: BUFG_GT
+	Clock source region: X0Y6
+	Clock regions with locked loads: (0, 4) (0, 6) 
+	initial rect ((0, 4), (2, 6))
+
+Clock 7: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bufg_gt_sysclk_n_0
+	Clock source type: BUFG_GT fixed to track 1
+	Clock source region: X7Y1
+	Clock locked root: (7, 0)
+	Clock regions with locked loads: (6, 2) (7, 0) (7, 1) (7, 2) (7, 3) 
+	initial rect ((6, 0), (7, 3))
+
+Clock 8: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_CORECLK
+	Clock source type: BUFG_GT fixed to track 14
+	Clock source region: X7Y3
+	Clock locked root: (7, 0)
+	Clock regions with locked loads: (6, 1) (6, 2) (7, 0) (7, 1) (7, 2) 
+	initial rect ((6, 0), (7, 3))
+
+Clock 9: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_PCLK2_GT
+	Clock source type: BUFG_GT fixed to track 21
+	Clock source region: X7Y3
+	Clock locked root: (7, 0)
+	Clock regions with locked loads: (6, 1) (6, 2) (7, 0) (7, 1) (7, 2) (7, 3) 
+	initial rect ((6, 0), (7, 3))
+
+Clock 10: level0_i/blp/blp_i/freerun_clk/bufg_div/U0/BUFGCE_O[0]
+	Clock source type: BUFG_DIV
+	Clock source region: X4Y1
+	Clock locked root: (3, 5)
+	Clock regions with locked loads: (4, 0) (4, 2) (4, 3) 
+	initial rect ((0, 0), (7, 11))
+
+Clock 11: level0_i/blp/blp_i/ss_cmp/inst/mgmt_debug_bridge/inst/bs_mux/inst/tck
+	Clock source type: BUFG_CTRL
+	Clock source region: X4Y1
+	Clock locked root: (6, 1)
+	Clock regions with locked loads: (6, 1) (6, 2) (7, 1) 
+	initial rect ((4, 1), (7, 2))
+
+Clock 12: level0_i/blp/blp_i/ss_hif/inst/clkwiz_level0_periph/inst/clk_out1
+	Clock source type: BUFGCE fixed to track 4
+	Clock source region: X4Y1
+	Clock locked root: (6, 2)
+	Clock regions with locked loads: (6, 1) (6, 2) (6, 3) (7, 1) (7, 2) (7, 3) 
+	initial rect ((4, 1), (7, 3))
+
+Clock 13: level0_i/blp/blp_i/ss_cmp/inst/mdm_board_control/U0/No_Dbg_Reg_Access.BUFG_DRCK/Dbg_Clk_0
+	Clock source type: BUFGCE fixed to track 8
+	Clock source region: X4Y4
+	Clock locked root: (6, 8)
+	Clock regions with locked loads: (6, 7) (7, 7) (7, 10) 
+	initial rect ((4, 4), (7, 10))
+
+Clock 14: level0_i/blp/blp_i/ss_cmp/inst/jtag_fallback/inst/bs_switch/inst/BSCAN_SWITCH.N_EXT_BSCAN.itck_i
+	Clock source type: BUFGCE fixed to track 6
+	Clock source region: X4Y1
+	Clock locked root: (5, 1)
+	Clock regions with locked loads: (4, 1) (6, 1) 
+	initial rect ((4, 1), (6, 1))
+
+Clock 15: level0_i/ulp/ulp_cmp/inst/user_debug_bridge/inst/bsip/inst/tck
+	Clock source type: BUFGCE
+	Clock source region: X4Y9
+	initial rect ((4, 9), (6, 9))
+
+Clock 16: level0_i/ulp/ulp_ucs/inst/aclk_kernel_01_hierarchy/clock_throttling_aclk_kernel_01/U0/Clk_Out_Cont
+	Clock source type: BUFGCE
+	Clock source region: X4Y2
+	initial rect ((4, 2), (6, 6))
+
+Clock 17: level0_i/ulp/ulp_ucs/inst/aclk_kernel_00_hierarchy/clock_throttling_aclk_kernel_00/U0/Clk_Out_Cont
+	Clock source type: BUFGCE
+	Clock source region: X4Y3
+	initial rect ((4, 3), (6, 6))
+
+Clock 18: level0_i/ulp/ulp_ucs/inst/aclk_kernel_01_hierarchy/clock_throttling_aclk_kernel_01/U0/Clk_Int_Cont
+	Clock source type: BUFGCE
+	Clock source region: X4Y2
+	initial rect ((4, 2), (4, 2))
+
+Clock 19: level0_i/blp/blp_i/ss_cmp/inst/mgmt_debug_bridge/inst/bsip/inst/tck
+	Clock source type: BUFGCE fixed to track 7
+	Clock source region: X4Y1
+	Clock locked root: (5, 1)
+	Clock regions with locked loads: (4, 1) (6, 1) 
+	initial rect ((4, 1), (6, 1))
+
+Clock 20: level0_i/ulp/ulp_ucs/inst/aclk_kernel_01_hierarchy/clock_throttling_aclk_kernel_01/U0/Clk_Out
+	Clock source type: BUFGCE
+	Clock source region: X4Y2
+	initial rect ((4, 2), (6, 6))
+
+Clock 21: level0_i/ulp/ulp_ucs/inst/aclk_kernel_00_hierarchy/clock_throttling_aclk_kernel_00/U0/Clk_Int_Cont
+	Clock source type: BUFGCE
+	Clock source region: X4Y3
+	initial rect ((4, 3), (4, 3))
+
+Clock 22: level0_i/blp/blp_i/ss_cmp/inst/mdm_board_control/U0/Use_External.Use_BSCANID.No_Dbg_Reg_Access.BUFG_UPDATE/Dbg_Update_0
+	Clock source type: BUFGCE fixed to track 14
+	Clock source region: X4Y4
+	Clock locked root: (6, 8)
+	Clock regions with locked loads: (6, 7) (7, 7) (7, 10) 
+	initial rect ((4, 4), (7, 10))
+
+Clock 23: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 17
+	Clock source region: X7Y0
+	Clock locked root: (7, 1)
+	Clock regions with locked loads: (7, 1) 
+	initial rect ((7, 0), (7, 1))
+
+Clock 24: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[10].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 17
+	Clock source region: X7Y2
+	Clock locked root: (7, 2)
+	Clock regions with locked loads: (7, 2) 
+	initial rect ((7, 2), (7, 2))
+
+Clock 25: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[11].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 2
+	Clock source region: X7Y2
+	Clock locked root: (7, 2)
+	Clock regions with locked loads: (7, 2) 
+	initial rect ((7, 2), (7, 2))
+
+Clock 26: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[12].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 9
+	Clock source region: X7Y3
+	Clock locked root: (7, 3)
+	Clock regions with locked loads: (7, 3) 
+	initial rect ((7, 3), (7, 3))
+
+Clock 27: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[13].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 17
+	Clock source region: X7Y3
+	Clock locked root: (7, 3)
+	Clock regions with locked loads: (7, 3) 
+	initial rect ((7, 3), (7, 3))
+
+Clock 28: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[14].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 23
+	Clock source region: X7Y3
+	Clock locked root: (7, 3)
+	Clock regions with locked loads: (7, 3) 
+	initial rect ((7, 3), (7, 3))
+
+Clock 29: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[15].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 15
+	Clock source region: X7Y3
+	Clock locked root: (7, 3)
+	Clock regions with locked loads: (7, 3) 
+	initial rect ((7, 3), (7, 3))
+
+Clock 30: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 9
+	Clock source region: X7Y0
+	Clock locked root: (7, 1)
+	Clock regions with locked loads: (7, 1) 
+	initial rect ((7, 0), (7, 1))
+
+Clock 31: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 23
+	Clock source region: X7Y0
+	Clock locked root: (7, 1)
+	Clock regions with locked loads: (7, 1) 
+	initial rect ((7, 0), (7, 1))
+
+Clock 32: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[3].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 15
+	Clock source region: X7Y0
+	Clock locked root: (7, 1)
+	Clock regions with locked loads: (7, 1) 
+	initial rect ((7, 0), (7, 1))
+
+Clock 33: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[4].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 2
+	Clock source region: X7Y1
+	Clock locked root: (7, 1)
+	Clock regions with locked loads: (7, 1) 
+	initial rect ((7, 1), (7, 1))
+
+Clock 34: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[5].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 8
+	Clock source region: X7Y1
+	Clock locked root: (7, 1)
+	Clock regions with locked loads: (7, 1) 
+	initial rect ((7, 1), (7, 1))
+
+Clock 35: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[6].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 7
+	Clock source region: X7Y1
+	Clock locked root: (7, 1)
+	Clock regions with locked loads: (7, 1) 
+	initial rect ((7, 1), (7, 1))
+
+Clock 36: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[7].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 10
+	Clock source region: X7Y1
+	Clock locked root: (7, 2)
+	Clock regions with locked loads: (7, 2) 
+	initial rect ((7, 1), (7, 2))
+
+Clock 37: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[8].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 12
+	Clock source region: X7Y2
+	Clock locked root: (7, 2)
+	Clock regions with locked loads: (7, 2) 
+	initial rect ((7, 2), (7, 2))
+
+Clock 38: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[9].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	Clock source type: BUFG_GT fixed to track 15
+	Clock source region: X7Y2
+	Clock locked root: (7, 2)
+	Clock regions with locked loads: (7, 2) 
+	initial rect ((7, 2), (7, 2))
+
+Clock 39: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_INTCLK
+	Clock source type: BUFG_GT fixed to track 13
+	Clock source region: X7Y3
+	Clock locked root: (7, 0)
+	Clock regions with locked loads: (7, 2) 
+	initial rect ((7, 0), (7, 3))
+
+Clock 40: level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/mcap_clk
+	Clock source type: BUFG_GT fixed to track 22
+	Clock source region: X7Y3
+	Clock locked root: (7, 0)
+	Clock regions with locked loads: (7, 0) 
+	initial rect ((7, 0), (7, 3))
+
+
+
+*****************
+User Constraints:
+*****************
+The following 2 clock nets belong to CLOCK_DELAY_GROUP level0_i_blp_blp_i_ss_hif_inst_pcie_inst_group_i0:
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_USERCLK
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_CORECLK
+
+The following 6 clock nets have the USER_CLOCK_ROOT property:
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_CORECLK(BUFG_GT): X7Y0
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_INTCLK(BUFG_GT): X7Y0
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_PCLK2_GT(BUFG_GT): X7Y0
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_USERCLK(BUFG_GT): X7Y0
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/mcap_clk(BUFG_GT): X7Y0
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bufg_gt_sysclk_n_0(BUFG_GT): X7Y0
+
+The following 2 clock nets have the CLOCK_LOW_FANOUT property:
+	level0_i/ulp/ulp_ucs/inst/aclk_kernel_01_hierarchy/clock_throttling_aclk_kernel_01/U0/Clk_Int_Cont(BUFGCE)
+	level0_i/ulp/ulp_ucs/inst/aclk_kernel_00_hierarchy/clock_throttling_aclk_kernel_00/U0/Clk_Int_Cont(BUFGCE)
+
+
+
+*************************
+DFX Flow Clock Type Info:
+*************************
+The following 27 are static clocks:
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bufg_gt_sysclk_n_0
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_CORECLK
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_PCLK2_GT
+	level0_i/blp/blp_i/ss_cmp/inst/mgmt_debug_bridge/inst/bs_mux/inst/tck
+	level0_i/blp/blp_i/ss_hif/inst/clkwiz_level0_periph/inst/clk_out1
+	level0_i/blp/blp_i/ss_cmp/inst/mdm_board_control/U0/No_Dbg_Reg_Access.BUFG_DRCK/Dbg_Clk_0
+	level0_i/blp/blp_i/ss_cmp/inst/jtag_fallback/inst/bs_switch/inst/BSCAN_SWITCH.N_EXT_BSCAN.itck_i
+	level0_i/blp/blp_i/ss_cmp/inst/mgmt_debug_bridge/inst/bsip/inst/tck
+	level0_i/blp/blp_i/ss_cmp/inst/mdm_board_control/U0/Use_External.Use_BSCANID.No_Dbg_Reg_Access.BUFG_UPDATE/Dbg_Update_0
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[10].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[11].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[12].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[13].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[14].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[15].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[3].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[4].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[5].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[6].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[7].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[8].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_39ab_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_39ab_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_cpll_cal_gtye4.gen_cpll_cal_inst[9].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_inst/gtwizard_ultrascale_v1_7_10_gtye4_cpll_cal_tx_i/txoutclkmon
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_INTCLK
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/mcap_clk
+The following 3 are static driver boundary clocks:
+	level0_i/blp/blp_i/ss_hif/inst/pcie/inst/bd_39ab_pcie_0_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_USERCLK
+	level0_i/blp/blp_i/ss_hif/inst/clkwiz_level0_periph/inst/clk_out2
+	level0_i/blp/blp_i/freerun_clk/bufg_div/U0/BUFGCE_O[0]
+The following 10 are RM internal clocks:
+	level0_i/ulp/ulp_ucs/inst/aclk_kernel_00_hierarchy/clock_throttling_aclk_kernel_00/U0/Clk_Out
+	level0_i/ulp/ulp_ucs/inst/aclk_hbm_hierarchy/clkwiz_hbm/inst/CLK_CORE_DRP_I/clk_inst/clk_out1
+	level0_i/ulp/cmac_0/inst/cmac_bd_0_i/cmac_uplus_0/inst/cmac_gtwiz_userclk_rx_inst/gen_gtwiz_userclk_rx_main.bufg_gt_usrclk_inst_0
+	level0_i/ulp/cmac_0/inst/cmac_bd_0_i/cmac_uplus_0/inst/cmac_gtwiz_userclk_tx_inst/CLK
+	level0_i/ulp/ulp_cmp/inst/user_debug_bridge/inst/bsip/inst/tck
+	level0_i/ulp/ulp_ucs/inst/aclk_kernel_01_hierarchy/clock_throttling_aclk_kernel_01/U0/Clk_Out_Cont
+	level0_i/ulp/ulp_ucs/inst/aclk_kernel_00_hierarchy/clock_throttling_aclk_kernel_00/U0/Clk_Out_Cont
+	level0_i/ulp/ulp_ucs/inst/aclk_kernel_01_hierarchy/clock_throttling_aclk_kernel_01/U0/Clk_Int_Cont
+	level0_i/ulp/ulp_ucs/inst/aclk_kernel_01_hierarchy/clock_throttling_aclk_kernel_01/U0/Clk_Out
+	level0_i/ulp/ulp_ucs/inst/aclk_kernel_00_hierarchy/clock_throttling_aclk_kernel_00/U0/Clk_Int_Cont
+
+

@@ -1,0 +1,80 @@
+===============================================================================
+Version:    v++ v2023.2 (64-bit)
+Build:      SW Build 4026344 on 2023-10-11-15:42:10
+Copyright:  Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+Created:    Sat Jan 17 15:37:44 2026
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             vnx_project_split_if0
+Target Device:           xilinx:u55c:gen3x16_xdma_3:202210.1
+Target Clock:            300.000000MHz
+Total number of kernels: 3
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name      Type  Target              OpenCL Library         Compute Units
+---------------  ----  ------------------  ---------------------  -------------
+krnl_proj_split  c     fpga0:OCL_REGION_0  vnx_project_split_if0  1
+cmac_0           ip_c  fpga0:OCL_REGION_0  vnx_project_split_if0  1
+networklayer     ip_c  fpga0:OCL_REGION_0  vnx_project_split_if0  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     vnx_project_split_if0
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit       Kernel Name      Module Name                                      Target Frequency  Estimated Frequency
+-----------------  ---------------  -----------------------------------------------  ----------------  -------------------
+krnl_proj_split_0  krnl_proj_split  input_split_Pipeline_VITIS_LOOP_39_2             300.300293        430.663208
+krnl_proj_split_0  krnl_proj_split  input_split                                      300.300293        430.663208
+krnl_proj_split_0  krnl_proj_split  matcher_engine_1720_16_Pipeline_init_state       300.300293        430.107513
+krnl_proj_split_0  krnl_proj_split  matcher_engine_1720_16_Pipeline_pattern_loop     300.300293        416.840363
+krnl_proj_split_0  krnl_proj_split  matcher_engine_1720_16_Pipeline_reset_state      300.300293        430.107513
+krnl_proj_split_0  krnl_proj_split  matcher_engine_1720_16_s                         300.300293        416.840363
+krnl_proj_split_0  krnl_proj_split  matcher_engine_957_214_Pipeline_init_state       300.300293        432.52594
+krnl_proj_split_0  krnl_proj_split  matcher_engine_957_214_Pipeline_match_mask_loop  300.300293        411.184235
+krnl_proj_split_0  krnl_proj_split  matcher_engine_957_214_Pipeline_reset_state      300.300293        432.52594
+krnl_proj_split_0  krnl_proj_split  matcher_engine_957_214_s                         300.300293        411.184235
+krnl_proj_split_0  krnl_proj_split  merge_matches_Pipeline_VITIS_LOOP_146_1          300.300293        322.580658
+krnl_proj_split_0  krnl_proj_split  merge_matches                                    300.300293        322.580658
+krnl_proj_split_0  krnl_proj_split  Block_entry211_proc                              300.300293        821.692688
+krnl_proj_split_0  krnl_proj_split  krnl_proj_split                                  300.300293        322.580658
+
+Latency Information
+Compute Unit       Kernel Name      Module Name                                      Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+-----------------  ---------------  -----------------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+krnl_proj_split_0  krnl_proj_split  input_split_Pipeline_VITIS_LOOP_39_2             66              66             66            66              0.220 us         0.220 us        0.220 us
+krnl_proj_split_0  krnl_proj_split  input_split                                      undef           undef          undef         undef           undef            undef           undef
+krnl_proj_split_0  krnl_proj_split  matcher_engine_1720_16_Pipeline_init_state       1722            1722           1722          1722            5.739 us         5.739 us        5.739 us
+krnl_proj_split_0  krnl_proj_split  matcher_engine_1720_16_Pipeline_pattern_loop     3444            3444           3444          3444            11.479 us        11.479 us       11.479 us
+krnl_proj_split_0  krnl_proj_split  matcher_engine_1720_16_Pipeline_reset_state      1722            1722           1722          1722            5.739 us         5.739 us        5.739 us
+krnl_proj_split_0  krnl_proj_split  matcher_engine_1720_16_s                         undef           undef          undef         undef           undef            undef           undef
+krnl_proj_split_0  krnl_proj_split  matcher_engine_957_214_Pipeline_init_state       959             959            959           959             3.196 us         3.196 us        3.196 us
+krnl_proj_split_0  krnl_proj_split  matcher_engine_957_214_Pipeline_match_mask_loop  217             217            217           217             0.723 us         0.723 us        0.723 us
+krnl_proj_split_0  krnl_proj_split  matcher_engine_957_214_Pipeline_reset_state      959             959            959           959             3.196 us         3.196 us        3.196 us
+krnl_proj_split_0  krnl_proj_split  matcher_engine_957_214_s                         undef           undef          undef         undef           undef            undef           undef
+krnl_proj_split_0  krnl_proj_split  merge_matches_Pipeline_VITIS_LOOP_146_1          undef           undef          undef         undef           undef            undef           undef
+krnl_proj_split_0  krnl_proj_split  merge_matches                                    undef           undef          undef         undef           undef            undef           undef
+krnl_proj_split_0  krnl_proj_split  Block_entry211_proc                              0               0              0             0               0 ns             0 ns            0 ns
+krnl_proj_split_0  krnl_proj_split  krnl_proj_split                                  undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit       Kernel Name      Module Name                                      FF    LUT    DSP  BRAM  URAM
+-----------------  ---------------  -----------------------------------------------  ----  -----  ---  ----  ----
+krnl_proj_split_0  krnl_proj_split  input_split_Pipeline_VITIS_LOOP_39_2             148   2668   0    0     0
+krnl_proj_split_0  krnl_proj_split  input_split                                      877   2812   0    0     0
+krnl_proj_split_0  krnl_proj_split  matcher_engine_1720_16_Pipeline_init_state       13    63     0    0     0
+krnl_proj_split_0  krnl_proj_split  matcher_engine_1720_16_Pipeline_pattern_loop     118   22295  0    19    0
+krnl_proj_split_0  krnl_proj_split  matcher_engine_1720_16_Pipeline_reset_state      13    63     0    0     0
+krnl_proj_split_0  krnl_proj_split  matcher_engine_1720_16_s                         409   22586  0    21    0
+krnl_proj_split_0  krnl_proj_split  matcher_engine_957_214_Pipeline_init_state       12    61     0    0     0
+krnl_proj_split_0  krnl_proj_split  matcher_engine_957_214_Pipeline_match_mask_loop  247   1481   0    100   0
+krnl_proj_split_0  krnl_proj_split  matcher_engine_957_214_Pipeline_reset_state      12    61     0    0     0
+krnl_proj_split_0  krnl_proj_split  matcher_engine_957_214_s                         1054  3965   0    117   0
+krnl_proj_split_0  krnl_proj_split  merge_matches_Pipeline_VITIS_LOOP_146_1          3092  12975  0    0     0
+krnl_proj_split_0  krnl_proj_split  merge_matches                                    3708  13200  0    0     0
+krnl_proj_split_0  krnl_proj_split  Block_entry211_proc                              130   29     0    0     0
+krnl_proj_split_0  krnl_proj_split  krnl_proj_split                                  6951  43478  0    138   0
+-------------------------------------------------------------------------------

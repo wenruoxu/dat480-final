@@ -1,0 +1,395 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'matcher_engine_957_214_Pipeline_match_mask_loop'" level="0">
+<item name = "Date">Sat Jan 17 14:13:01 2026
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">krnl_proj_split</item>
+<item name = "Solution">hls (Vitis Kernel Flow Target)</item>
+<item name = "Product family">virtexuplusHBM</item>
+<item name = "Target device">xcu55c-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.432 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">217, 217, 0.723 us, 0.723 us, 217, 217, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- match_mask_loop">215, 215, 3, 1, 1, 214, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 74, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 1362, -</column>
+<column name="Memory">100, -, 0, 0, -</column>
+<column name="Multiplexer">-, -, -, 45, -</column>
+<column name="Register">-, -, 247, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">7, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">2, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="sparsemux_513_8_1_1_1_U324">sparsemux_513_8_1_1_1, 0, 0, 0, 1362, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="pattern_bytes_LONG_U">matcher_engine_957_214_Pipeline_match_mask_loop_pattern_bytes_LONG_ROM_AUTO_1R, 100, 0, 0, 0, 204798, 8, 1, 1638384</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln112_fu_2663_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln114_fu_2673_p2">+, 0, 0, 25, 18, 18</column>
+<column name="and_ln113_fu_3474_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln112_fu_2657_p2">icmp, 0, 0, 15, 8, 7</column>
+<column name="icmp_ln113_fu_2684_p2">icmp, 0, 0, 15, 8, 8</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_k_1">9, 2, 8, 16</column>
+<column name="k_fu_1072">9, 2, 8, 16</column>
+<column name="match_mask_fu_1068">9, 2, 214, 428</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="icmp_ln112_reg_4800">1, 0, 1, 0</column>
+<column name="icmp_ln113_reg_4809">1, 0, 1, 0</column>
+<column name="icmp_ln113_reg_4809_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="k_1_reg_4795">8, 0, 8, 0</column>
+<column name="k_1_reg_4795_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="k_fu_1072">8, 0, 8, 0</column>
+<column name="match_mask_fu_1068">214, 0, 214, 0</column>
+<column name="tmp_9_reg_4814">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, matcher_engine&lt;957, 214&gt;_Pipeline_match_mask_loop, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, matcher_engine&lt;957, 214&gt;_Pipeline_match_mask_loop, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, matcher_engine&lt;957, 214&gt;_Pipeline_match_mask_loop, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, matcher_engine&lt;957, 214&gt;_Pipeline_match_mask_loop, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, matcher_engine&lt;957, 214&gt;_Pipeline_match_mask_loop, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, matcher_engine&lt;957, 214&gt;_Pipeline_match_mask_loop, return value</column>
+<column name="phi_mul">in, 18, ap_none, phi_mul, scalar</column>
+<column name="len">in, 8, ap_none, len, scalar</column>
+<column name="dec">in, 1, ap_none, dec, scalar</column>
+<column name="dec_1">in, 1, ap_none, dec_1, scalar</column>
+<column name="dec_2">in, 1, ap_none, dec_2, scalar</column>
+<column name="dec_3">in, 1, ap_none, dec_3, scalar</column>
+<column name="dec_4">in, 1, ap_none, dec_4, scalar</column>
+<column name="dec_5">in, 1, ap_none, dec_5, scalar</column>
+<column name="dec_6">in, 1, ap_none, dec_6, scalar</column>
+<column name="dec_7">in, 1, ap_none, dec_7, scalar</column>
+<column name="dec_8">in, 1, ap_none, dec_8, scalar</column>
+<column name="dec_9">in, 1, ap_none, dec_9, scalar</column>
+<column name="dec_10">in, 1, ap_none, dec_10, scalar</column>
+<column name="dec_11">in, 1, ap_none, dec_11, scalar</column>
+<column name="dec_12">in, 1, ap_none, dec_12, scalar</column>
+<column name="dec_13">in, 1, ap_none, dec_13, scalar</column>
+<column name="dec_14">in, 1, ap_none, dec_14, scalar</column>
+<column name="dec_15">in, 1, ap_none, dec_15, scalar</column>
+<column name="dec_16">in, 1, ap_none, dec_16, scalar</column>
+<column name="dec_17">in, 1, ap_none, dec_17, scalar</column>
+<column name="dec_18">in, 1, ap_none, dec_18, scalar</column>
+<column name="dec_19">in, 1, ap_none, dec_19, scalar</column>
+<column name="dec_20">in, 1, ap_none, dec_20, scalar</column>
+<column name="dec_21">in, 1, ap_none, dec_21, scalar</column>
+<column name="dec_22">in, 1, ap_none, dec_22, scalar</column>
+<column name="dec_23">in, 1, ap_none, dec_23, scalar</column>
+<column name="dec_24">in, 1, ap_none, dec_24, scalar</column>
+<column name="dec_25">in, 1, ap_none, dec_25, scalar</column>
+<column name="dec_26">in, 1, ap_none, dec_26, scalar</column>
+<column name="dec_27">in, 1, ap_none, dec_27, scalar</column>
+<column name="dec_28">in, 1, ap_none, dec_28, scalar</column>
+<column name="dec_29">in, 1, ap_none, dec_29, scalar</column>
+<column name="dec_30">in, 1, ap_none, dec_30, scalar</column>
+<column name="dec_31">in, 1, ap_none, dec_31, scalar</column>
+<column name="dec_32">in, 1, ap_none, dec_32, scalar</column>
+<column name="dec_33">in, 1, ap_none, dec_33, scalar</column>
+<column name="dec_34">in, 1, ap_none, dec_34, scalar</column>
+<column name="dec_35">in, 1, ap_none, dec_35, scalar</column>
+<column name="dec_36">in, 1, ap_none, dec_36, scalar</column>
+<column name="dec_37">in, 1, ap_none, dec_37, scalar</column>
+<column name="dec_38">in, 1, ap_none, dec_38, scalar</column>
+<column name="dec_39">in, 1, ap_none, dec_39, scalar</column>
+<column name="dec_40">in, 1, ap_none, dec_40, scalar</column>
+<column name="dec_41">in, 1, ap_none, dec_41, scalar</column>
+<column name="dec_42">in, 1, ap_none, dec_42, scalar</column>
+<column name="dec_43">in, 1, ap_none, dec_43, scalar</column>
+<column name="dec_44">in, 1, ap_none, dec_44, scalar</column>
+<column name="dec_45">in, 1, ap_none, dec_45, scalar</column>
+<column name="dec_46">in, 1, ap_none, dec_46, scalar</column>
+<column name="dec_47">in, 1, ap_none, dec_47, scalar</column>
+<column name="dec_48">in, 1, ap_none, dec_48, scalar</column>
+<column name="dec_49">in, 1, ap_none, dec_49, scalar</column>
+<column name="dec_50">in, 1, ap_none, dec_50, scalar</column>
+<column name="dec_51">in, 1, ap_none, dec_51, scalar</column>
+<column name="dec_52">in, 1, ap_none, dec_52, scalar</column>
+<column name="dec_53">in, 1, ap_none, dec_53, scalar</column>
+<column name="dec_54">in, 1, ap_none, dec_54, scalar</column>
+<column name="dec_55">in, 1, ap_none, dec_55, scalar</column>
+<column name="dec_56">in, 1, ap_none, dec_56, scalar</column>
+<column name="dec_57">in, 1, ap_none, dec_57, scalar</column>
+<column name="dec_58">in, 1, ap_none, dec_58, scalar</column>
+<column name="dec_59">in, 1, ap_none, dec_59, scalar</column>
+<column name="dec_60">in, 1, ap_none, dec_60, scalar</column>
+<column name="dec_61">in, 1, ap_none, dec_61, scalar</column>
+<column name="dec_62">in, 1, ap_none, dec_62, scalar</column>
+<column name="dec_63">in, 1, ap_none, dec_63, scalar</column>
+<column name="dec_64">in, 1, ap_none, dec_64, scalar</column>
+<column name="dec_65">in, 1, ap_none, dec_65, scalar</column>
+<column name="dec_66">in, 1, ap_none, dec_66, scalar</column>
+<column name="dec_67">in, 1, ap_none, dec_67, scalar</column>
+<column name="dec_68">in, 1, ap_none, dec_68, scalar</column>
+<column name="dec_69">in, 1, ap_none, dec_69, scalar</column>
+<column name="dec_70">in, 1, ap_none, dec_70, scalar</column>
+<column name="dec_71">in, 1, ap_none, dec_71, scalar</column>
+<column name="dec_72">in, 1, ap_none, dec_72, scalar</column>
+<column name="dec_73">in, 1, ap_none, dec_73, scalar</column>
+<column name="dec_74">in, 1, ap_none, dec_74, scalar</column>
+<column name="dec_75">in, 1, ap_none, dec_75, scalar</column>
+<column name="dec_76">in, 1, ap_none, dec_76, scalar</column>
+<column name="dec_77">in, 1, ap_none, dec_77, scalar</column>
+<column name="dec_78">in, 1, ap_none, dec_78, scalar</column>
+<column name="dec_79">in, 1, ap_none, dec_79, scalar</column>
+<column name="dec_80">in, 1, ap_none, dec_80, scalar</column>
+<column name="dec_81">in, 1, ap_none, dec_81, scalar</column>
+<column name="dec_82">in, 1, ap_none, dec_82, scalar</column>
+<column name="dec_83">in, 1, ap_none, dec_83, scalar</column>
+<column name="dec_84">in, 1, ap_none, dec_84, scalar</column>
+<column name="dec_85">in, 1, ap_none, dec_85, scalar</column>
+<column name="dec_86">in, 1, ap_none, dec_86, scalar</column>
+<column name="dec_87">in, 1, ap_none, dec_87, scalar</column>
+<column name="dec_88">in, 1, ap_none, dec_88, scalar</column>
+<column name="dec_89">in, 1, ap_none, dec_89, scalar</column>
+<column name="dec_90">in, 1, ap_none, dec_90, scalar</column>
+<column name="dec_91">in, 1, ap_none, dec_91, scalar</column>
+<column name="dec_92">in, 1, ap_none, dec_92, scalar</column>
+<column name="dec_93">in, 1, ap_none, dec_93, scalar</column>
+<column name="dec_94">in, 1, ap_none, dec_94, scalar</column>
+<column name="dec_95">in, 1, ap_none, dec_95, scalar</column>
+<column name="dec_96">in, 1, ap_none, dec_96, scalar</column>
+<column name="dec_97">in, 1, ap_none, dec_97, scalar</column>
+<column name="dec_98">in, 1, ap_none, dec_98, scalar</column>
+<column name="dec_99">in, 1, ap_none, dec_99, scalar</column>
+<column name="dec_100">in, 1, ap_none, dec_100, scalar</column>
+<column name="dec_101">in, 1, ap_none, dec_101, scalar</column>
+<column name="dec_102">in, 1, ap_none, dec_102, scalar</column>
+<column name="dec_103">in, 1, ap_none, dec_103, scalar</column>
+<column name="dec_104">in, 1, ap_none, dec_104, scalar</column>
+<column name="dec_105">in, 1, ap_none, dec_105, scalar</column>
+<column name="dec_106">in, 1, ap_none, dec_106, scalar</column>
+<column name="dec_107">in, 1, ap_none, dec_107, scalar</column>
+<column name="dec_108">in, 1, ap_none, dec_108, scalar</column>
+<column name="dec_109">in, 1, ap_none, dec_109, scalar</column>
+<column name="dec_110">in, 1, ap_none, dec_110, scalar</column>
+<column name="dec_111">in, 1, ap_none, dec_111, scalar</column>
+<column name="dec_112">in, 1, ap_none, dec_112, scalar</column>
+<column name="dec_113">in, 1, ap_none, dec_113, scalar</column>
+<column name="dec_114">in, 1, ap_none, dec_114, scalar</column>
+<column name="dec_115">in, 1, ap_none, dec_115, scalar</column>
+<column name="dec_116">in, 1, ap_none, dec_116, scalar</column>
+<column name="dec_117">in, 1, ap_none, dec_117, scalar</column>
+<column name="dec_118">in, 1, ap_none, dec_118, scalar</column>
+<column name="dec_119">in, 1, ap_none, dec_119, scalar</column>
+<column name="dec_120">in, 1, ap_none, dec_120, scalar</column>
+<column name="dec_121">in, 1, ap_none, dec_121, scalar</column>
+<column name="dec_122">in, 1, ap_none, dec_122, scalar</column>
+<column name="dec_123">in, 1, ap_none, dec_123, scalar</column>
+<column name="dec_124">in, 1, ap_none, dec_124, scalar</column>
+<column name="dec_125">in, 1, ap_none, dec_125, scalar</column>
+<column name="dec_126">in, 1, ap_none, dec_126, scalar</column>
+<column name="dec_127">in, 1, ap_none, dec_127, scalar</column>
+<column name="dec_128">in, 1, ap_none, dec_128, scalar</column>
+<column name="dec_129">in, 1, ap_none, dec_129, scalar</column>
+<column name="dec_130">in, 1, ap_none, dec_130, scalar</column>
+<column name="dec_131">in, 1, ap_none, dec_131, scalar</column>
+<column name="dec_132">in, 1, ap_none, dec_132, scalar</column>
+<column name="dec_133">in, 1, ap_none, dec_133, scalar</column>
+<column name="dec_134">in, 1, ap_none, dec_134, scalar</column>
+<column name="dec_135">in, 1, ap_none, dec_135, scalar</column>
+<column name="dec_136">in, 1, ap_none, dec_136, scalar</column>
+<column name="dec_137">in, 1, ap_none, dec_137, scalar</column>
+<column name="dec_138">in, 1, ap_none, dec_138, scalar</column>
+<column name="dec_139">in, 1, ap_none, dec_139, scalar</column>
+<column name="dec_140">in, 1, ap_none, dec_140, scalar</column>
+<column name="dec_141">in, 1, ap_none, dec_141, scalar</column>
+<column name="dec_142">in, 1, ap_none, dec_142, scalar</column>
+<column name="dec_143">in, 1, ap_none, dec_143, scalar</column>
+<column name="dec_144">in, 1, ap_none, dec_144, scalar</column>
+<column name="dec_145">in, 1, ap_none, dec_145, scalar</column>
+<column name="dec_146">in, 1, ap_none, dec_146, scalar</column>
+<column name="dec_147">in, 1, ap_none, dec_147, scalar</column>
+<column name="dec_148">in, 1, ap_none, dec_148, scalar</column>
+<column name="dec_149">in, 1, ap_none, dec_149, scalar</column>
+<column name="dec_150">in, 1, ap_none, dec_150, scalar</column>
+<column name="dec_151">in, 1, ap_none, dec_151, scalar</column>
+<column name="dec_152">in, 1, ap_none, dec_152, scalar</column>
+<column name="dec_153">in, 1, ap_none, dec_153, scalar</column>
+<column name="dec_154">in, 1, ap_none, dec_154, scalar</column>
+<column name="dec_155">in, 1, ap_none, dec_155, scalar</column>
+<column name="dec_156">in, 1, ap_none, dec_156, scalar</column>
+<column name="dec_157">in, 1, ap_none, dec_157, scalar</column>
+<column name="dec_158">in, 1, ap_none, dec_158, scalar</column>
+<column name="dec_159">in, 1, ap_none, dec_159, scalar</column>
+<column name="dec_160">in, 1, ap_none, dec_160, scalar</column>
+<column name="dec_161">in, 1, ap_none, dec_161, scalar</column>
+<column name="dec_162">in, 1, ap_none, dec_162, scalar</column>
+<column name="dec_163">in, 1, ap_none, dec_163, scalar</column>
+<column name="dec_164">in, 1, ap_none, dec_164, scalar</column>
+<column name="dec_165">in, 1, ap_none, dec_165, scalar</column>
+<column name="dec_166">in, 1, ap_none, dec_166, scalar</column>
+<column name="dec_167">in, 1, ap_none, dec_167, scalar</column>
+<column name="dec_168">in, 1, ap_none, dec_168, scalar</column>
+<column name="dec_169">in, 1, ap_none, dec_169, scalar</column>
+<column name="dec_170">in, 1, ap_none, dec_170, scalar</column>
+<column name="dec_171">in, 1, ap_none, dec_171, scalar</column>
+<column name="dec_172">in, 1, ap_none, dec_172, scalar</column>
+<column name="dec_173">in, 1, ap_none, dec_173, scalar</column>
+<column name="dec_174">in, 1, ap_none, dec_174, scalar</column>
+<column name="dec_175">in, 1, ap_none, dec_175, scalar</column>
+<column name="dec_176">in, 1, ap_none, dec_176, scalar</column>
+<column name="dec_177">in, 1, ap_none, dec_177, scalar</column>
+<column name="dec_178">in, 1, ap_none, dec_178, scalar</column>
+<column name="dec_179">in, 1, ap_none, dec_179, scalar</column>
+<column name="dec_180">in, 1, ap_none, dec_180, scalar</column>
+<column name="dec_181">in, 1, ap_none, dec_181, scalar</column>
+<column name="dec_182">in, 1, ap_none, dec_182, scalar</column>
+<column name="dec_183">in, 1, ap_none, dec_183, scalar</column>
+<column name="dec_184">in, 1, ap_none, dec_184, scalar</column>
+<column name="dec_185">in, 1, ap_none, dec_185, scalar</column>
+<column name="dec_186">in, 1, ap_none, dec_186, scalar</column>
+<column name="dec_187">in, 1, ap_none, dec_187, scalar</column>
+<column name="dec_188">in, 1, ap_none, dec_188, scalar</column>
+<column name="dec_189">in, 1, ap_none, dec_189, scalar</column>
+<column name="dec_190">in, 1, ap_none, dec_190, scalar</column>
+<column name="dec_191">in, 1, ap_none, dec_191, scalar</column>
+<column name="dec_192">in, 1, ap_none, dec_192, scalar</column>
+<column name="dec_193">in, 1, ap_none, dec_193, scalar</column>
+<column name="dec_194">in, 1, ap_none, dec_194, scalar</column>
+<column name="dec_195">in, 1, ap_none, dec_195, scalar</column>
+<column name="dec_196">in, 1, ap_none, dec_196, scalar</column>
+<column name="dec_197">in, 1, ap_none, dec_197, scalar</column>
+<column name="dec_198">in, 1, ap_none, dec_198, scalar</column>
+<column name="dec_199">in, 1, ap_none, dec_199, scalar</column>
+<column name="dec_200">in, 1, ap_none, dec_200, scalar</column>
+<column name="dec_201">in, 1, ap_none, dec_201, scalar</column>
+<column name="dec_202">in, 1, ap_none, dec_202, scalar</column>
+<column name="dec_203">in, 1, ap_none, dec_203, scalar</column>
+<column name="dec_204">in, 1, ap_none, dec_204, scalar</column>
+<column name="dec_205">in, 1, ap_none, dec_205, scalar</column>
+<column name="dec_206">in, 1, ap_none, dec_206, scalar</column>
+<column name="dec_207">in, 1, ap_none, dec_207, scalar</column>
+<column name="dec_208">in, 1, ap_none, dec_208, scalar</column>
+<column name="dec_209">in, 1, ap_none, dec_209, scalar</column>
+<column name="dec_210">in, 1, ap_none, dec_210, scalar</column>
+<column name="dec_211">in, 1, ap_none, dec_211, scalar</column>
+<column name="dec_212">in, 1, ap_none, dec_212, scalar</column>
+<column name="dec_213">in, 1, ap_none, dec_213, scalar</column>
+<column name="dec_214">in, 1, ap_none, dec_214, scalar</column>
+<column name="dec_215">in, 1, ap_none, dec_215, scalar</column>
+<column name="dec_216">in, 1, ap_none, dec_216, scalar</column>
+<column name="dec_217">in, 1, ap_none, dec_217, scalar</column>
+<column name="dec_218">in, 1, ap_none, dec_218, scalar</column>
+<column name="dec_219">in, 1, ap_none, dec_219, scalar</column>
+<column name="dec_220">in, 1, ap_none, dec_220, scalar</column>
+<column name="dec_221">in, 1, ap_none, dec_221, scalar</column>
+<column name="dec_222">in, 1, ap_none, dec_222, scalar</column>
+<column name="dec_223">in, 1, ap_none, dec_223, scalar</column>
+<column name="dec_224">in, 1, ap_none, dec_224, scalar</column>
+<column name="dec_225">in, 1, ap_none, dec_225, scalar</column>
+<column name="dec_226">in, 1, ap_none, dec_226, scalar</column>
+<column name="dec_227">in, 1, ap_none, dec_227, scalar</column>
+<column name="dec_228">in, 1, ap_none, dec_228, scalar</column>
+<column name="dec_229">in, 1, ap_none, dec_229, scalar</column>
+<column name="dec_230">in, 1, ap_none, dec_230, scalar</column>
+<column name="dec_231">in, 1, ap_none, dec_231, scalar</column>
+<column name="dec_232">in, 1, ap_none, dec_232, scalar</column>
+<column name="dec_233">in, 1, ap_none, dec_233, scalar</column>
+<column name="dec_234">in, 1, ap_none, dec_234, scalar</column>
+<column name="dec_235">in, 1, ap_none, dec_235, scalar</column>
+<column name="dec_236">in, 1, ap_none, dec_236, scalar</column>
+<column name="dec_237">in, 1, ap_none, dec_237, scalar</column>
+<column name="dec_238">in, 1, ap_none, dec_238, scalar</column>
+<column name="dec_239">in, 1, ap_none, dec_239, scalar</column>
+<column name="dec_240">in, 1, ap_none, dec_240, scalar</column>
+<column name="dec_241">in, 1, ap_none, dec_241, scalar</column>
+<column name="dec_242">in, 1, ap_none, dec_242, scalar</column>
+<column name="dec_243">in, 1, ap_none, dec_243, scalar</column>
+<column name="dec_244">in, 1, ap_none, dec_244, scalar</column>
+<column name="dec_245">in, 1, ap_none, dec_245, scalar</column>
+<column name="dec_246">in, 1, ap_none, dec_246, scalar</column>
+<column name="dec_247">in, 1, ap_none, dec_247, scalar</column>
+<column name="dec_248">in, 1, ap_none, dec_248, scalar</column>
+<column name="dec_249">in, 1, ap_none, dec_249, scalar</column>
+<column name="dec_250">in, 1, ap_none, dec_250, scalar</column>
+<column name="dec_251">in, 1, ap_none, dec_251, scalar</column>
+<column name="dec_252">in, 1, ap_none, dec_252, scalar</column>
+<column name="dec_253">in, 1, ap_none, dec_253, scalar</column>
+<column name="dec_254">in, 1, ap_none, dec_254, scalar</column>
+<column name="dec_255">in, 1, ap_none, dec_255, scalar</column>
+<column name="match_mask_out">out, 214, ap_vld, match_mask_out, pointer</column>
+<column name="match_mask_out_ap_vld">out, 1, ap_vld, match_mask_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

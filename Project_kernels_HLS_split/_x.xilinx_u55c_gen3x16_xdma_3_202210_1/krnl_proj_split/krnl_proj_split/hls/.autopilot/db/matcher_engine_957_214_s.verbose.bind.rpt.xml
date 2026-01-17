@@ -1,0 +1,50 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'matcher_engine_957_214_s'" level="0">
+<item name = "Date">Sat Jan 17 14:12:46 2026
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">krnl_proj_split</item>
+<item name = "Solution">hls (Vitis Kernel Flow Target)</item>
+<item name = "Product family">virtexuplusHBM</item>
+<item name = "Target device">xcu55c-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.432 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_matcher_engine_957_214_Pipeline_init_state_fu_198820">matcher_engine_957_214_Pipeline_init_state, 959, 959, 3.196 us, 3.196 us, 959, 959, no</column>
+<column name="grp_matcher_engine_957_214_Pipeline_reset_state_fu_198826">matcher_engine_957_214_Pipeline_reset_state, 959, 959, 3.196 us, 3.196 us, 959, 959, no</column>
+<column name="grp_matcher_engine_957_214_Pipeline_match_mask_loop_fu_198832">matcher_engine_957_214_Pipeline_match_mask_loop, 217, 217, 0.723 us, 0.723 us, 217, 217, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_80_1">?, ?, 2873 ~ 213413, -, -, ?, no</column>
+<column name=" + pattern_loop">2871, 213411, 3 ~ 223, -, -, 957, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

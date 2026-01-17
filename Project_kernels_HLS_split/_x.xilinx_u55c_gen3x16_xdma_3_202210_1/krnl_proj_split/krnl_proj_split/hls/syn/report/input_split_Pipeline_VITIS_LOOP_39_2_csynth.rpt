@@ -1,0 +1,174 @@
+
+
+================================================================
+== Vitis HLS Report for 'input_split_Pipeline_VITIS_LOOP_39_2'
+================================================================
+* Date:           Sat Jan 17 14:12:47 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        krnl_proj_split
+* Solution:       hls (Vitis Kernel Flow Target)
+* Product family: virtexuplusHBM
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.322 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       66|       66|  0.220 us|  0.220 us|   66|   66|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_39_2  |       64|       64|         2|          1|          1|    64|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|     2596|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       72|    -|
+|Register             |        -|     -|      148|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      148|     2668|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+------+------------+------------+
+    |           Variable Name          | Operation| DSP| FF|  LUT | Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+------+------------+------------+
+    |add_ln39_fu_152_p2                |         +|   0|  0|    14|           7|           1|
+    |add_ln47_fu_207_p2                |         +|   0|  0|    71|          64|           1|
+    |and_ln41_fu_168_p2                |       and|   0|  0|    64|          64|          64|
+    |ap_block_pp0_stage0_01001         |       and|   0|  0|     2|           1|           1|
+    |ap_condition_227                  |       and|   0|  0|     2|           1|           1|
+    |icmp_ln39_fu_146_p2               |      icmp|   0|  0|    15|           7|           8|
+    |icmp_ln41_fu_173_p2               |      icmp|   0|  0|    71|          64|           1|
+    |lshr_ln43_fu_198_p2               |      lshr|   0|  0|  2171|         512|         512|
+    |ap_block_state3_pp0_stage0_iter2  |        or|   0|  0|     2|           1|           1|
+    |shl_ln41_fu_162_p2                |       shl|   0|  0|   182|           1|          64|
+    |ap_enable_pp0                     |       xor|   0|  0|     2|           1|           2|
+    +----------------------------------+----------+----+---+------+------------+------------+
+    |Total                             |          |   0|  0|  2596|         723|         656|
+    +----------------------------------+----------+----+---+------+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                    |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1        |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2        |   9|          2|    1|          2|
+    |b_fu_64                        |   9|          2|    7|         14|
+    |byte_count_write_assign_fu_72  |   9|          2|   64|        128|
+    |empty_31_fu_68                 |   9|          2|   64|        128|
+    |long_bytes_blk_n               |   9|          2|    1|          2|
+    |short_bytes_blk_n              |   9|          2|    1|          2|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          |  72|         16|  140|        280|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------+----+----+-----+-----------+
+    |              Name             | FF | LUT| Bits| Const Bits|
+    +-------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                      |   1|   0|    1|          0|
+    |ap_done_reg                    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2        |   1|   0|    1|          0|
+    |b_fu_64                        |   7|   0|    7|          0|
+    |bt_data_reg_284                |   8|   0|    8|          0|
+    |byte_count_write_assign_fu_72  |  64|   0|   64|          0|
+    |empty_31_fu_68                 |  64|   0|   64|          0|
+    |icmp_ln41_reg_280              |   1|   0|    1|          0|
+    +-------------------------------+----+----+-----+-----------+
+    |Total                          | 148|   0|  148|          0|
+    +-------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+|              RTL Ports             | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+|ap_clk                              |   in|    1|  ap_ctrl_hs|  input_split_Pipeline_VITIS_LOOP_39_2|  return value|
+|ap_rst                              |   in|    1|  ap_ctrl_hs|  input_split_Pipeline_VITIS_LOOP_39_2|  return value|
+|ap_start                            |   in|    1|  ap_ctrl_hs|  input_split_Pipeline_VITIS_LOOP_39_2|  return value|
+|ap_done                             |  out|    1|  ap_ctrl_hs|  input_split_Pipeline_VITIS_LOOP_39_2|  return value|
+|ap_idle                             |  out|    1|  ap_ctrl_hs|  input_split_Pipeline_VITIS_LOOP_39_2|  return value|
+|ap_ready                            |  out|    1|  ap_ctrl_hs|  input_split_Pipeline_VITIS_LOOP_39_2|  return value|
+|short_bytes_din                     |  out|    9|     ap_fifo|                           short_bytes|       pointer|
+|short_bytes_num_data_valid          |   in|    7|     ap_fifo|                           short_bytes|       pointer|
+|short_bytes_fifo_cap                |   in|    7|     ap_fifo|                           short_bytes|       pointer|
+|short_bytes_full_n                  |   in|    1|     ap_fifo|                           short_bytes|       pointer|
+|short_bytes_write                   |  out|    1|     ap_fifo|                           short_bytes|       pointer|
+|long_bytes_din                      |  out|    9|     ap_fifo|                            long_bytes|       pointer|
+|long_bytes_num_data_valid           |   in|    7|     ap_fifo|                            long_bytes|       pointer|
+|long_bytes_fifo_cap                 |   in|    7|     ap_fifo|                            long_bytes|       pointer|
+|long_bytes_full_n                   |   in|    1|     ap_fifo|                            long_bytes|       pointer|
+|long_bytes_write                    |  out|    1|     ap_fifo|                            long_bytes|       pointer|
+|add_i_i5                            |   in|   64|     ap_none|                              add_i_i5|        scalar|
+|empty                               |   in|   64|     ap_none|                                 empty|        scalar|
+|in_word_keep                        |   in|   64|     ap_none|                          in_word_keep|        scalar|
+|in_word_data                        |   in|  512|     ap_none|                          in_word_data|        scalar|
+|byte_count_write_assign_out         |  out|   64|      ap_vld|           byte_count_write_assign_out|       pointer|
+|byte_count_write_assign_out_ap_vld  |  out|    1|      ap_vld|           byte_count_write_assign_out|       pointer|
+|p_out                               |  out|   64|      ap_vld|                                 p_out|       pointer|
+|p_out_ap_vld                        |  out|    1|      ap_vld|                                 p_out|       pointer|
++------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+

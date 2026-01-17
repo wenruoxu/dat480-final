@@ -1,0 +1,286 @@
+{
+    "Used Resources": [
+        {
+            "ip_instance": "ulp_cmac_0_0",
+            "resources": [
+                {
+                    "LUT": "10353"
+                },
+                {
+                    "LUTAsLogic": "9690"
+                },
+                {
+                    "LUTAsMem": "663"
+                },
+                {
+                    "REG": "32831"
+                },
+                {
+                    "CARRY8": "1109"
+                },
+                {
+                    "F7MUX": "572"
+                },
+                {
+                    "F8MUX": "172"
+                },
+                {
+                    "F9MUX": "0"
+                },
+                {
+                    "BRAM": "17"
+                },
+                {
+                    "URAM": "0"
+                },
+                {
+                    "DSP": "0"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "3"
+                },
+                {
+                    "PLL": "0"
+                },
+                {
+                    "MMCM": "0"
+                },
+                {
+                    "GTYE4_CHANNEL": "4"
+                },
+                {
+                    "GTYE4_COMMON": "1"
+                },
+                {
+                    "SLL_SLR1-SLR2": "0"
+                },
+                {
+                    "SLL_SLR2-SLR1": "0"
+                },
+                {
+                    "SLL_SLR0-SLR1": "0"
+                },
+                {
+                    "SLL_SLR1-SLR0": "0"
+                }
+            ]
+        },
+        {
+            "ip_instance": "ulp_krnl_proj_split_0_0",
+            "resources": [
+                {
+                    "LUT": "5961"
+                },
+                {
+                    "LUTAsLogic": "5877"
+                },
+                {
+                    "LUTAsMem": "84"
+                },
+                {
+                    "REG": "6201"
+                },
+                {
+                    "CARRY8": "48"
+                },
+                {
+                    "F7MUX": "668"
+                },
+                {
+                    "F8MUX": "321"
+                },
+                {
+                    "F9MUX": "0"
+                },
+                {
+                    "BRAM": "73"
+                },
+                {
+                    "URAM": "0"
+                },
+                {
+                    "DSP": "0"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "0"
+                },
+                {
+                    "PLL": "0"
+                },
+                {
+                    "MMCM": "0"
+                },
+                {
+                    "GTYE4_CHANNEL": "0"
+                },
+                {
+                    "GTYE4_COMMON": "0"
+                },
+                {
+                    "SLL_SLR1-SLR2": "0"
+                },
+                {
+                    "SLL_SLR2-SLR1": "0"
+                },
+                {
+                    "SLL_SLR0-SLR1": "0"
+                },
+                {
+                    "SLL_SLR1-SLR0": "0"
+                }
+            ]
+        },
+        {
+            "ip_instance": "ulp_networklayer_0_0",
+            "resources": [
+                {
+                    "LUT": "21340"
+                },
+                {
+                    "LUTAsLogic": "18058"
+                },
+                {
+                    "LUTAsMem": "3282"
+                },
+                {
+                    "REG": "46343"
+                },
+                {
+                    "CARRY8": "524"
+                },
+                {
+                    "F7MUX": "575"
+                },
+                {
+                    "F8MUX": "269"
+                },
+                {
+                    "F9MUX": "0"
+                },
+                {
+                    "BRAM": "20"
+                },
+                {
+                    "URAM": "0"
+                },
+                {
+                    "DSP": "0"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "0"
+                },
+                {
+                    "PLL": "0"
+                },
+                {
+                    "MMCM": "0"
+                },
+                {
+                    "GTYE4_CHANNEL": "0"
+                },
+                {
+                    "GTYE4_COMMON": "0"
+                },
+                {
+                    "SLL_SLR1-SLR2": "0"
+                },
+                {
+                    "SLL_SLR2-SLR1": "0"
+                },
+                {
+                    "SLL_SLR0-SLR1": "0"
+                },
+                {
+                    "SLL_SLR1-SLR0": "0"
+                }
+            ]
+        },
+        {
+            "ip_instance": "network_layer_bd_arp_server_0",
+            "resources": ""
+        },
+        {
+            "ip_instance": "network_layer_bd_ethh_inserter_0",
+            "resources": ""
+        },
+        {
+            "ip_instance": "network_layer_bd_icmp_server_0",
+            "resources": ""
+        },
+        {
+            "ip_instance": "network_layer_bd_packet_handler_0",
+            "resources": ""
+        },
+        {
+            "ip_instance": "network_layer_bd_udp_0",
+            "resources": ""
+        }
+    ],
+    "Available Resources": [
+        {
+            "pblock": "pblock_dynamic_region",
+            "resources": [
+                {
+                    "BRAM": "1776"
+                },
+                {
+                    "BRAM_SLR0": "600"
+                },
+                {
+                    "BRAM_SLR1": "576"
+                },
+                {
+                    "BRAM_SLR2": "600"
+                },
+                {
+                    "DSP": "8376"
+                },
+                {
+                    "DSPs_SLR0": "2664"
+                },
+                {
+                    "DSPs_SLR1": "2784"
+                },
+                {
+                    "DSPs_SLR2": "2928"
+                },
+                {
+                    "LUT": "1146240"
+                },
+                {
+                    "LUT_SLR0": "386880"
+                },
+                {
+                    "LUT_SLR1": "364320"
+                },
+                {
+                    "LUT_SLR2": "395040"
+                },
+                {
+                    "REG": "2292480"
+                },
+                {
+                    "REG_SLR0": "773760"
+                },
+                {
+                    "REG_SLR1": "728640"
+                },
+                {
+                    "REG_SLR2": "790080"
+                },
+                {
+                    "URAM": "960"
+                },
+                {
+                    "URAM_SLR0": "320"
+                },
+                {
+                    "URAM_SLR1": "320"
+                },
+                {
+                    "URAM_SLR2": "320"
+                }
+            ]
+        }
+    ]
+}

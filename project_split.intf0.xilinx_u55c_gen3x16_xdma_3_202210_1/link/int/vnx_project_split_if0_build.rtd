@@ -1,0 +1,1607 @@
+{
+    "schema_version": {
+        "major": "1",
+        "minor": "0",
+        "patch": "0"
+    },
+    "build_metadata": {
+        "dsa": {
+            "vendor": "xilinx",
+            "board_id": "u55c",
+            "name": "gen3x16_xdma_3",
+            "version_major": "202210",
+            "version_minor": "1",
+            "description": "",
+            "generated_by": {
+                "name": "Vivado",
+                "version": "2022.1",
+                "cl": "3513633",
+                "time_stamp": "Fri Apr  1 11:16:28 2022"
+            },
+            "board": {
+                "name": "xilinx.com:au55c:1.0",
+                "vendor": "xilinx.com",
+                "part": "xcu55c-fsvh2892-2L-e",
+                "board_part": "xilinx.com:au55c:part0:1.0"
+            },
+            "feature_roms": [
+                {
+                    "time_epoch": "0"
+                }
+            ]
+        },
+        "xclbin": {
+            "generated_by": {
+                "name": "v++",
+                "version": "2023.2",
+                "cl": "4026344",
+                "time_stamp": "2023-10-11-15:42:10",
+                "options": "\/opt\/Xilinx\/Vitis\/2023.2\/bin\/unwrapped\/lnx64.o\/v++ --advanced.param compiler.userPostSysLinkOverlayTcl=\/home\/m2_2\/shared\/dat480-final\/Ethernet\/post_sys_link.tcl --config configuration_project_split_if0.tmp.ini --connectivity.nk cmac_0:1:cmac_0 --connectivity.nk networklayer:1:networklayer_0 --connectivity.nk krnl_proj_split:1:krnl_proj_split_0 --connectivity.slr cmac_0:SLR1 --connectivity.slr networklayer_0:SLR1 --connectivity.slr krnl_proj_split_0:SLR1 --connectivity.stream_connect cmac_0.M_AXIS:networklayer_0.S_AXIS_eth2nl --connectivity.stream_connect networklayer_0.M_AXIS_nl2eth:cmac_0.S_AXIS --connectivity.stream_connect networklayer_0.M_AXIS_nl2sk:krnl_proj_split_0.input_stream --connectivity.stream_connect krnl_proj_split_0.output_stream:networklayer_0.S_AXIS_sk2nl --input_files NetLayers\/_x.xilinx_u55c_gen3x16_xdma_3_202210_1\/networklayer.xo --input_files Ethernet\/_x.xilinx_u55c_gen3x16_xdma_3_202210_1\/cmac_0.xo --input_files Project_kernels_HLS_split\/_x.xilinx_u55c_gen3x16_xdma_3_202210_1\/krnl_proj_split.xo --jobs 2 --link --optimize 0 --output project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1\/vnx_project_split_if0.xclbin --platform xilinx_u55c_gen3x16_xdma_3_202210_1 --report_level 0 --save-temps --target hw --temp_dir .\/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1 --user_ip_repo_paths \/home\/m2_2\/shared\/dat480-final\/NetLayers\/100G-fpga-network-stack-core\/synthesis_results_HBM --vivado.prop run.impl_1.strategy=Performance_NetDelay_low "
+            },
+            "user_regions": [
+                {
+                    "name": "OCL_REGION_0",
+                    "type": "clc_region",
+                    "instance_path": "level0_i\/ulp",
+                    "base_address": "",
+                    "kernels": [
+                        {
+                            "name": "krnl_proj_split",
+                            "ports": [
+                                {
+                                    "name": "INPUT_STREAM",
+                                    "mode": "read_only",
+                                    "range": "",
+                                    "data_width": "512",
+                                    "port_type": "stream",
+                                    "base": ""
+                                },
+                                {
+                                    "name": "OUTPUT_STREAM",
+                                    "mode": "write_only",
+                                    "range": "",
+                                    "data_width": "512",
+                                    "port_type": "stream",
+                                    "base": ""
+                                },
+                                {
+                                    "name": "S_AXI_CONTROL",
+                                    "mode": "slave",
+                                    "range": "0x40",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                }
+                            ],
+                            "arguments": [
+                                {
+                                    "name": "input_stream",
+                                    "address_qualifier": "4",
+                                    "id": "0",
+                                    "port": "INPUT_STREAM",
+                                    "size": "0x0",
+                                    "offset": "0x0",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "stream<hls::axis<ap_uint<512>, 1, 1, 16, '8', false>, 0>&"
+                                },
+                                {
+                                    "name": "output_stream",
+                                    "address_qualifier": "4",
+                                    "id": "1",
+                                    "port": "OUTPUT_STREAM",
+                                    "size": "0x0",
+                                    "offset": "0x0",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "stream<hls::axis<ap_uint<512>, 1, 1, 16, '8', false>, 0>&"
+                                },
+                                {
+                                    "name": "processed_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "2",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x8",
+                                    "offset": "0x10",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "processed_cycles",
+                                    "address_qualifier": "0",
+                                    "id": "3",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x8",
+                                    "offset": "0x28",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                }
+                            ],
+                            "instances": [
+                                {
+                                    "name": "krnl_proj_split_0"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "cmac_0",
+                            "ports": [
+                                {
+                                    "name": "S_AXILITE",
+                                    "mode": "slave",
+                                    "range": "0x2000",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "S_AXIS",
+                                    "mode": "read_only",
+                                    "range": "",
+                                    "data_width": "512",
+                                    "port_type": "stream",
+                                    "base": ""
+                                },
+                                {
+                                    "name": "M_AXIS",
+                                    "mode": "write_only",
+                                    "range": "",
+                                    "data_width": "512",
+                                    "port_type": "stream",
+                                    "base": ""
+                                }
+                            ],
+                            "arguments": [
+                                {
+                                    "name": "gt_reset_reg",
+                                    "address_qualifier": "0",
+                                    "id": "0",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0000",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "reset_reg",
+                                    "address_qualifier": "0",
+                                    "id": "1",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0004",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "mode",
+                                    "address_qualifier": "0",
+                                    "id": "2",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0008",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "conf_tx",
+                                    "address_qualifier": "0",
+                                    "id": "3",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x000C",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "conf_rx",
+                                    "address_qualifier": "0",
+                                    "id": "4",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0014",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "core_mode",
+                                    "address_qualifier": "0",
+                                    "id": "5",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0020",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "version",
+                                    "address_qualifier": "0",
+                                    "id": "6",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0024",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "gt_loopback",
+                                    "address_qualifier": "0",
+                                    "id": "7",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0090",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "user_reg0",
+                                    "address_qualifier": "0",
+                                    "id": "8",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x00CC",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_status",
+                                    "address_qualifier": "0",
+                                    "id": "9",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0200",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_status",
+                                    "address_qualifier": "0",
+                                    "id": "10",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0204",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_status",
+                                    "address_qualifier": "0",
+                                    "id": "11",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0208",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_block_lock",
+                                    "address_qualifier": "0",
+                                    "id": "12",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x020C",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_lane_sync",
+                                    "address_qualifier": "0",
+                                    "id": "13",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0210",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_lane_sync_err",
+                                    "address_qualifier": "0",
+                                    "id": "14",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0214",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_an_link_ctl",
+                                    "address_qualifier": "0",
+                                    "id": "15",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0260",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_lt_status",
+                                    "address_qualifier": "0",
+                                    "id": "16",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x0264",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_pm_tick",
+                                    "address_qualifier": "0",
+                                    "id": "17",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x02B0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_cycle_count",
+                                    "address_qualifier": "0",
+                                    "id": "18",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x02B8",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets",
+                                    "address_qualifier": "0",
+                                    "id": "19",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0500",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_good_packets",
+                                    "address_qualifier": "0",
+                                    "id": "20",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0508",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "21",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0510",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_good_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "22",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0518",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_64B",
+                                    "address_qualifier": "0",
+                                    "id": "23",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0520",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_65_127B",
+                                    "address_qualifier": "0",
+                                    "id": "24",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0528",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_128_255B",
+                                    "address_qualifier": "0",
+                                    "id": "25",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0530",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_256_511B",
+                                    "address_qualifier": "0",
+                                    "id": "26",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0538",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_512_1023B",
+                                    "address_qualifier": "0",
+                                    "id": "27",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0540",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_1024_1518B",
+                                    "address_qualifier": "0",
+                                    "id": "28",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0548",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_1519_1522B",
+                                    "address_qualifier": "0",
+                                    "id": "29",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0550",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_1523_1548B",
+                                    "address_qualifier": "0",
+                                    "id": "30",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0558",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_1549_2047B",
+                                    "address_qualifier": "0",
+                                    "id": "31",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0560",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_2048_4095B",
+                                    "address_qualifier": "0",
+                                    "id": "32",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0568",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_4096_8191B",
+                                    "address_qualifier": "0",
+                                    "id": "33",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0570",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_8192_9215B",
+                                    "address_qualifier": "0",
+                                    "id": "34",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0578",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_large",
+                                    "address_qualifier": "0",
+                                    "id": "35",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0580",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_packets_small",
+                                    "address_qualifier": "0",
+                                    "id": "36",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0588",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_total_bad_fcs",
+                                    "address_qualifier": "0",
+                                    "id": "37",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x05B8",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_pause",
+                                    "address_qualifier": "0",
+                                    "id": "38",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x05F0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_tx_user_pause",
+                                    "address_qualifier": "0",
+                                    "id": "39",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x05F8",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets",
+                                    "address_qualifier": "0",
+                                    "id": "40",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0608",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_good_packets",
+                                    "address_qualifier": "0",
+                                    "id": "41",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0610",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "42",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0618",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_good_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "43",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0620",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_64B",
+                                    "address_qualifier": "0",
+                                    "id": "44",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0628",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_65_127B",
+                                    "address_qualifier": "0",
+                                    "id": "45",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0630",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_128_255B",
+                                    "address_qualifier": "0",
+                                    "id": "46",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0638",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_256_511B",
+                                    "address_qualifier": "0",
+                                    "id": "47",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0640",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_512_1023B",
+                                    "address_qualifier": "0",
+                                    "id": "48",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0648",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_1024_1518B",
+                                    "address_qualifier": "0",
+                                    "id": "49",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0650",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_1519_1522B",
+                                    "address_qualifier": "0",
+                                    "id": "50",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0658",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_1523_1548B",
+                                    "address_qualifier": "0",
+                                    "id": "51",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0660",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_1549_2047B",
+                                    "address_qualifier": "0",
+                                    "id": "52",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0668",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_2048_4095B",
+                                    "address_qualifier": "0",
+                                    "id": "53",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0670",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_4096_8191B",
+                                    "address_qualifier": "0",
+                                    "id": "54",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0678",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_8192_9215B",
+                                    "address_qualifier": "0",
+                                    "id": "55",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0680",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_large",
+                                    "address_qualifier": "0",
+                                    "id": "56",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0688",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_small",
+                                    "address_qualifier": "0",
+                                    "id": "57",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0690",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_undersize",
+                                    "address_qualifier": "0",
+                                    "id": "58",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0698",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_fragmented",
+                                    "address_qualifier": "0",
+                                    "id": "59",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x06A0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_oversize",
+                                    "address_qualifier": "0",
+                                    "id": "60",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x06A8",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_toolong",
+                                    "address_qualifier": "0",
+                                    "id": "61",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x06B0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_packets_jabber",
+                                    "address_qualifier": "0",
+                                    "id": "62",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x06B8",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_total_bad_fcs",
+                                    "address_qualifier": "0",
+                                    "id": "63",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x06C0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_packets_bad_fcs",
+                                    "address_qualifier": "0",
+                                    "id": "64",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x06C8",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_stomped_fcs",
+                                    "address_qualifier": "0",
+                                    "id": "65",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x06D0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_pause",
+                                    "address_qualifier": "0",
+                                    "id": "66",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x06F8",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "stat_rx_user_pause",
+                                    "address_qualifier": "0",
+                                    "id": "67",
+                                    "port": "S_AXILITE",
+                                    "size": "0x8",
+                                    "offset": "0x0700",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "rsfec_config_ind_corr",
+                                    "address_qualifier": "0",
+                                    "id": "68",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x1000",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "rsfec_config_enable",
+                                    "address_qualifier": "0",
+                                    "id": "69",
+                                    "port": "S_AXILITE",
+                                    "size": "0x4",
+                                    "offset": "0x107C",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "S_AXIS",
+                                    "address_qualifier": "4",
+                                    "id": "70",
+                                    "port": "S_AXIS",
+                                    "size": "0x0",
+                                    "offset": "0x0",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x0",
+                                    "type": "stream<ap_axiu<512,0,0,0>>&"
+                                },
+                                {
+                                    "name": "M_AXIS",
+                                    "address_qualifier": "4",
+                                    "id": "71",
+                                    "port": "M_AXIS",
+                                    "size": "0x0",
+                                    "offset": "0x0",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x0",
+                                    "type": "stream<ap_axiu<512,0,0,0>>&"
+                                }
+                            ],
+                            "instances": [
+                                {
+                                    "name": "cmac_0"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "networklayer",
+                            "ports": [
+                                {
+                                    "name": "S_AXIL_nl",
+                                    "mode": "slave",
+                                    "range": "0x2000",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "S_AXIS_sk2nl",
+                                    "mode": "read_only",
+                                    "range": "",
+                                    "data_width": "512",
+                                    "port_type": "stream",
+                                    "base": ""
+                                },
+                                {
+                                    "name": "S_AXIS_eth2nl",
+                                    "mode": "read_only",
+                                    "range": "",
+                                    "data_width": "512",
+                                    "port_type": "stream",
+                                    "base": ""
+                                },
+                                {
+                                    "name": "M_AXIS_nl2sk",
+                                    "mode": "write_only",
+                                    "range": "",
+                                    "data_width": "512",
+                                    "port_type": "stream",
+                                    "base": ""
+                                },
+                                {
+                                    "name": "M_AXIS_nl2eth",
+                                    "mode": "write_only",
+                                    "range": "",
+                                    "data_width": "512",
+                                    "port_type": "stream",
+                                    "base": ""
+                                }
+                            ],
+                            "arguments": [
+                                {
+                                    "name": "mac_address",
+                                    "address_qualifier": "0",
+                                    "id": "0",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0010",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "ip_address",
+                                    "address_qualifier": "0",
+                                    "id": "1",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x4",
+                                    "offset": "0x0018",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "gateway",
+                                    "address_qualifier": "0",
+                                    "id": "2",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x4",
+                                    "offset": "0x001C",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "ip_mask",
+                                    "address_qualifier": "0",
+                                    "id": "3",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x4",
+                                    "offset": "0x0020",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "eth_in_cycles",
+                                    "address_qualifier": "0",
+                                    "id": "4",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0400",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "eth_in_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "5",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0408",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "eth_in_packets",
+                                    "address_qualifier": "0",
+                                    "id": "6",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0410",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "pkth_in_cycles",
+                                    "address_qualifier": "0",
+                                    "id": "7",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0418",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "pkth_in_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "8",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0420",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "pkth_in_packets",
+                                    "address_qualifier": "0",
+                                    "id": "9",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0428",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "arp_in_cycles",
+                                    "address_qualifier": "0",
+                                    "id": "10",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0430",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "arp_in_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "11",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0438",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "arp_in_packets",
+                                    "address_qualifier": "0",
+                                    "id": "12",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0440",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "arp_out_cycles",
+                                    "address_qualifier": "0",
+                                    "id": "13",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0448",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "arp_out_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "14",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0450",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "arp_out_packets",
+                                    "address_qualifier": "0",
+                                    "id": "15",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0458",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "icmp_in_cycles",
+                                    "address_qualifier": "0",
+                                    "id": "16",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0460",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "icmp_in_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "17",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0468",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "icmp_in_packets",
+                                    "address_qualifier": "0",
+                                    "id": "18",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0470",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "icmp_out_cycles",
+                                    "address_qualifier": "0",
+                                    "id": "19",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0478",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "icmp_out_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "20",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0480",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "icmp_out_packets",
+                                    "address_qualifier": "0",
+                                    "id": "21",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0488",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "ethhi_out_cycles",
+                                    "address_qualifier": "0",
+                                    "id": "22",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0490",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "ethhi_out_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "23",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0498",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "ethhi_out_packets",
+                                    "address_qualifier": "0",
+                                    "id": "24",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x04A0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "eth_out_cycles",
+                                    "address_qualifier": "0",
+                                    "id": "25",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x04A8",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "eth_out_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "26",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x04B0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "eth_out_packets",
+                                    "address_qualifier": "0",
+                                    "id": "27",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x04B8",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "udp_in_cycles",
+                                    "address_qualifier": "0",
+                                    "id": "28",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x04C0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "udp_in_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "29",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x04C8",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "udp_in_packets",
+                                    "address_qualifier": "0",
+                                    "id": "30",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x04D0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "app_out_cycles",
+                                    "address_qualifier": "0",
+                                    "id": "31",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x04D8",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "app_out_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "32",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x04E0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "app_out_packets",
+                                    "address_qualifier": "0",
+                                    "id": "33",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x04E8",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "udp_out_cycles",
+                                    "address_qualifier": "0",
+                                    "id": "34",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x04F0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "udp_out_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "35",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x04F8",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "udp_out_packets",
+                                    "address_qualifier": "0",
+                                    "id": "36",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0500",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "app_in_cycles",
+                                    "address_qualifier": "0",
+                                    "id": "37",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0508",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "app_in_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "38",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0510",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "app_in_packets",
+                                    "address_qualifier": "0",
+                                    "id": "39",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x8",
+                                    "offset": "0x0518",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x8",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "debug_reset_counters",
+                                    "address_qualifier": "0",
+                                    "id": "40",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x4",
+                                    "offset": "0x05F0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "udp_number_sockets",
+                                    "address_qualifier": "0",
+                                    "id": "41",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x4",
+                                    "offset": "0x0810",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "udp_theirIP_offset",
+                                    "address_qualifier": "0",
+                                    "id": "42",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x4",
+                                    "offset": "0x0820",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "udp_theirPort_offset",
+                                    "address_qualifier": "0",
+                                    "id": "43",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x4",
+                                    "offset": "0x08A0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "udp_myPort_offset",
+                                    "address_qualifier": "0",
+                                    "id": "44",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x4",
+                                    "offset": "0x0920",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "udp_valid_offset",
+                                    "address_qualifier": "0",
+                                    "id": "45",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x4",
+                                    "offset": "0x09A0",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "arp_discovery",
+                                    "address_qualifier": "0",
+                                    "id": "46",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x4",
+                                    "offset": "0x1010",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "arp_valid_offset",
+                                    "address_qualifier": "0",
+                                    "id": "47",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x4",
+                                    "offset": "0x1100",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "arp_ip_addr_offset",
+                                    "address_qualifier": "0",
+                                    "id": "48",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x4",
+                                    "offset": "0x1400",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "arp_mac_addr_offset",
+                                    "address_qualifier": "0",
+                                    "id": "49",
+                                    "port": "S_AXIL_nl",
+                                    "size": "0x4",
+                                    "offset": "0x1800",
+                                    "host_offset": "0x00",
+                                    "host_size": "0x4",
+                                    "type": "uint"
+                                },
+                                {
+                                    "name": "S_AXIS_sk2nl",
+                                    "address_qualifier": "4",
+                                    "id": "50",
+                                    "port": "S_AXIS_sk2nl",
+                                    "size": "0x0",
+                                    "offset": "0x0",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x0",
+                                    "type": "stream<ap_axiu<512,0,0,16>>&"
+                                },
+                                {
+                                    "name": "M_AXIS_nl2sk",
+                                    "address_qualifier": "4",
+                                    "id": "51",
+                                    "port": "M_AXIS_nl2sk",
+                                    "size": "0x0",
+                                    "offset": "0x0",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x0",
+                                    "type": "stream<ap_axiu<512,96,0,16>>&"
+                                },
+                                {
+                                    "name": "S_AXIS_eth2nl",
+                                    "address_qualifier": "4",
+                                    "id": "52",
+                                    "port": "S_AXIS_eth2nl",
+                                    "size": "0x0",
+                                    "offset": "0x0",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x0",
+                                    "type": "stream<ap_axiu<512,0,0,0>>&"
+                                },
+                                {
+                                    "name": "M_AXIS_nl2eth",
+                                    "address_qualifier": "4",
+                                    "id": "53",
+                                    "port": "M_AXIS_nl2eth",
+                                    "size": "0x0",
+                                    "offset": "0x0",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x0",
+                                    "type": "stream<ap_axiu<512,0,0,0>>&"
+                                }
+                            ],
+                            "instances": [
+                                {
+                                    "name": "networklayer_0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

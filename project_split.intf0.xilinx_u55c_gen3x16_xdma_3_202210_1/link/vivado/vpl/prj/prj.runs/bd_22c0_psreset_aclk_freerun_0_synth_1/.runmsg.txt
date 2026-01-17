@@ -1,0 +1,2 @@
+Compiling (synthesis checkpoint) kernel/IP: bd_22c0_psreset_aclk_freerun_0
+Log file: /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/prj/prj.runs/bd_22c0_psreset_aclk_freerun_0_synth_1/runme.log

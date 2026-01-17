@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd">
+    <xd:fcnMap xd:fcnName="networklayer" xd:type="RTLKernel" xd:clockId="0" xd:flow="explicit" xd:componentRef="networklayer">
+        <xd:ctrlReg xd:busInterface="S_AXIL_nl" xd:portInterfaceType="axilite" xd:name="control" xd:type="ap_ctrl_none" xd:offset="0x0"/>
+        <xd:arg xd:name="mac_address" xd:swRootName="mac_address" xd:dataWidth="64" xd:offset="0x0010" xd:portInterfaceType="axilite" xd:direction="in" xd:id="0" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="ip_address" xd:swRootName="ip_address" xd:dataWidth="32" xd:offset="0x0018" xd:portInterfaceType="axilite" xd:direction="in" xd:id="1" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="gateway" xd:swRootName="gateway" xd:dataWidth="32" xd:offset="0x001C" xd:portInterfaceType="axilite" xd:direction="in" xd:id="2" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="ip_mask" xd:swRootName="ip_mask" xd:dataWidth="32" xd:offset="0x0020" xd:portInterfaceType="axilite" xd:direction="in" xd:id="3" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="eth_in_cycles" xd:swRootName="eth_in_cycles" xd:dataWidth="64" xd:offset="0x0400" xd:portInterfaceType="axilite" xd:direction="in" xd:id="4" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="eth_in_bytes" xd:swRootName="eth_in_bytes" xd:dataWidth="64" xd:offset="0x0408" xd:portInterfaceType="axilite" xd:direction="in" xd:id="5" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="eth_in_packets" xd:swRootName="eth_in_packets" xd:dataWidth="64" xd:offset="0x0410" xd:portInterfaceType="axilite" xd:direction="in" xd:id="6" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="pkth_in_cycles" xd:swRootName="pkth_in_cycles" xd:dataWidth="64" xd:offset="0x0418" xd:portInterfaceType="axilite" xd:direction="in" xd:id="7" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="pkth_in_bytes" xd:swRootName="pkth_in_bytes" xd:dataWidth="64" xd:offset="0x0420" xd:portInterfaceType="axilite" xd:direction="in" xd:id="8" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="pkth_in_packets" xd:swRootName="pkth_in_packets" xd:dataWidth="64" xd:offset="0x0428" xd:portInterfaceType="axilite" xd:direction="in" xd:id="9" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="arp_in_cycles" xd:swRootName="arp_in_cycles" xd:dataWidth="64" xd:offset="0x0430" xd:portInterfaceType="axilite" xd:direction="in" xd:id="10" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="arp_in_bytes" xd:swRootName="arp_in_bytes" xd:dataWidth="64" xd:offset="0x0438" xd:portInterfaceType="axilite" xd:direction="in" xd:id="11" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="arp_in_packets" xd:swRootName="arp_in_packets" xd:dataWidth="64" xd:offset="0x0440" xd:portInterfaceType="axilite" xd:direction="in" xd:id="12" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="arp_out_cycles" xd:swRootName="arp_out_cycles" xd:dataWidth="64" xd:offset="0x0448" xd:portInterfaceType="axilite" xd:direction="in" xd:id="13" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="arp_out_bytes" xd:swRootName="arp_out_bytes" xd:dataWidth="64" xd:offset="0x0450" xd:portInterfaceType="axilite" xd:direction="in" xd:id="14" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="arp_out_packets" xd:swRootName="arp_out_packets" xd:dataWidth="64" xd:offset="0x0458" xd:portInterfaceType="axilite" xd:direction="in" xd:id="15" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="icmp_in_cycles" xd:swRootName="icmp_in_cycles" xd:dataWidth="64" xd:offset="0x0460" xd:portInterfaceType="axilite" xd:direction="in" xd:id="16" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="icmp_in_bytes" xd:swRootName="icmp_in_bytes" xd:dataWidth="64" xd:offset="0x0468" xd:portInterfaceType="axilite" xd:direction="in" xd:id="17" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="icmp_in_packets" xd:swRootName="icmp_in_packets" xd:dataWidth="64" xd:offset="0x0470" xd:portInterfaceType="axilite" xd:direction="in" xd:id="18" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="icmp_out_cycles" xd:swRootName="icmp_out_cycles" xd:dataWidth="64" xd:offset="0x0478" xd:portInterfaceType="axilite" xd:direction="in" xd:id="19" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="icmp_out_bytes" xd:swRootName="icmp_out_bytes" xd:dataWidth="64" xd:offset="0x0480" xd:portInterfaceType="axilite" xd:direction="in" xd:id="20" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="icmp_out_packets" xd:swRootName="icmp_out_packets" xd:dataWidth="64" xd:offset="0x0488" xd:portInterfaceType="axilite" xd:direction="in" xd:id="21" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="ethhi_out_cycles" xd:swRootName="ethhi_out_cycles" xd:dataWidth="64" xd:offset="0x0490" xd:portInterfaceType="axilite" xd:direction="in" xd:id="22" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="ethhi_out_bytes" xd:swRootName="ethhi_out_bytes" xd:dataWidth="64" xd:offset="0x0498" xd:portInterfaceType="axilite" xd:direction="in" xd:id="23" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="ethhi_out_packets" xd:swRootName="ethhi_out_packets" xd:dataWidth="64" xd:offset="0x04A0" xd:portInterfaceType="axilite" xd:direction="in" xd:id="24" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="eth_out_cycles" xd:swRootName="eth_out_cycles" xd:dataWidth="64" xd:offset="0x04A8" xd:portInterfaceType="axilite" xd:direction="in" xd:id="25" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="eth_out_bytes" xd:swRootName="eth_out_bytes" xd:dataWidth="64" xd:offset="0x04B0" xd:portInterfaceType="axilite" xd:direction="in" xd:id="26" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="eth_out_packets" xd:swRootName="eth_out_packets" xd:dataWidth="64" xd:offset="0x04B8" xd:portInterfaceType="axilite" xd:direction="in" xd:id="27" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="udp_in_cycles" xd:swRootName="udp_in_cycles" xd:dataWidth="64" xd:offset="0x04C0" xd:portInterfaceType="axilite" xd:direction="in" xd:id="28" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="udp_in_bytes" xd:swRootName="udp_in_bytes" xd:dataWidth="64" xd:offset="0x04C8" xd:portInterfaceType="axilite" xd:direction="in" xd:id="29" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="udp_in_packets" xd:swRootName="udp_in_packets" xd:dataWidth="64" xd:offset="0x04D0" xd:portInterfaceType="axilite" xd:direction="in" xd:id="30" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="app_out_cycles" xd:swRootName="app_out_cycles" xd:dataWidth="64" xd:offset="0x04D8" xd:portInterfaceType="axilite" xd:direction="in" xd:id="31" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="app_out_bytes" xd:swRootName="app_out_bytes" xd:dataWidth="64" xd:offset="0x04E0" xd:portInterfaceType="axilite" xd:direction="in" xd:id="32" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="app_out_packets" xd:swRootName="app_out_packets" xd:dataWidth="64" xd:offset="0x04E8" xd:portInterfaceType="axilite" xd:direction="in" xd:id="33" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="udp_out_cycles" xd:swRootName="udp_out_cycles" xd:dataWidth="64" xd:offset="0x04F0" xd:portInterfaceType="axilite" xd:direction="in" xd:id="34" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="udp_out_bytes" xd:swRootName="udp_out_bytes" xd:dataWidth="64" xd:offset="0x04F8" xd:portInterfaceType="axilite" xd:direction="in" xd:id="35" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="udp_out_packets" xd:swRootName="udp_out_packets" xd:dataWidth="64" xd:offset="0x0500" xd:portInterfaceType="axilite" xd:direction="in" xd:id="36" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="app_in_cycles" xd:swRootName="app_in_cycles" xd:dataWidth="64" xd:offset="0x0508" xd:portInterfaceType="axilite" xd:direction="in" xd:id="37" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="app_in_bytes" xd:swRootName="app_in_bytes" xd:dataWidth="64" xd:offset="0x0510" xd:portInterfaceType="axilite" xd:direction="in" xd:id="38" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="app_in_packets" xd:swRootName="app_in_packets" xd:dataWidth="64" xd:offset="0x0518" xd:portInterfaceType="axilite" xd:direction="in" xd:id="39" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="debug_reset_counters" xd:swRootName="debug_reset_counters" xd:dataWidth="32" xd:offset="0x05F0" xd:portInterfaceType="axilite" xd:direction="in" xd:id="40" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="udp_number_sockets" xd:swRootName="udp_number_sockets" xd:dataWidth="32" xd:offset="0x0810" xd:portInterfaceType="axilite" xd:direction="in" xd:id="41" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="udp_theirIP_offset" xd:swRootName="udp_theirIP_offset" xd:dataWidth="32" xd:offset="0x0820" xd:portInterfaceType="axilite" xd:direction="in" xd:id="42" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="udp_theirPort_offset" xd:swRootName="udp_theirPort_offset" xd:dataWidth="32" xd:offset="0x08A0" xd:portInterfaceType="axilite" xd:direction="in" xd:id="43" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="udp_myPort_offset" xd:swRootName="udp_myPort_offset" xd:dataWidth="32" xd:offset="0x0920" xd:portInterfaceType="axilite" xd:direction="in" xd:id="44" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="udp_valid_offset" xd:swRootName="udp_valid_offset" xd:dataWidth="32" xd:offset="0x09A0" xd:portInterfaceType="axilite" xd:direction="in" xd:id="45" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="arp_discovery" xd:swRootName="arp_discovery" xd:dataWidth="32" xd:offset="0x1010" xd:portInterfaceType="axilite" xd:direction="in" xd:id="46" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="arp_valid_offset" xd:swRootName="arp_valid_offset" xd:dataWidth="32" xd:offset="0x1100" xd:portInterfaceType="axilite" xd:direction="in" xd:id="47" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="arp_ip_addr_offset" xd:swRootName="arp_ip_addr_offset" xd:dataWidth="32" xd:offset="0x1400" xd:portInterfaceType="axilite" xd:direction="in" xd:id="48" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="arp_mac_addr_offset" xd:swRootName="arp_mac_addr_offset" xd:dataWidth="32" xd:offset="0x1800" xd:portInterfaceType="axilite" xd:direction="in" xd:id="49" xd:busInterfaceRef="S_AXIL_nl"/>
+        <xd:arg xd:name="S_AXIS_sk2nl" xd:swRootName="S_AXIS_sk2nl" xd:dataWidth="512" xd:offset="0x0" xd:portInterfaceType="axis" xd:direction="in" xd:busInterfaceRef="S_AXIS_sk2nl"/>
+        <xd:arg xd:name="M_AXIS_nl2sk" xd:swRootName="M_AXIS_nl2sk" xd:dataWidth="512" xd:offset="0x0" xd:portInterfaceType="axis" xd:direction="out" xd:busInterfaceRef="M_AXIS_nl2sk"/>
+        <xd:arg xd:name="S_AXIS_eth2nl" xd:swRootName="S_AXIS_eth2nl" xd:dataWidth="512" xd:offset="0x0" xd:portInterfaceType="axis" xd:direction="in" xd:busInterfaceRef="S_AXIS_eth2nl"/>
+        <xd:arg xd:name="M_AXIS_nl2eth" xd:swRootName="M_AXIS_nl2eth" xd:dataWidth="512" xd:offset="0x0" xd:portInterfaceType="axis" xd:direction="out" xd:busInterfaceRef="M_AXIS_nl2eth"/>
+    </xd:fcnMap>
+</xd:repository>

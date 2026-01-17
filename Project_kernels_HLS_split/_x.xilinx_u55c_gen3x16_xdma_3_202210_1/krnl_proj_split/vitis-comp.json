@@ -1,0 +1,9 @@
+{
+  "name": "krnl_proj_split",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": ["..\/..\/krnl_proj_split.cfg"],
+    "work_dir": "krnl_proj_split"
+  }
+}

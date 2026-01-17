@@ -1,0 +1,117 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:217:37" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:217:56" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:217:74" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:219:35" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:219:53" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:219:70" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_output_word" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="input_split" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="input_split" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:67:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matcher_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:69:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matcher_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = state type = ram_1p impl = bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:72:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matcher_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = dec complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:76:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matcher_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:90:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matcher_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:98:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matcher_engine" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:138:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_matches" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="krnl_proj_split" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=krnl_proj_split" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:196:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_proj_split" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port = input_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:197:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_proj_split" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port = output_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:198:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_proj_split" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = processed_bytes bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:199:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_proj_split" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = processed_cycles bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:200:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_proj_split" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = return bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:201:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_proj_split" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:207:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_proj_split" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = short_bytes depth = 64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:208:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_proj_split" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = long_bytes depth = 64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:209:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_proj_split" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = short_matches depth = 64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:210:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_proj_split" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = long_matches depth = 64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:187:9" msg_body="Inlining function 'write_output_word(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1ul, 1ul, 16ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;512&gt;, ap_uint&lt;64&gt;, ap_uint&lt;16&gt;, bool)' into 'merge_matches(hls::stream&lt;match_t, 0&gt;&amp;, hls::stream&lt;match_t, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1ul, 1ul, 16ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;16&gt;)'">
+        <args Callee="write_output_word(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1ul, 1ul, 16ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;512&gt;, ap_uint&lt;64&gt;, ap_uint&lt;16&gt;, bool)" Callee-DebugLoc="File /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp Line 19 Column 0" Caller="merge_matches(hls::stream&lt;match_t, 0&gt;&amp;, hls::stream&lt;match_t, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1ul, 1ul, 16ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;16&gt;)" Caller-DebugLoc="File /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp Line 137 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:185:9" msg_body="Inlining function 'write_output_word(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1ul, 1ul, 16ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;512&gt;, ap_uint&lt;64&gt;, ap_uint&lt;16&gt;, bool)' into 'merge_matches(hls::stream&lt;match_t, 0&gt;&amp;, hls::stream&lt;match_t, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1ul, 1ul, 16ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;16&gt;)'">
+        <args Callee="write_output_word(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1ul, 1ul, 16ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;512&gt;, ap_uint&lt;64&gt;, ap_uint&lt;16&gt;, bool)" Callee-DebugLoc="File /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp Line 19 Column 0" Caller="merge_matches(hls::stream&lt;match_t, 0&gt;&amp;, hls::stream&lt;match_t, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1ul, 1ul, 16ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;16&gt;)" Caller-DebugLoc="File /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp Line 137 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:173:13" msg_body="Inlining function 'write_output_word(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1ul, 1ul, 16ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;512&gt;, ap_uint&lt;64&gt;, ap_uint&lt;16&gt;, bool)' into 'merge_matches(hls::stream&lt;match_t, 0&gt;&amp;, hls::stream&lt;match_t, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1ul, 1ul, 16ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;16&gt;)'">
+        <args Callee="write_output_word(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1ul, 1ul, 16ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;512&gt;, ap_uint&lt;64&gt;, ap_uint&lt;16&gt;, bool)" Callee-DebugLoc="File /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp Line 19 Column 0" Caller="merge_matches(hls::stream&lt;match_t, 0&gt;&amp;, hls::stream&lt;match_t, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 1ul, 1ul, 16ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;16&gt;)" Caller-DebugLoc="File /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp Line 137 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:66:0" msg_body="Unrolling loop 'decode_loop' (/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:97:9) in function 'matcher_engine&lt;957, 214&gt;' completely with a factor of 256">
+        <args Factor="256" LoopLoc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:97:9" LoopName="decode_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:66:0" msg_body="Unrolling loop 'decode_loop' (/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:97:9) in function 'matcher_engine&lt;1720, 16&gt;' completely with a factor of 256">
+        <args Factor="256" LoopLoc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:97:9" LoopName="decode_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:71:7" msg_body="Applying array_partition to 'dec': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="dec"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:206:26" msg_body="Aggregating fifo (hls::stream) variable 'long_matches' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="long_matches"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:205:26" msg_body="Aggregating fifo (hls::stream) variable 'short_matches' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="short_matches"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:203:22" msg_body="Aggregating fifo (hls::stream) variable 'short_bytes' with compact=bit mode in 9-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="9" HwTyName="fifo (hls::stream)" Name="short_bytes"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:204:25" msg_body="Aggregating fifo (hls::stream) variable 'long_bytes' with compact=bit mode in 9-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="9" HwTyName="fifo (hls::stream)" Name="long_bytes"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:112:13" msg_body="Loop 'match_mask_loop' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="match_mask_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:66:0" msg_body="Unrolling loop 'match_mask_loop' (/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:112:13) in function 'matcher_engine&lt;1720, 16&gt;' completely with a factor of 16">
+        <args Factor="16" LoopLoc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/krnl_proj_split.cpp:112:13" LoopName="match_mask_loop"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/patterns_snort_short.h:3454:0" msg_body="array_partition dim=2 type=complete  variable=_ZL19pattern_bytes_SHORT 1 krnl_proj_split /home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/patterns_snort_short.h:3454:0 pattern_bytes_SHORT">
+        <args PragmaFunction="krnl_proj_split" PragmaIsAuto="1" PragmaOptions="dim=2 type=complete  variable=_ZL19pattern_bytes_SHORT" PragmaType="array_partition" VarName="pattern_bytes_SHORT" varLoc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/patterns_snort_short.h:3454:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/patterns_snort_short.h:3454:0" msg_body="Inferring pragma 'array_partition type=complete dim=2' for array 'pattern_bytes_SHORT' due to pipeline pragma">
+        <args Dim="2" Mode="complete" Name="pattern_bytes_SHORT" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/m2_2/shared/dat480-final/Project_kernels_HLS_split/src/patterns_snort_short.h:3454:0" msg_body="Applying array_partition to '_ZL19pattern_bytes_SHORT': Complete partitioning on dimension 2.">
+        <args Dim="2" Mode="Complete" UOName="_ZL19pattern_bytes_SHORT"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

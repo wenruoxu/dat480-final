@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root VersionMajor="7" VersionMinor="3" SoftwareVersionMajor="2023" SoftwareVersionMinor="2" IpCache="no">
+  <IpCaches/>
+  <Kernels>
+    <Kernel Name="cmac_0" Dir="cmac_0" IP="ip_repo/xilinx_com_kernel_cmac_0_1_0" TopIpDir="" ProjectID="795056148595432ba8895fb4f45c770c" Debug="no" Hls="no" Pdi="no" ShimSoln="no" SwEmu="no" Domain="" Deadlock="no" KernelJson="no">
+      <SupportedFlows>
+        <SupportedFlow>HW_EMU</SupportedFlow>
+        <SupportedFlow>SYSTEM</SupportedFlow>
+      </SupportedFlows>
+    </Kernel>
+  </Kernels>
+</Root>

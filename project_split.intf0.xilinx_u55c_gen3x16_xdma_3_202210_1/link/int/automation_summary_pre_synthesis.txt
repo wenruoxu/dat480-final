@@ -1,0 +1,142 @@
+====================================================================
+Version:    xcd v2023.2 (64-bit)
+Copyright:  Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+Created:    Sat Jan 17 14:15:09 2026
+====================================================================
+
+1. Kernel and compute unit information
+======================================
+
+Compute Unit: cmac_0
+Kernel: cmac_0
+Clock Pins: ap_clk, clk_gt_freerun
+Reset Pin: ap_rst_n
+
+Compute Unit: networklayer_0
+Kernel: networklayer
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+Compute Unit: krnl_proj_split_0
+Kernel: krnl_proj_split
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+2. Interface Connections
+========================
+
+Compute Unit to Compute Unit
+----------------------------
+Source Pin: krnl_proj_split_0/output_stream
+Destination Pin: networklayer_0/S_AXIS_sk2nl
+
+Source Pin: networklayer_0/M_AXIS_nl2eth
+Destination Pin: cmac_0/S_AXIS
+
+Source Pin: networklayer_0/M_AXIS_nl2sk
+Destination Pin: krnl_proj_split_0/input_stream
+
+Source Pin: cmac_0/M_AXIS
+Destination Pin: networklayer_0/S_AXIS_eth2nl
+
+IP to Compute Unit
+------------------
+Source Pin: SLR1/M01_AXI
+Destination Pin: cmac_0/S_AXILITE
+
+Source Pin: SLR1/M03_AXI
+Destination Pin: krnl_proj_split_0/s_axi_control
+
+Source Pin: SLR1/M02_AXI
+Destination Pin: networklayer_0/S_AXIL_nl
+
+3. Clock Connections
+====================
+
+Compute Unit: cmac_0
+Clock ID: 0
+Platform Clock Frequency: 300.00 MHz
+Requested Kernel Clock Frequency: 300.00 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: cmac_0/ap_clk
+
+Compute Unit: cmac_0
+Clock ID: 0
+Platform Clock Frequency: 300.00 MHz
+Requested Kernel Clock Frequency: 100.00 MHz
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: cmac_0/clk_gt_freerun
+
+Compute Unit: krnl_proj_split_0
+Clock ID: 0
+Platform Clock Frequency: 300.00 MHz
+Requested Kernel Clock Frequency: 300.00 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: krnl_proj_split_0/ap_clk
+
+Compute Unit: networklayer_0
+Clock ID: 0
+Platform Clock Frequency: 300.00 MHz
+Requested Kernel Clock Frequency: 300.00 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: networklayer_0/ap_clk
+
+Clock Instance: ii_level0_wire
+Source Port: /blp_s_aclk_ctrl_00
+Destination Pin: ii_level0_wire/blp_s_aclk_ctrl_00
+
+Clock Instance: ii_level0_wire
+Source Port: /blp_s_aclk_freerun_ref_00
+Destination Pin: ii_level0_wire/blp_s_aclk_freerun_ref_00
+
+Clock Instance: ii_level0_wire
+Source Port: /blp_s_aclk_pcie_00
+Destination Pin: ii_level0_wire/blp_s_aclk_pcie_00
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_ctrl_00
+Destination Pin: ulp_ucs/aclk_ctrl
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_freerun
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_hbm_refclk
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_pcie_00
+Destination Pin: ulp_ucs/aclk_pcie
+
+4. Reset Connections
+====================
+
+Compute Unit: cmac_0
+Source Pin: proc_sys_reset_kernel_slr1/peripheral_aresetn
+Destination Pin: cmac_0/ap_rst_n
+Associated Clock Pin: cmac_0/ap_clk
+
+Compute Unit: krnl_proj_split_0
+Source Pin: proc_sys_reset_kernel_slr1/peripheral_aresetn
+Destination Pin: krnl_proj_split_0/ap_rst_n
+Associated Clock Pin: krnl_proj_split_0/ap_clk
+
+Compute Unit: networklayer_0
+Source Pin: proc_sys_reset_kernel_slr1/peripheral_aresetn
+Destination Pin: networklayer_0/ap_rst_n
+Associated Clock Pin: networklayer_0/ap_clk
+
+5. Clock Summary
+================
+
+PL
++-------------------+-----------------+----------------+---------------+------------+
+| Instance          | Kernel          | Clock Port     | Compile (MHz) | Link (MHz) |
++-------------------+-----------------+----------------+---------------+------------+
+| cmac_0            | cmac_0          | ap_clk         | N/A           | 300.00     |
+| cmac_0            | cmac_0          | clk_gt_freerun | N/A           | 100.00     |
+| networklayer_0    | networklayer    | ap_clk         | N/A           | 300.00     |
+| krnl_proj_split_0 | krnl_proj_split | ap_clk         | 300.03        | 300.00     |
++-------------------+-----------------+----------------+---------------+------------+
+

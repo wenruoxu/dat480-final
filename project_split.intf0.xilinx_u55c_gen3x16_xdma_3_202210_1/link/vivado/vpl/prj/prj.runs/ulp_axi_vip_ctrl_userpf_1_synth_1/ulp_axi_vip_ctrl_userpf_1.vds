@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat Jan 17 14:51:21 2026
+# Process ID: 3621089
+# Current directory: /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/prj/prj.runs/ulp_axi_vip_ctrl_userpf_1_synth_1
+# Command line: vivado -log ulp_axi_vip_ctrl_userpf_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ulp_axi_vip_ctrl_userpf_1.tcl
+# Log file: /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/prj/prj.runs/ulp_axi_vip_ctrl_userpf_1_synth_1/ulp_axi_vip_ctrl_userpf_1.vds
+# Journal file: /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/prj/prj.runs/ulp_axi_vip_ctrl_userpf_1_synth_1/vivado.jou
+# Running On: cse-es62-02.cse.chalmers.se, OS: Linux, CPU Frequency: 800.337 MHz, CPU Physical cores: 16, Host memory: 66844 MB
+#-----------------------------------------------------------
+source ulp_axi_vip_ctrl_userpf_1.tcl -notrace
+INFO: Dispatch client connection id - 40537
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/m2_2/shared/dat480-final/NetLayers/100G-fpga-network-stack-core/synthesis_results_HBM'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xo/ip_repo/xilinx_com_hls_krnl_proj_split_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xo/ip_repo/xilinx_com_kernel_cmac_0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xo/ip_repo/xilinx_com_kernel_networklayer_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2023.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2023.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axi_clk_metadata_adapter:1.0'. The one found in IP location '/home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axi_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/axi_clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axis_clk_metadata_adapter:1.0'. The one found in IP location '/home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axis_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/axis_clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:clk_metadata_adapter:1.0'. The one found in IP location '/home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/clk_metadata_adapter_v1_0' will take precedence over the same IP in location /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:pipeline_reg:1.0'. The one found in IP location '/home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/pipeline_reg_v1_0' will take precedence over the same IP in location /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/pipeline_reg_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:shell_utils_build_info:1.0'. The one found in IP location '/home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/shell_utils_build_info_v1_0' will take precedence over the same IP in the Xilinx installed IP.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ulp_axi_vip_ctrl_userpf_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 810ac308fee98358 to dir: /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/prj/prj.runs/ulp_axi_vip_ctrl_userpf_1_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/m2_2/shared/dat480-final/.ipcache/8/1/810ac308fee98358/ulp_axi_vip_ctrl_userpf_0.dcp to /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/prj/prj.runs/ulp_axi_vip_ctrl_userpf_1_synth_1/ulp_axi_vip_ctrl_userpf_1.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/m2_2/shared/dat480-final/.ipcache/8/1/810ac308fee98358/ulp_axi_vip_ctrl_userpf_0_stub.v to /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/prj/prj.runs/ulp_axi_vip_ctrl_userpf_1_synth_1/ulp_axi_vip_ctrl_userpf_1_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/m2_2/shared/dat480-final/.ipcache/8/1/810ac308fee98358/ulp_axi_vip_ctrl_userpf_0_stub.vhdl to /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/prj/prj.runs/ulp_axi_vip_ctrl_userpf_1_synth_1/ulp_axi_vip_ctrl_userpf_1_stub.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/m2_2/shared/dat480-final/.ipcache/8/1/810ac308fee98358/ulp_axi_vip_ctrl_userpf_0_sim_netlist.v to /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/prj/prj.runs/ulp_axi_vip_ctrl_userpf_1_synth_1/ulp_axi_vip_ctrl_userpf_1_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/m2_2/shared/dat480-final/.ipcache/8/1/810ac308fee98358/ulp_axi_vip_ctrl_userpf_0_sim_netlist.vhdl to /home/m2_2/shared/dat480-final/project_split.intf0.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/prj/prj.runs/ulp_axi_vip_ctrl_userpf_1_synth_1/ulp_axi_vip_ctrl_userpf_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP ulp_axi_vip_ctrl_userpf_1, cache-ID = 810ac308fee98358.
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 17 14:51:26 2026...

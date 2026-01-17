@@ -1,0 +1,233 @@
+{
+    "1": {
+        "name": "Block_entry211_proc",
+        "file": "\/home\/m2_2\/shared\/dat480-final\/Project_kernels_HLS_split\/src\/krnl_proj_split.cpp",
+        "fileloc": "222",
+        "instructions": "4",
+        "total_instructions": "4",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "matcher_engine<957, 214>",
+        "file": "krnl_proj_split.cpp",
+        "fileloc": "62",
+        "instructions": "568",
+        "total_instructions": "889",
+        "calls": "8 11 7",
+        "basicblocks": "267",
+        "loads": {
+            "G": "3",
+            "L": "1"
+        },
+        "stores": {
+            "G": "1"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "3": {
+        "name": "merge_matches",
+        "file": "\/home\/m2_2\/shared\/dat480-final\/Project_kernels_HLS_split\/src\/krnl_proj_split.cpp",
+        "fileloc": "220",
+        "instructions": "21",
+        "total_instructions": "113",
+        "calls": "9",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "4": {
+        "name": "matcher_engine<1720, 16>_Pipeline_init_state",
+        "file": "\/home\/m2_2\/shared\/dat480-final\/Project_kernels_HLS_split\/src\/krnl_proj_split.cpp",
+        "fileloc": "75",
+        "instructions": "17",
+        "total_instructions": "17",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "krnl_proj_split",
+        "file": "krnl_proj_split.cpp",
+        "fileloc": "192",
+        "instructions": "48",
+        "total_instructions": "2084",
+        "calls": "6 12 2 3 1",
+        "basicblocks": "1"
+    },
+    "5": {
+        "name": "input_split_Pipeline_VITIS_LOOP_39_2",
+        "file": "\/home\/m2_2\/shared\/dat480-final\/Project_kernels_HLS_split\/src\/krnl_proj_split.cpp",
+        "fileloc": "39",
+        "instructions": "45",
+        "total_instructions": "45",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "input_split",
+        "file": "\/home\/m2_2\/shared\/dat480-final\/Project_kernels_HLS_split\/src\/krnl_proj_split.cpp",
+        "fileloc": "29",
+        "instructions": "33",
+        "total_instructions": "78",
+        "calls": "5",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "matcher_engine<957, 214>_Pipeline_match_mask_loop",
+        "file": "\/home\/m2_2\/shared\/dat480-final\/Project_kernels_HLS_split\/src\/krnl_proj_split.cpp",
+        "fileloc": "105",
+        "instructions": "287",
+        "total_instructions": "287",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "matcher_engine<957, 214>_Pipeline_init_state",
+        "file": "\/home\/m2_2\/shared\/dat480-final\/Project_kernels_HLS_split\/src\/krnl_proj_split.cpp",
+        "fileloc": "75",
+        "instructions": "17",
+        "total_instructions": "17",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "merge_matches_Pipeline_VITIS_LOOP_146_1",
+        "file": "\/home\/m2_2\/shared\/dat480-final\/Project_kernels_HLS_split\/src\/krnl_proj_split.cpp",
+        "fileloc": "220",
+        "instructions": "92",
+        "total_instructions": "92",
+        "calls": "",
+        "basicblocks": "14",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "matcher_engine<1720, 16>_Pipeline_reset_state",
+        "file": "\/home\/m2_2\/shared\/dat480-final\/Project_kernels_HLS_split\/src\/krnl_proj_split.cpp",
+        "fileloc": "89",
+        "instructions": "17",
+        "total_instructions": "17",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "11": {
+        "name": "matcher_engine<957, 214>_Pipeline_reset_state",
+        "file": "\/home\/m2_2\/shared\/dat480-final\/Project_kernels_HLS_split\/src\/krnl_proj_split.cpp",
+        "fileloc": "89",
+        "instructions": "17",
+        "total_instructions": "17",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "12": {
+        "name": "matcher_engine<1720, 16>",
+        "file": "krnl_proj_split.cpp",
+        "fileloc": "62",
+        "instructions": "528",
+        "total_instructions": "952",
+        "calls": "4 10 13",
+        "basicblocks": "260",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "13": {
+        "name": "matcher_engine<1720, 16>_Pipeline_pattern_loop",
+        "file": "\/home\/m2_2\/shared\/dat480-final\/Project_kernels_HLS_split\/src\/krnl_proj_split.cpp",
+        "fileloc": "64",
+        "instructions": "390",
+        "total_instructions": "390",
+        "calls": "",
+        "basicblocks": "8",
+        "loads": {
+            "G": "19",
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

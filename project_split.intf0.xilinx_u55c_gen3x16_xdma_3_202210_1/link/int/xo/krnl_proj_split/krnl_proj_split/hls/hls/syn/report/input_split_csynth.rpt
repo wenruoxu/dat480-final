@@ -1,0 +1,188 @@
+
+
+================================================================
+== Vitis HLS Report for 'input_split'
+================================================================
+* Date:           Sat Jan 17 14:12:47 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        krnl_proj_split
+* Solution:       hls (Vitis Kernel Flow Target)
+* Product family: virtexuplusHBM
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.322 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------+--------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                 |                                      |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                     Instance                    |                Module                |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------------------------------+--------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_input_split_Pipeline_VITIS_LOOP_39_2_fu_108  |input_split_Pipeline_VITIS_LOOP_39_2  |       66|       66|  0.220 us|  0.220 us|   66|   66|       no|
+        +-------------------------------------------------+--------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_36_1  |        ?|        ?|        70|          -|          -|     ?|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|        4|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|      148|     2668|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      140|    -|
+|Register             |        -|     -|      729|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      877|     2812|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------+--------------------------------------+---------+----+-----+------+-----+
+    |                     Instance                    |                Module                | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +-------------------------------------------------+--------------------------------------+---------+----+-----+------+-----+
+    |grp_input_split_Pipeline_VITIS_LOOP_39_2_fu_108  |input_split_Pipeline_VITIS_LOOP_39_2  |        0|   0|  148|  2668|    0|
+    +-------------------------------------------------+--------------------------------------+---------+----+-----+------+-----+
+    |Total                                            |                                      |        0|   0|  148|  2668|    0|
+    +-------------------------------------------------+--------------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state5  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   4|           2|           2|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |add_i_i5_fu_62            |   9|          2|   64|        128|
+    |ap_NS_fsm                 |  31|          6|    1|          6|
+    |ap_done                   |   9|          2|    1|          2|
+    |empty_fu_58               |   9|          2|   64|        128|
+    |input_stream_TDATA_blk_n  |   9|          2|    1|          2|
+    |long_bytes_blk_n          |   9|          2|    1|          2|
+    |long_bytes_din            |   9|          2|    9|         18|
+    |long_bytes_write          |  14|          3|    1|          3|
+    |real_start                |   9|          2|    1|          2|
+    |short_bytes_blk_n         |   9|          2|    1|          2|
+    |short_bytes_din           |   9|          2|    9|         18|
+    |short_bytes_write         |  14|          3|    1|          3|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     | 140|         30|  154|        314|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------+-----+----+-----+-----------+
+    |                             Name                             |  FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------+-----+----+-----+-----------+
+    |add_i_i5_fu_62                                                |   64|   0|   64|          0|
+    |ap_CS_fsm                                                     |    5|   0|    5|          0|
+    |ap_done_reg                                                   |    1|   0|    1|          0|
+    |empty_fu_58                                                   |   64|   0|   64|          0|
+    |grp_input_split_Pipeline_VITIS_LOOP_39_2_fu_108_ap_start_reg  |    1|   0|    1|          0|
+    |in_word_data_reg_209                                          |  512|   0|  512|          0|
+    |in_word_dest_reg_223                                          |   16|   0|   16|          0|
+    |in_word_keep_reg_214                                          |   64|   0|   64|          0|
+    |in_word_last_reg_219                                          |    1|   0|    1|          0|
+    |start_once_reg                                                |    1|   0|    1|          0|
+    +--------------------------------------------------------------+-----+----+-----+-----------+
+    |Total                                                         |  729|   0|  729|          0|
+    +--------------------------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+-----------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++----------------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|            input_split|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|            input_split|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|            input_split|  return value|
+|start_full_n                |   in|    1|  ap_ctrl_hs|            input_split|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|            input_split|  return value|
+|ap_continue                 |   in|    1|  ap_ctrl_hs|            input_split|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|            input_split|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|            input_split|  return value|
+|start_out                   |  out|    1|  ap_ctrl_hs|            input_split|  return value|
+|start_write                 |  out|    1|  ap_ctrl_hs|            input_split|  return value|
+|ap_return_0                 |  out|   16|  ap_ctrl_hs|            input_split|  return value|
+|ap_return_1                 |  out|   64|  ap_ctrl_hs|            input_split|  return value|
+|input_stream_TDATA          |   in|  512|        axis|  input_stream_V_data_V|       pointer|
+|input_stream_TVALID         |   in|    1|        axis|  input_stream_V_dest_V|       pointer|
+|input_stream_TREADY         |  out|    1|        axis|  input_stream_V_dest_V|       pointer|
+|input_stream_TDEST          |   in|   16|        axis|  input_stream_V_dest_V|       pointer|
+|input_stream_TKEEP          |   in|   64|        axis|  input_stream_V_keep_V|       pointer|
+|input_stream_TSTRB          |   in|   64|        axis|  input_stream_V_strb_V|       pointer|
+|input_stream_TUSER          |   in|    1|        axis|  input_stream_V_user_V|       pointer|
+|input_stream_TLAST          |   in|    1|        axis|  input_stream_V_last_V|       pointer|
+|input_stream_TID            |   in|    1|        axis|    input_stream_V_id_V|       pointer|
+|short_bytes_din             |  out|    9|     ap_fifo|            short_bytes|       pointer|
+|short_bytes_num_data_valid  |   in|    7|     ap_fifo|            short_bytes|       pointer|
+|short_bytes_fifo_cap        |   in|    7|     ap_fifo|            short_bytes|       pointer|
+|short_bytes_full_n          |   in|    1|     ap_fifo|            short_bytes|       pointer|
+|short_bytes_write           |  out|    1|     ap_fifo|            short_bytes|       pointer|
+|long_bytes_din              |  out|    9|     ap_fifo|             long_bytes|       pointer|
+|long_bytes_num_data_valid   |   in|    7|     ap_fifo|             long_bytes|       pointer|
+|long_bytes_fifo_cap         |   in|    7|     ap_fifo|             long_bytes|       pointer|
+|long_bytes_full_n           |   in|    1|     ap_fifo|             long_bytes|       pointer|
+|long_bytes_write            |  out|    1|     ap_fifo|             long_bytes|       pointer|
++----------------------------+-----+-----+------------+-----------------------+--------------+
+
