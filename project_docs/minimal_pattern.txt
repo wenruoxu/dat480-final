@@ -1,0 +1,10 @@
+/bnbform.cgi
+/bb/index.php
+/server-status
+/nph-exploitscanget.cgi
+CAL 
+|0B|
+.html?0.
+/android/sms/sync.php
+/info2www
+/changepw.exe
