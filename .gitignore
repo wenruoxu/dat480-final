@@ -11,3 +11,8 @@ basic.*/
 benchmark.*/
 __pycache__/
 *.jstack
+# Vivado/Vitis build artifacts (do not commit)
+**/vivado/vpl/**
+**/.local/**
+*.dcp
+*.runs/
