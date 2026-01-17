@@ -1,8 +1,9 @@
+由于原始的项目要求文件并不是文字版而是图片版，所以我做了ocr并将内容放到下面了。
+
 [File name]: Lab_Project_PM_Pattern_Matching_DAT480_2025.pdf
 
 ===== Extracted Text =====
 
-**Page 1:**
 The goal of the lab project is to build a network processing engine for pattern matching using the Alveo U55C FPGA board to achieve a high processing throughput of up to line-rate.
 
 Network Input: UDP packets with payload containing the patterns to be detected at up to 100Gb/s (64 bytes per FPGA clock cycle of 300MHz).
@@ -22,11 +23,6 @@ Presentation: There will also be a presentation where you will present your work
 Grading: The following points as well as the quality of your work will be used to determine the grades:
 
 Processing throughput: Minimum one byte per cycle working on hardware. To add to a higher grade your design should process multiple bytes per cycle. The number of patterns supported. From either the MINI_pattern_match_snort3_content.txt (minimum) or pattern_match_snort3_content.txt files. Automatic preprocessing / design generation from provided patterns.
-
-**Page 2:**
-Instructions:
-
-Before running anything on the FPGA, look at the canvas page "FPGA Booking", and make sure that you have booked the current timeslot for the FPGA you are going to use! Now to the project.
 
 Start by downloading the project template:
 
@@ -58,3 +54,4 @@ The image appears to be a block diagram or a high-level architectural overview r
 7.  **Arrows/Lines:** Showing the direction of data flow from Network Input, through the Data Interface, into the Pattern Matching Engine, and finally to the Output Interface and Host.
 
 **Overall Purpose:** The diagram serves to visually summarize the system's data path and major functional blocks, providing a conceptual understanding of how the high-throughput pattern matching engine is constructed on the FPGA platform.
+
